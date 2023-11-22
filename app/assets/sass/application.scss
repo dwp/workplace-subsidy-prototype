@@ -5,12 +5,6 @@
 
 // Add extra styles here
 
-@import "node_modules/govuk-frontend/dist/govuk/all";
-@import "components/hidden.scss";
-@import "components/action-bar.scss";
-@import "components/filter-layout.scss";
-@import "components/filter-panel.scss";
-
 .dwp-header {
 background-color: #0b0c0c;
 border-bottom: 0;
@@ -51,9 +45,6 @@ margin-top: 15px;
 }
 }
 
-.moj-filter__tag:after {
-    background-image: url("/plugin-assets/%40ministryofjustice%2Ffrontend/moj/assets/images/icon-tag-remove-cross.svg");
-}
 
 
 //key Details
@@ -174,20 +165,3 @@ clear: both;
 margin-top: 5px;
 }
 } 
-
-
-
-
-
-.govuk-button--alt {
-    background-color: #1d70b8;
-}
-
-.govuk-button--alt:hover {
-    background-color: #003078;
-}
-
-
-.autocomplete__option {
-    font-family: "GDS Transport", arial, sans-serif;
-}

@@ -40,16 +40,7 @@
 {% endblock %}
 
 {% block header %}
-
-{{ 
-  govukHeader({
-    homepageUrl: "/",
-    serviceName: "Get a workplace health assessment to support an employee's health and disability",
-    serviceUrl: "/"
-  })
-}}
-
-{# <header class="govuk-header" role="banner" data-module="govuk-header">
+<header class="govuk-header" role="banner" data-module="govuk-header">
   <div class="govuk-header__container govuk-width-container">
     <div class="govuk-header__logo">
       <a href="#" class="govuk-header__link govuk-header__link--homepage">
@@ -74,7 +65,7 @@
       </a>
 
   </div>
-</header> #}
+</header>
 
 {% endblock %}
 
@@ -94,7 +85,7 @@
             text: "Privacy"
           },
           {
-            href: "/manage-prototype/clear-data",
+            href: "/prototype-admin/clear-data",
             text: "Clear data"
           }
         ],
@@ -106,20 +97,8 @@
 
 {% block bodyEnd %}
   {% block scripts %}
-
-  {{ super() }}
-  <script>
-    var AppFrontend = {};
-  </script>
-  <script src="/public/javascripts/components/filter-toggle-button.js"></script>
-
-
     {% include "includes/scripts.html" %}
     {% block pageScripts %}{% endblock %}
   {% endblock %}
-  
   <!-- GOV.UK Prototype Kit {{releaseVersion}} -->
 {% endblock %}
-
-
-

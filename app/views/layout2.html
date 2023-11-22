@@ -41,34 +41,21 @@
 
 {% block header %}
 
+
+
 <header class="govuk-header dwp-header" data-module="govuk-header">
-  
-  {% from "internal-service-header/macro.njk" import dwpHeader %}
-
-      <main>
-      {{ dwpHeader({
-      name: "Workplace health assessment",
-      serviceHref: '/',
-      container:true
-      }) }}
-      </main> 
-
-    <div class="govuk-width-container">
-    <div class="govuk-grid-row">
-
-      
-        {# <div class="govuk-grid-column-two-thirds govuk-!-padding-top-2 govuk-!-padding-bottom-2">
-            <a href="/index" class="govuk-header__link govuk-header__link--service-name">
-                Workplace health assessment
-            </a>
-            <br>
-        </div>
-        #}
-        
-    </div>
+<div class=" govuk-width-container ">
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="/index" class="govuk-header__link govuk-header__link--service-name">
+            Workplace health assessment
+        </a>
     </div>
     
+</div>
+</div>
 </header>
+
 
 
 
@@ -189,7 +176,7 @@
             text: "GOV.UK Prototype Kit " + releaseVersion
           },
           {
-            href: "/manage-prototype/clear-data",
+            href: "/prototype-admin/clear-data",
             text: "Clear data"
           }
         ],
