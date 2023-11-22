@@ -1,0 +1,520 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+<!--  <div class="govuk-width-container">
+<section class="dwp-key-details-bar" aria-label="Key details">
+<dl class="dwp-key-details-bar__key-details">
+</section>
+</div>  -->
+
+<div class="govuk-grid-column-two-thirds">
+
+  <h1 class="govuk-heading-l">Find a provider</h1>
+
+    <div class="moj-search">
+
+      <form action="#" method="post">
+
+        <div class="govuk-form-group">
+
+          <div id="search-hint" class="govuk-hint moj-search__hint ">
+                 You can search by company name
+               </div>
+
+          <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+        </div>
+
+        <button class="govuk-button moj-search__button " data-module="govuk-button">
+          Search
+        </button>
+
+      </form>
+    </div>
+
+</div>
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+
+  <div class="govuk-grid-column-one-third ">
+    <h2 class="govuk-heading-m govuk-!-margin-top-6">Filters</h2>
+    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+              Location
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                  East Anglia
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                  London
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Midlands
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    North East
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                North West
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    South East
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                South West
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                  Wales
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                  Yorkshire
+                  </label>
+                </div>
+
+              </div>
+
+            </fieldset>
+          </div>
+
+            </div>
+      </div>
+
+
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+              Worked with small or medium sized businesses
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                    No
+                  </label>
+                </div>
+
+              </div>
+
+            </fieldset>
+
+
+      </div>
+
+    </fieldset>
+  </div>
+
+
+  </div>
+
+
+
+    </div>
+
+  <a href="filter-results"
+    <button class="govuk-button" data-module="govuk-button">
+  Apply filters
+  </button>
+  </a>
+
+  <p>
+      <a class="govuk-link block govuk-!-margin-bottom-6" href="">Clear all filters</a></p>
+
+    </form>
+  </div>
+
+
+  <div class="govuk-grid-column-two-thirds">
+
+
+<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-6">40 results</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p class="govuk-body"><a href="provider-details1" class="govuk-link govuk-link--no-underline govuk-!-font-weight-bold">Cordell Health Ltd</a></p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <ul class="govuk-list">
+      <li>
+        <span class="govuk-hint">Location:</span>
+          <span> London, Midlands, South West, South East</span>
+          </li>
+          <li>
+            <span class="govuk-hint">Specialisms:</span>
+            <span> Provides assessments on full range of conditions</span>
+            </li>
+            <li>
+  <span class="govuk-hint">Price range after 80% discount:
+</span>
+  <span> £20 - £80 (without discount £100 - £400) </span></li>
+  <li>
+  <span class="govuk-hint">Worked with small or medium sized businesses: </span>
+  <span>Yes</span>
+  </li>
+  <li>
+  <span class="govuk-hint">Type of consultation:  </span>
+  <span>Telephone, Video conference, In-person</span>
+  </li>
+  </ul>
+</div>
+</div>
+
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p class="govuk-body"><a href="#" class="govuk-link govuk-link--no-underline govuk-!-font-weight-bold">Healthwork</a></p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <ul class="govuk-list">
+      <li>
+        <span class="govuk-hint">Location:</span>
+          <span>
+            East Anglia,
+            London,
+            Midlands,
+            North East,
+            North West,
+            South East,
+            South West,
+            Wales,
+            Yorkshire </span>
+          </li>
+          <li>
+            <span class="govuk-hint">Specialisms:</span>
+            <span> Provides assessments on full range of conditions</span>
+            </li>
+            <li>
+  <span class="govuk-hint">Price range after 80% discount:
+</span>
+  <span> £20 - £80 (without discount £100 - £400) </span></li>
+  <li>
+  <span class="govuk-hint">Worked with small or medium sized businesses: </span>
+  <span>Yes</span>
+  </li>
+  <li>
+  <span class="govuk-hint">Type of consultation:  </span>
+  <span>In-person</span>
+  </li>
+  </ul>
+</div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p class="govuk-body"><a href="provider-details2" class="govuk-link govuk-link--no-underline govuk-!-font-weight-bold">Innovate Healthcare Management Group</a></p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <ul class="govuk-list">
+      <li>
+        <span class="govuk-hint">Location:</span>
+          <span> East Anglia,
+          London,
+          Midlands,
+          North East,
+          North West,
+          South East,
+          South West,
+          Wales,
+          Yorkshire</span>
+          </li>
+          <li>
+            <span class="govuk-hint">Specialisms:</span>
+            <span> Provides assessments on full range of conditions</span>
+            </li>
+            <li>
+  <span class="govuk-hint">Price range after 80% discount:
+  </span>
+  <span> £20 - £80 (without discount £100 - £400) </span></li>
+  <li>
+  <span class="govuk-hint">Worked with small or medium sized businesses: </span>
+  <span>Yes</span>
+  </li>
+  <li>
+  <span class="govuk-hint">Type of consultation:  </span>
+  <span>Telephone, Video conference, In-person</span>
+  </li>
+  </ul>
+</div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p class="govuk-body"><a href="#" class="govuk-link govuk-link--no-underline govuk-!-font-weight-bold">Kays Medical</a></p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <ul class="govuk-list">
+      <li>
+        <span class="govuk-hint">Location:</span>
+          <span>
+            East Anglia,
+            London,
+            Midlands,
+            North East,
+            North West,
+            South East,
+            South West,
+            Wales,
+            Yorkshire</span>
+          </li>
+          <li>
+            <span class="govuk-hint">Specialisms:</span>
+            <span> Provides assessments on full range of conditions</span>
+            </li>
+            <li>
+  <span class="govuk-hint">Price range after 80% discount:
+  </span>
+  <span> £20 - £80 (without discount £100 - £400) </span></li>
+  <li>
+  <span class="govuk-hint">Worked with small or medium sized businesses: </span>
+  <span>Yes</span>
+  </li>
+  <li>
+  <span class="govuk-hint">Type of consultation:  </span>
+  <span>Telephone, Video conference, In-person</span>
+  </li>
+  </ul>
+</div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p class="govuk-body"><a href="provider-details3" class="govuk-link govuk-link--no-underline govuk-!-font-weight-bold">Medigold Health</a></p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <ul class="govuk-list">
+      <li>
+        <span class="govuk-hint">Location:</span>
+          <span> East Anglia,
+          London,
+          Midlands,
+          North East,
+          North West,
+          South East,
+          South West,
+          Wales,
+          Yorkshire </span>
+          </li>
+          <li>
+            <span class="govuk-hint">Specialisms:</span>
+            <span> Provides assessments on full range of conditions</span>
+            </li>
+            <li>
+  <span class="govuk-hint">Price range after 80% discount:
+</span>
+  <span> £20 - £80 (without discount £100 - £400) </span></li>
+  <li>
+  <span class="govuk-hint">Worked with small or medium sized businesses: </span>
+  <span>Yes</span>
+  </li>
+  <li>
+  <span class="govuk-hint">Type of consultation:  </span>
+  <span>Telephone, Video conference, In-person</span>
+  </li>
+  </ul>
+</div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p class="govuk-body"><a href="#" class="govuk-link govuk-link--no-underline govuk-!-font-weight-bold">Pegasus Occupational Health Limited</a></p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <ul class="govuk-list">
+      <li>
+        <span class="govuk-hint">Location:</span>
+          <span> East Anglia,
+          London,
+          Midlands,
+          North East,
+          North West,
+          South East,
+          South West,
+          Wales,
+          Yorkshire</span>
+          </li>
+          <li>
+            <span class="govuk-hint">Specialisms:</span>
+            <span> Provides assessments on full range of conditions</span>
+            </li>
+            <li>
+  <span class="govuk-hint">Price range after 80% discount:
+</span>
+  <span> £20 - £80 (without discount £100 - £400) </span></li>
+  <li>
+  <span class="govuk-hint">Worked with small or medium sized businesses: </span>
+  <span>Yes</span>
+  </li>
+  <li>
+  <span class="govuk-hint">Type of consultation:  </span>
+  <span>In-person</span>
+  </li>
+  </ul>
+</div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p class="govuk-body"><a href="#" class="govuk-link govuk-link--no-underline govuk-!-font-weight-bold">TP Health Limited</a></p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <ul class="govuk-list">
+      <li>
+        <span class="govuk-hint">Location:</span>
+          <span> East Anglia,
+          London,
+          Midlands,
+          North East,
+          North West,
+          South East,
+          South West,
+          Wales,
+          Yorkshire</span>
+          </li>
+          <li>
+            <span class="govuk-hint">Specialisms:</span>
+            <span> Provides assessments on full range of conditions</span>
+            </li>
+            <li>
+  <span class="govuk-hint">Price range after 80% discount:
+</span>
+  <span> £20 - £80 (without discount £100 - £400) </span></li>
+  <li>
+  <span class="govuk-hint">Worked with small or medium sized businesses: </span>
+  <span>Yes</span>
+  </li>
+  <li>
+  <span class="govuk-hint">Type of consultation:  </span>
+  <span>Telephone, Video conference, In-person</span>
+  </li>
+  </ul>
+</div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p class="govuk-body"><a href="provider-details4" class="govuk-link govuk-link--no-underline govuk-!-font-weight-bold">Work Wellness Ltd</a></p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <ul class="govuk-list">
+      <li>
+        <span class="govuk-hint">Location:</span>
+          <span> Midlands, South East, South West</span>
+          </li>
+          <li>
+            <span class="govuk-hint">Specialisms:</span>
+            <span> Provides assessments on full range of conditions</span>
+            </li>
+            <li>
+  <span class="govuk-hint">Price range after 80% discount:
+</span>
+  <span> £20 - £80 (without discount £100 - £400) </span></li>
+  <li>
+  <span class="govuk-hint">Worked with small or medium sized businesses: </span>
+  <span>Yes</span>
+  </li>
+  <li>
+  <span class="govuk-hint">Type of consultation:  </span>
+  <span>Telephone, Video conference, In-person</span>
+  </li>
+  </ul>
+</div>
+</div>
+
+<nav class="moj-pagination" aria-label="Pagination navigation">
+
+  <ul class="moj-pagination__list">
+    <li class="moj-pagination__item  moj-pagination__item--prev">
+      <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> page</span></a>
+    </li>
+
+    <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=1" aria-label="Page 1 of 30">1</a></li>
+
+    <li class="moj-pagination__item moj-pagination__item--active" aria-label="Page 2 of 30" aria-current="page">2</li>
+
+    <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3" aria-label="Page 3 of 30">3</a></li>
+
+    <li class="moj-pagination__item moj-pagination__item--dots">…</li>
+
+    <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=5" aria-label="Page 5 of 30">5</a></li>
+
+    <li class="moj-pagination__item  moj-pagination__item--next">
+      <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> page</span></a>
+    </li>
+  </ul>
+  <p class="moj-pagination__results">Showing <b>10</b> to <b>20</b> of <b>30</b> pages</p>
+</nav>
+
+
+
+  </div>
+
+
+</div>
+
+{% endblock %}

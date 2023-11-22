@@ -1,0 +1,49 @@
+{% extends "layout2.html" %}
+
+{% block pageTitle %}
+  Main menu
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      Enter the code
+    </h1>
+
+
+  <div class="govuk-form-group">
+
+    <div id="passport-issued-hint" class="govuk-hint">
+          For example, ABC 43726
+        </div>
+        <div class="govuk-date-input" id="passport-issued">
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+
+              <input class="govuk-input govuk-date-input__input govuk-input--width-two-thirds" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+            </div>
+          </div>
+
+
+          </div>
+          </div>
+
+        
+
+  <a href="validate-code-result"
+          <button class="govuk-button" data-module="govuk-button">Check the code</button>
+  </a>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

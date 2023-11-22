@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">
+You are not eligible to use this service </h1>
+
+
+
+<p>You can only use this service if you have employees.
+</p>
+
+<h2 class="govuk-heading-m">
+Read guidance on: </h2>
+<ul class="govuk-list govuk-list--bullet">
+  <li><a href="https://www.support-disability-healthconditions-atwork.dwp.gov.uk/support-and-manage-disabled-employees-and-employees-with-health-conditions-at-work">
+supporting and managing disabled employees and employees with health conditions at work</a></li>
+<li><a href="https://www.gov.uk/access-to-work">
+  Access to Work: support for employees with a disability or health condition</a></li>
+<li><a href="https://www.gov.uk/government/publications/fit-note-guidance-for-employers-and-line-managers">
+guidance for employers and line managers about fit notes (statements of fitness for work)</a></li>
+<li><a href="https://www.gov.uk/reasonable-adjustments-for-disabled-workers">
+reasonable adjustments for workers with disabilities or health conditions</a></li>
+</ul>
+
+
+
+
+
+
+
+
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}

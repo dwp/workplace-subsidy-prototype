@@ -1,0 +1,161 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+
+              <h1 class="govuk-heading-l">Check your answers </h1>
+
+              <h2 class="govuk-heading-m">Eligibility details</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                  Company registration
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    England and Wales
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> name</span>
+                    </a>
+                  </dd>
+                </div>
+
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                  Number of employees
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+
+                    <p class="govuk-body">1 to 9 employees</p>
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> contact details</span>
+                    </a>
+                  </dd>
+                </div>
+
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                Was your turnover for the 2020 to 2021 financial year less than £10.2 million?
+                </dt>
+                <dd class="govuk-summary-list__value">
+
+                  <p class="govuk-body">No</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">
+                    Change<span class="govuk-visually-hidden"> contact details</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+              Was your balance sheet total for the 2020 to 2021 financial year less than £5.1 million?
+                </dt>
+                <dd class="govuk-summary-list__value">
+
+                  <p class="govuk-body">Yes</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">
+                    Change<span class="govuk-visually-hidden"> contact details</span>
+                  </a>
+                </dd>
+              </div>
+            </dl>
+
+              <h2 class="govuk-heading-m">Contact details</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                  Company name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Philips
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> name</span>
+                    </a>
+                  </dd>
+                </div>
+
+
+
+
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Email address
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+
+                    <p class="govuk-body">phillips@example.com</p>
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> contact details</span>
+                    </a>
+                  </dd>
+                </div>
+              </dl>
+
+
+
+
+  <h2 class="govuk-heading-m">Declaration</h2>
+<p>By sending the application you agree that the information you have given is correct.</p>
+<div class="govuk-inset-text">The Department for Work and Pensions may do further checks on your organisation's eligibility.</div>
+<p>If you deliberately give the wrong information, or you do not report any changes, you may:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li>  be prosecuted</li>
+<li>  need to pay a financial penalty</li>
+<li>  need to pay for the services you have used</li>
+</ul>
+
+<a href="voucher"
+        <button class="govuk-button" data-module="govuk-button">I agree – send my application</button>
+</a>
+
+
+            </div>
+          </div>
+        </main>
+      </div>
+
+
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}

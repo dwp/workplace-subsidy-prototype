@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">What is the name of your organisation?
+</h1>
+
+<div class="govuk-form-group">
+
+    <select class="govuk-select govuk-!-width-two-thirds" id="sort" name="sort">
+    <option value="published"selected></option>
+    <option value="updated" >lorem ipsum</option>
+    <option value="views">lorem ipsum</option>
+    <option value="comments">lorem ipsum</option>
+  </select>
+  </div>
+
+<a href="you-claimed"
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+</a>
+
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}

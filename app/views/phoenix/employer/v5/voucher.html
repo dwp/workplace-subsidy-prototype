@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<h1 class="govuk-heading-l">Your discount code </h1>
+
+
+
+
+      <h2 class="govuk-heading-l govuk-!-margin-top-8"> W 7 4   H L 1   P Z 9</h2>
+<p>We have sent you a confirmation email.
+</p>
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+<h2 class="govuk-heading-m">What happens next </h2>
+
+
+<p>You can search for an occupational health provider to do an assessment. You can do this now or come back later.</p> 
+
+<p>To do this later, click the link in your confirmation email or the 'browse providers' link on the Start page of the service.</p>
+
+<p>You can also <a href="/phoenix/employer/v5/start-page"> get another discount code </a>for any other employees.</p>
+
+
+
+
+
+
+
+
+<a href="/phoenix/employer/register/v2/page-1"
+      <button class="govuk-button govuk-!-margin-top-4" data-module="govuk-button">
+    Find a provider
+  </button></a>
+<p><a href="">Print this page</a></p>
+
+    </div>
+  </div>
+  </main>
+  </div>
+{% endblock %}

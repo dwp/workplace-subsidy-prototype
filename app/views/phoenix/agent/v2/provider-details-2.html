@@ -1,0 +1,76 @@
+{% extends "layout2.html" %}
+
+{% block pageTitle %}
+  Main menu
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      Cordell Health Ltd
+    </h1>
+
+    <strong class="govuk-tag">
+    Published on the register
+    </strong>
+
+
+    <nav class="moj-sub-navigation govuk-!-margin-top-6" aria-label="Sub navigation">
+
+      <ul class="moj-sub-navigation__list">
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" aria-current="page" href="provider-details-1">Details</a>
+        </li>
+
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="provider-details-2">Address</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="provider-details-4">Eligibility</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="provider-details-3">Assessment</a>
+        </li>
+
+
+      </ul>
+
+    </nav>
+
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Address
+      </dt>
+      <dd class="govuk-summary-list__value">
+        72 Guild Street<br>London<br>SE23 6FH
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">
+          Change<span class="govuk-visually-hidden"> address</span>
+        </a>
+      </dd>
+    </div>
+
+
+  </dl>
+
+    </div>
+
+
+
+
+
+
+
+  </div>
+
+{% endblock %}

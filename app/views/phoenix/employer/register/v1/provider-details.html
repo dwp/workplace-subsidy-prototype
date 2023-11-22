@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">
+Provider details</h1>
+
+
+<table class="govuk-table">
+  <!-- <caption class="govuk-table__caption govuk-table__caption--m">Dates and amounts</caption> -->
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Company name</th>
+      <td class="govuk-table__cell">Company T</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Address</th>
+      <td class="govuk-table__cell">72 Guild Street<br>London<br>SE23 6FH</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Phone number</th>
+      <td class="govuk-table__cell">+44 345768 9303</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Email address</th>
+      <td class="govuk-table__cell">companyT@provider.co.uk</td>
+    </tr>
+  <!--  <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Other branches</th>
+      <td class="govuk-table__cell">i dont know</td>
+    </tr>  -->
+  <!--  <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Specialisations</th>
+      <td class="govuk-table__cell">Building</td>
+    </tr> -->
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Experience working with SMEs</th>
+      <td class="govuk-table__cell">Yes</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Type</th>
+      <td class="govuk-table__cell">In person</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Price range</th>
+      <td class="govuk-table__cell">£100 health assessment<br>£180 nurse health assessment<br>£280 doctor health assessment</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Website</th>
+      <td class="govuk-table__cell"><a href="https://www.som.org.uk/find-oh-provider-company" class="govuk-link" rel="noreferrer noopener" target="_blank">Company T website (opens in new tab)</a></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+<a href="list"
+      <button class="govuk-button" data-module="govuk-button">
+  Return to providers list
+  </button></a>
+  </div>
+  </div>
+
+
+{% endblock %}

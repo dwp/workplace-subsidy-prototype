@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Get help to find and pay for an occupational health assessment
+    </h1>
+<p>As a small or medium sized business, you may have concerns about your employee’s health. 
+This could be because of a disability, a health concern or long-term health condition.</p>
+
+
+      <p>This service can help you find an approved health care provider to carry out a comprehensive health assessment at an 80% discount. </p>
+
+  <h2 class="govuk-heading-m">A health assessment can provide you with:  </h2>
+          <ul class="govuk-list govuk-list--bullet">
+  <li>support for  a disabled person to stay in work </li>
+<li>assistance for employees get back into work after being off sick</li>
+<li>help to manage your employee’s physical and mental health</li>
+<li>tailored advice to manage an employee’s health condition</li>
+      </ul>
+<p>
+Once carried out, you and your employee will get a report with recommended next steps. Any further occupational health services are not discounted.</p>
+
+<h2 class="govuk-heading-m">
+Who can use this service </h2>
+
+<p>You are eligible if your business is registered in England or Wales and you have: </p>
+
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>1-50 employees and your annual turnover is £6.5 million or less or a balance sheet total of £3.26million or less</li>
+<p>or</p>
+  <li>51-250 employees, and annual turnover is £25.9million or less or a balance sheet total of £12.9million or less</li>
+
+</ul>
+
+
+
+
+
+      <a href="are-you-eligible" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+        Start now
+        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+        </svg>
+      </a>
+
+
+
+
+      <p>The online service is also available in <a href="#">Welsh (Cymraeg)</a>.</p>
+
+
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <div class="app-step-nav-related app-step-nav-related--singular">
+        <h2 class="app-step-nav-related__heading">
+          <span class="app-step-nav-related__pretitle">Related content</span>
+          <a href="#">
+            Support and manage disabled employees and employees with health conditions
+          </a>
+        </h2>
+      </div>
+
+
+
+
+            </div>
+
+
+      </div>
+
+
+
+
+  </div>
+{% endblock %}

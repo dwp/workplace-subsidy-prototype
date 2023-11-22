@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Medigold Health - Northampton
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">
+Medigold Health - Northampton</h1>
+
+
+<table class="govuk-table">
+  <!-- <caption class="govuk-table__caption govuk-table__caption--m">Dates and amounts</caption> -->
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Address</th>
+      <td class="govuk-table__cell">
+Medigold House<br>
+1 Queensbridge<br>
+Northampton<br>
+NN4 7BF
+
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Phone number</th>
+      <td class="govuk-table__cell">+44 330390 3370</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Email address</th>
+      <td class="govuk-table__cell">enquiries@medigold-health.com</td>
+    </tr>
+  <!--  <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Other branches</th>
+      <td class="govuk-table__cell">i dont know</td>
+    </tr>  -->
+  <!--  <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Specialisations</th>
+      <td class="govuk-table__cell">Building</td>
+    </tr> -->
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Worked with small or medium-sized businesses</th>
+      <td class="govuk-table__cell">Yes</td>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Type of consultation</th>
+        <td class="govuk-table__cell">Remote (telephone), Remote (video), In-person (clinic), In-person (home)</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Cancellation policy</th>
+        <td class="govuk-table__cell">Free cancellation within 48 hours</td>
+      </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Price range after 80% discount </th>
+
+
+      <td class="govuk-table__cell">£20 - £80 <br>(without discount £100 - £400)</td>
+      </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Website</th>
+      <td class="govuk-table__cell"><a href="https://www.medigold-health.com" class="govuk-link" rel="noreferrer noopener" target="_blank">Medigold Health website (opens in new tab)</a></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+<a href="list"
+      <button class="govuk-button" data-module="govuk-button">
+  Return to providers list
+  </button></a>
+  </div>
+  </div>
+
+
+{% endblock %}

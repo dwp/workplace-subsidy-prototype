@@ -1,0 +1,72 @@
+{% extends "layout2.html" %}
+
+{% block pageTitle %}
+  Main menu
+{% endblock %}
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<form class="form" method="post">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
+    <h1 class="govuk-fieldset__heading">
+      What are the assessment types for this clinic?
+    </h1>
+  </legend>
+  <div class="govuk-form-group">
+ 
+    <div id="waste-hint" class="govuk-hint">
+ Select all that apply.
+</div>
+    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+ 
+  <div class="govuk-checkboxes__item">
+    <input class="govuk-checkboxes__input" id="workplacehealth-3" name="assessmentType" type="checkbox" value="phone-method">
+    <label class="govuk-label govuk-checkboxes__label" for="workplacehealth-3">
+    Phone
+    </label>
+  </div>
+  <div class="govuk-checkboxes__item">
+    <input class="govuk-checkboxes__input" id="workplacehealth-4" name="assessmentType" type="checkbox" value="video-method">
+    <label class="govuk-label govuk-checkboxes__label" for="workplacehealth-4">
+    Video call
+    </label>
+  </div>
+  <div class="govuk-checkboxes__item">
+    <input class="govuk-checkboxes__input" id="workplacehealth-5" name="assessmentType" type="checkbox" value="homevisit">
+    <label class="govuk-label govuk-checkboxes__label" for="workplacehealth-5">
+    Home visit
+    </label>
+  </div>
+  <div class="govuk-checkboxes__item">
+    <input class="govuk-checkboxes__input" id="workplacehealth-6" name="assessmentType" type="checkbox" value="clinicvisit">
+    <label class="govuk-label govuk-checkboxes__label" for="workplacehealth-6">
+    At a clinic
+    </label>
+  </div>
+  <div class="govuk-checkboxes__item">
+    <input class="govuk-checkboxes__input" id="workplacehealth-7" name="assessmentType" type="checkbox" value="workplacevisit">
+    <label class="govuk-label govuk-checkboxes__label" for="workplacehealth-7">
+    At a workplace
+    </label>
+  </div>
+    </div>
+    </div>
+
+<a href="change-email-confirmation"
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+</a>
+
+</form>
+    </div>
+  </div>
+
+{% endblock %}

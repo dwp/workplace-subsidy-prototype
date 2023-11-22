@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers 
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+
+              <h1 class="govuk-heading-l">Check your answers </h1>
+
+              <h2 class="govuk-heading-m">Details</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                  Company name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Philips
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> name</span>
+                    </a>
+                  </dd>
+                </div>
+
+
+
+
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Email address
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+
+                    <p class="govuk-body">sarah.phillips@example.com</p>
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> contact details</span>
+                    </a>
+                  </dd>
+                </div>
+              </dl>
+
+
+
+              <a href="declaration"
+                      <button class="govuk-button" data-module="govuk-button">Continue</button>
+              </a>
+
+
+
+            </div>
+          </div>
+        </main>
+      </div>
+
+
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}

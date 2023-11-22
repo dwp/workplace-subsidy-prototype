@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Your discount code
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<h1 class="govuk-heading-l">Your discount code </h1>
+
+
+
+
+      <h2 class="govuk-heading-l govuk-!-margin-top-8"> W B Y  6 9 0 7 3</h2>
+<p>We have sent you a confirmation email containing your discount code.</p>
+
+<p>Your discount code has no expiry date.*</p>
+
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+<h2 class="govuk-heading-m">What happens next </h2>
+
+
+<p>You can search for a workplace health provider to do an assessment. You can do this now or come back later.
+</p><p>To do this later, click the link in your confirmation email or the 'browse providers' link on the Start page of the service.</p>
+<p>When you have selected a provider and agreed on an assessment, you should tell them your discount code over the phone, or email them, to claim the 80% discount.</p>
+
+
+<p>You can also <a href="start-page"> get another discount code </a> for any other employees. You can use the discount scheme as many times as you like, for as many employees as you want. You can also use it again for the same employee if they need another assessment. </p>
+
+<h2 class="govuk-heading-m">Post-assessment survey  </h2>
+
+
+<p>If you get a discounted workplace health assessment through this service, we may contact you to gain feedback on the quality of the service you received.
+ </p>
+
+
+
+
+
+
+<a href="/phoenix/employer/register/v4/page-1"
+      <button class="govuk-button govuk-!-margin-top-4" data-module="govuk-button">
+    Find a provider
+  </button></a>
+
+
+
+
+<p>*The government reserves the right to discontinue or otherwise vary the terms of the scheme in any way upon reasonable notice, at which point the discount will no longer be valid.</p>
+
+<p><a href="">Print this page</a></p>
+
+    </div>
+  </div>
+  </main>
+  </div>
+{% endblock %}

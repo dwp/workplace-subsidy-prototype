@@ -1,0 +1,193 @@
+{% extends "layout2.html" %}
+
+{% block pageTitle %}
+  Main menu
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+      Acorn Occupational Health Ltd
+    </h1>
+    <strong class="govuk-tag govuk-tag--green">
+
+    Published
+    </strong>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+
+
+      <nav class="moj-side-navigation govuk-!-margin-top-5" aria-label="Side navigation">
+        <ul class="moj-side-navigation__list">
+          <li class="moj-side-navigation__item moj-side-navigation__item--active">
+            <a href="single-provider-details-1" aria-current="location">Clinic details</a>
+          </li>
+
+          <li class="moj-side-navigation__item">
+            <a href="single-provider-details-2">Application details</a>
+          </li>
+
+
+          <li class="moj-side-navigation__item">
+            <a href="single-provider-details-6">Changes record</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+
+
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m govuk-!-margin-top-7">
+    Application details
+    </h2>
+
+
+      <dl class="govuk-summary-list govuk-!-margin-top-5">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Provider name
+          </dt>
+          <dd class="govuk-summary-list__value">
+        Acorn Occupational Health Ltd
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> provider name</span>
+            </a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name of person who sent application
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Jane Doe
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+          acorn@example.com
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> email address</span>
+            </a>
+          </dd>
+        </div>
+
+
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Phone number
+          </dt>
+          <dd class="govuk-summary-list__value">07700 900457</dd>
+
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> phone number</span>
+            </a>
+          </dd>
+        </div>
+</dl>
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-7">
+        Healthcare professional's details
+        </h2>
+
+          <dl class="govuk-summary-list govuk-!-margin-top-5">
+
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Full name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Mohammad Hamdi Qonsowa
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> name</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+              Job role
+              </dt>
+              <dd class="govuk-summary-list__value">
+            Doctor
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> professional qualification</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Number
+              </dt>
+              <dd class="govuk-summary-list__value">
+              7662688
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> number</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+              Qualification
+              </dt>
+              <dd class="govuk-summary-list__value">
+              Qualification.doc
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> number</span>
+                </a>
+              </dd>
+            </div>
+
+  </dl>
+
+  <p class="govuk-body"> <a href="delete-provider" class="govuk-link">Remove from database </a></p>
+
+    </div>
+
+
+
+
+
+
+
+  </div>
+
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends "layout-employer.html" %}
+
+{% block pageTitle %}
+  Was your balance sheet total for the 2020 to 2021 financial year less than
+{% endblock %}
+
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" method="post">
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+
+
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
+<h1 class="govuk-fieldset__heading">
+  What was your balance sheet total for your latest financial year?</h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="balance" name="balance" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="balance">
+                  {% if data['size'] === 'micro' %}
+                  Less than £5.1 million
+                  {% elseif data['size'] === 'small' %}
+                  Less than £5.1 million
+                  {% elseif data['size'] === 'medium' %}
+                  Less than £18 million
+                  {% else %}
+
+                  {% endif %}
+
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="balance-2" name="balance" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="balance-2">
+                  {% if data['size'] === 'micro' %}
+                  More than £5.1 million
+                  {% elseif data['size'] === 'small' %}
+                  More than £5.1 million
+                  {% elseif data['size'] === 'medium' %}
+                  More than £18 million
+                  {% else %}
+
+                  {% endif %}
+                </label>
+              </div>
+
+
+            </div>
+
+
+
+
+          </fieldset>
+        </div>
+
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+</form>
+    </div>
+  </div>
+
+{% endblock %}

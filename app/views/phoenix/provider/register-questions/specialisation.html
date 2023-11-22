@@ -1,0 +1,248 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+  <form class="form" method="post">
+        <div class="govuk-form-group">
+
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
+              <h1 class="govuk-fieldset__heading">
+                Do you have any area(s) of expertise?
+              </h1>
+            </legend>
+            <div class="govuk-form-group">
+
+      <div id="waste-hint" class="govuk-hint">
+        Select all that apply.
+      </div>
+      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+          <label class="govuk-label govuk-checkboxes__label" for="waste">
+            Academia
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            Aerospace
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Agriculture
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Armed Forces
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Building
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Chemicals
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Commerce
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Communications
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Electronics
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Engineering-Heavy
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Engineering-Light
+          </label>
+        </div>  <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+              Food
+            </label>
+          </div>  <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Government
+              </label>
+            </div>  <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                  Health
+                </label>
+              </div>  <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                  <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                    IT
+                  </label>
+                </div>  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                      Leisure and Brewing
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                        Local Authority
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                          Media
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                            Medico-legal
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                              Mining
+                            </label>
+                          </div><div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                Motor
+                              </label>
+                            </div><div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                  Oil
+                                </label>
+                              </div><div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                  <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                    Pharmaceuticals
+                                  </label>
+                                </div><div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                    Potteries and Glass
+                                    </label>
+                                  </div>
+                                  <div class="govuk-checkboxes__item">
+                                      <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                      <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                    Radiation Medicine
+                                      </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                      Retail
+                                        </label>
+                                      </div>
+                                      <div class="govuk-checkboxes__item">
+                                          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                        Textiles
+                                          </label>
+                                        </div><div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                          Textiles and Paper
+                                            </label>
+                                          </div><div class="govuk-checkboxes__item">
+                                              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                            Tabacco
+                                              </label>
+                                            </div><div class="govuk-checkboxes__item">
+                                                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                                Transport
+                                                </label>
+                                              </div><div class="govuk-checkboxes__item">
+                                                  <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                                  <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                                Utilities
+                                                  </label>
+                                                </div><div class="govuk-checkboxes__item">
+                                                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                                  Occupational Medicine
+                                                    </label>
+                                                  </div><div class="govuk-checkboxes__item">
+                                                      <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                                      <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                                    Mental Health
+                                                      </label>
+                                                    </div><div class="govuk-checkboxes__item">
+                                                        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                                        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                                    III Health Retirements
+                                                        </label>
+                                                      </div><div class="govuk-checkboxes__item">
+                                                          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                                          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                                        Fitness for Work and Disability Discrimination
+                                                          </label>
+                                                        </div>
+
+      </div>
+
+    </fieldset>
+  </div>
+
+
+
+
+<a href="price"
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+</a>
+
+</form>
+    </div>
+  </div>
+
+{% endblock %}

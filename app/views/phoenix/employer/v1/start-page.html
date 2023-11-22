@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Get expert health support at work for a disabled employee or an employee with a health condition
+    </h1>
+<p>Use this service to find subsidised workplace health services if an employee's condition is affecting them at work. Workplace health services are often referred to as occupational health and can provide a range of support to employers. They are usually paid for, but can save you time and money by helping to keep an employee in work.
+<p>
+Eligible businesses will get an 80% discount when buying qualifying occupational health services.</p>
+
+      <p>This service will help you find subsidised occupational health experts who can:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>give tailored advice about an employee’s specific health condition or impairment</li>
+            <li>decide on changes in the workplace</li>
+<li>conduct workplace assessments</li>
+<li>support your employee to manage their health</li>
+      </ul>
+
+<h2 class="govuk-heading-m">Who can use this service </h2>
+<p>You can use this service if:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>your business is registered in England or Wales
+  <li>you have less than 250 employees</li>
+  <li>you meet one of the following statements, you have:</li>
+<ul class="govuk-list govuk-list--bullet">
+  <li>1-50 employees, a turnover less than £6.5 million or balance sheet total less than £3.26 million</li>
+<li>51-250 employees, a turnover less than £25.9 million or balance sheet total less than £12.9 million</li>
+</ul>
+</ul>
+
+<h3 class="govuk-heading-m">Before you start </h3>
+<p>You will need:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li> your business PAYE number</li>
+  <li> your number of employees</li>
+  <li> your turnover or balance sheet for the tax year 2020-2021</li>
+  </ul>
+
+
+
+      <a href="are-you-eligible" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+        Start now
+        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+        </svg>
+      </a>
+
+      <h4 class="govuk-heading-m">If you need general advice</h4>
+
+      <p>There's different guidance if you need general information. </p>
+
+      <p>Get advice on  <a href="#"> how to support and manage disabled employees and employees with health conditions</a>, including:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>having conversations with your employees, in or out of work</li>
+        <li>understanding any legal requirements</li>
+        <li>managing absence</li>
+
+      </ul>
+
+
+      <p>The online service is also available in <a href="#">Welsh (Cymraeg)</a>.</p>
+
+
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <div class="app-step-nav-related app-step-nav-related--singular">
+        <h2 class="app-step-nav-related__heading">
+          <span class="app-step-nav-related__pretitle">Related content</span>
+          <a href="#">
+            Support and manage disabled employees and employees with health conditions
+          </a>
+        </h2>
+      </div>
+
+
+
+
+            </div>
+
+
+      </div>
+
+
+
+
+  </div>
+{% endblock %}

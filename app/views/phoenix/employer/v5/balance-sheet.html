@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" method="post">
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+
+
+
+{% if data['size'] === 'micro' %}
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<span class="govuk-caption-l">Find out if you're eligible</span>
+<h1 class="govuk-fieldset__heading">
+            Was your balance sheet total for the 2020 to 2021 financial year £5.1 million or less?
+
+
+
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="balance" name="balance" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="balance">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="balance-2" name="balance" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="balance-2">
+                  No
+                </label>
+              </div>
+
+
+            </div>
+    {% elseif data['size'] === 'small' %}
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<span class="govuk-caption-l">Find out if you're eligible</span>
+      <h1 class="govuk-fieldset__heading">
+          Was your balance sheet total for the 2020 to 2021 financial year £5.1 million or less? </h1>
+
+                      </legend>
+                      <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="balance" name="balance" type="radio" value="yes">
+                          <label class="govuk-label govuk-radios__label" for="balance">
+                            Yes
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="balance-2" name="balance" type="radio" value="no">
+                          <label class="govuk-label govuk-radios__label" for="balance-2">
+                            No
+                          </label>
+                        </div>
+
+
+
+
+
+    {% elseif data['size'] === 'medium' %}
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<span class="govuk-caption-l">Find out if you're eligible</span>
+      <h1 class="govuk-fieldset__heading">Was your balance sheet total for the 2020 to 2021 financial year £11.4 million or less?</h1>
+
+                  </legend>
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="balance" name="balance" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="balance">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="balance-2" name="balance" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="balance-2">
+                        No
+                      </label>
+                    </div>
+                    
+
+
+
+                          {% else %}
+
+                          {% endif %}
+
+
+
+          </fieldset>
+        </div>
+
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+</form>
+    </div>
+  </div>
+
+{% endblock %}

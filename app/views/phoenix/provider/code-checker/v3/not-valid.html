@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">We could not find this discount code
+
+</h1>
+
+
+<p>You have entered:
+<h2 class="govuk-heading-m">W B Y  6 9 0 7 2</h2>
+
+<p>  We have not been able to find this code. This could be because:  </p>
+<ul class="govuk-list govuk-list--bullet">
+<li>an error was made when entering the code </li>
+<li>the employer made an error when giving you the code </li>
+ </ul>
+
+<p>Make sure you correctly entered the code given to you by the employer.  </p>
+
+<p>If the code still cannot be found, try going back to the employer to check they gave you the correct code..
+</p>
+
+<a href="what-is-code"
+        <button class="govuk-button" data-module="govuk-button">Try again</button>
+</a>
+<p><a href="left">
+        Leave service
+</a></p>
+
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,113 @@
+{% extends "layout2.html" %}
+
+{% block pageTitle %}
+  Main menu
+{% endblock %}
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<form class="form" method="post">
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          What is the healthcare professional's job role and registration number?
+        </h1>
+      </legend>
+
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="jobRole-1" name="jobRole" type="radio" value="doctor" data-aria-controls="conditional-jobrole" checked="jobRole" >
+          <label class="govuk-label govuk-radios__label" for="jobRole-1" >
+           Doctor
+          </label>
+        </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-jobrole">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="doctor-number">
+             GMC number
+            </label>
+            <input class="govuk-input govuk-!-width-one-third" id="doctor-number" name="doctor-number" type="doctor" spellcheck="false" autocomplete="doctor" value="7662688" >
+          </div>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="jobRole-2" name="jobRole" type="radio" value="nurse" data-aria-controls="conditional-jobrole-2">
+          <label class="govuk-label govuk-radios__label" for="jobRole-2">
+            Nurse
+          </label>
+        </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-jobrole-2">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="nurse-number">
+              NMC number
+            </label>
+            <input class="govuk-input govuk-!-width-one-third" id="nurse-number" name="nurse-number" type="nurse" autocomplete="nurse">
+          </div>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="jobRole-3" name="jobRole" type="radio" value="occupationalTherapist" data-aria-controls="conditional-jobrole-3">
+          <label class="govuk-label govuk-radios__label" for="jobRole-3">
+            Occupational therapist
+          </label>
+        </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-jobrole-3">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="ot-number">
+              HCPC number
+            </label>
+            <input class="govuk-input govuk-!-width-one-third" id="ot-number" name="ot-number" type="occupationalTherapist" autocomplete="occupationalTherapist">
+          </div>
+        </div>
+       
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="jobRole-5" name="jobRole" type="radio" value="physiotherapist" data-aria-controls="conditional-jobrole-5">
+          <label class="govuk-label govuk-radios__label" for="jobRole-5">
+            Physiotherapist
+          </label>
+        </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-jobrole-5">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="physio-no">
+              HCPC number
+            </label>
+            <input class="govuk-input govuk-!-width-one-third" id="physio-no" name="physio-no" type="physiotherapist" autocomplete="physiotherapist">
+          </div>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="jobRole-6" name="jobRole" type="radio" value="psychologist" data-aria-controls="conditional-jobrole-6">
+          <label class="govuk-label govuk-radios__label" for="jobRole-6">
+            Psychologist
+          </label>
+        </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-jobrole-6">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="phych-no">
+              HCPC number
+            </label>
+            <input class="govuk-input govuk-!-width-one-third" id="phych-no" name="phych-no" type="psychologist" autocomplete="psychologist">
+          </div>
+        </div>
+        
+      </div>
+    </fieldset>
+  </div>
+
+
+<a href="changed-hcp-role-and-number-provider-details"
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+</a>
+
+</form>
+    </div>
+  </div>
+
+{% endblock %}

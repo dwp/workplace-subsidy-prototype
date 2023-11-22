@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">Find an occupational health provider</h1>
+
+      <p>
+        Search the list to find a provider who can give you a discounted occupational health assessment for your employee.  </p>
+      <p>  Select a provider then use the details provided to contact them directly. The provider will talk to you about:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>  how complex your employee's situation is</li>
+<li>  who they recommend to do the assessment - this could be a doctor, nurse or other health professional </li>
+</ul>
+
+<p>  They'll also talk to you about whether they need to see your employee in person. This could be for a range of reasons, such as: </p>
+  <ul class="govuk-list govuk-list--bullet">
+<li>  your employee has communication difficulties</li>
+<li>  the provider may need to assess their workspace</li>
+</ul>
+
+<h2 class="govuk-heading-m">
+
+How you pay for the assessment </h2>
+
+<p>The price will depend on which provider you select. </p>
+
+<p>Based on your discussion, the provider will give you a quote. This will be between £100 and £400. Eligible businesses get an 80% discount. After discount, the amount you pay will be between £20 and £80.</p>
+<p>When paying the invoice, give the provider your 80% discount code and pay them the other 20%. The provider will claim the rest from the government. </p>
+<p>If your employee does not attend the appointment as arranged, you will have to pay 100% of the cost. </p>
+
+
+
+
+
+<a href="location"
+      <button class="govuk-button" data-module="govuk-button">
+  Find a provider
+  </button></a>
+
+
+
+
+  <p>The providers in the list have been through an evaluation process, but we do not check their individual services. When choosing a provider, it is important you check their services will meet your needs.</p>
+<p>  Read more about <a href="">how providers have been evaluated</a>.</p>
+
+
+
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}

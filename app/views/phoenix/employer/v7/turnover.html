@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+    Was your turnover for the 2020 to 2021 financial year less than
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+<form class="form" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<span class="govuk-caption-l">Find out if you're eligible</span>
+              <h1 class="govuk-fieldset__heading">
+                Was your turnover for the 2020 to 2021 financial year less than
+{% if data['size'] === 'small' %}
+            £10.2 million?
+
+{% elseif data['size'] === 'micro' %}
+            £10.2 million?
+
+{% elseif data['size'] === 'medium' %}
+            £22.8 million?
+
+              {% else %}
+
+              {% endif %}
+
+
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="turnover" name="turnover" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="turnover">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="turnover-2" name="turnover" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="turnover-2">
+                  No
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="turnover-2" name="turnover" type="radio" value="new">
+                <label class="govuk-label govuk-radios__label" for="turnover-3">
+                  My company is less than a year old
+                </label>
+              </div>
+
+            </div>
+
+          </fieldset>
+        </div>
+
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+</form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">How the listed occupational health providers have been evaluated </h1>
+
+      <p>
+        All the health providers listed in this service have had to go through a range of eligibility checks, and prove they meet certain professional standards.
+        </p>
+            <p>  These include: </p>
+<ul class="govuk-list govuk-list--bullet">
+<li>  proof of registration to a professional body </li>
+<li>  evidence of clinical governance </li>
+<li>  evidence of proper complaints or feedback mechanisms  </li>
+<li>  evidence of professional data management </li>
+<li>  a referral pathway </li>
+
+</ul>
+
+<p>  In addition, all providers have declared that they will: </p>
+
+  <ul class="govuk-list govuk-list--bullet">
+<li>  have an initial conversation with the employer to understand context of business  </li>
+<li>  discuss with the employee (during the assessment) about what will be included in the report  </li>
+<li>ensure the person undertaking the assessment is, or has oversight from, a qualified professional </li>
+<li>give the employee the option to see the report prior to sending to their employer </li>
+<li>produce a comprehensive assessment report </li>
+
+</ul>
+
+
+
+<a href="location"
+      <button class="govuk-button" data-module="govuk-button">
+  Find a provider
+  </button></a>
+
+
+
+
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}

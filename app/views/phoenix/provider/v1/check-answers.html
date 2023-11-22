@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+
+              <h1 class="govuk-heading-l">Check your answers before sending your application</h1>
+
+              <h2 class="govuk-heading-m">Personal details</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    SEQOHS certificate number
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    23451978
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> seqohs certificate number</span>
+                    </a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Sarah Philips
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> name</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Business name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Company XYZ
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> business name</span>
+                    </a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Contact details
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">07700 900457</p>
+                    <p class="govuk-body">sarah.phillips@example.com</p>
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> contact details</span>
+                    </a>
+                  </dd>
+                </div>
+              </dl>
+
+
+
+
+              <form action="declaration" method="post" novalidate>
+
+                <input type="hidden" name="answers-checked" value="true">
+
+                <button class="govuk-button" data-module="govuk-button">
+                  Continue
+                </button>
+
+              </form>
+
+            </div>
+          </div>
+        </main>
+      </div>
+
+
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}

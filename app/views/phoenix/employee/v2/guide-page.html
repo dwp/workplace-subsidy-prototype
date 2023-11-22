@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">
+Get expert health support at work <h1>
+
+<p>Workplace health services can help you manage your health and wellbeing at work. </p>
+
+<p>If something to do with your health is affecting you at work, you may find it useful to speak to a workplace health professional. </p>
+
+<p>You can ask your employer if they'll consider referring you for a workplace health assessment. Or your employer may ask if you'll agree to one. </p>
+
+
+
+<p>
+You do not have to agree, but an assessment can help you get any support you might need to:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li>stay in work</li>
+<li>get back to work if you've been off sick </li>
+
+</ul>
+
+
+
+<h2 class="govuk-heading-m"> What happens in a workplace health assessment</h2>
+
+<p>A workplace health professional will provide impartial advice to help you and your employer. They could be doctors, nurses, or other health providers. </p>
+
+<p>During the assessment they'll talk to you about:  </p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li>your health and any treatment you're having</li>
+<li>your usual work activities</li>
+<li>your general lifestyle and activities outside work </li>
+
+</ul>
+<p>A report will be written after the assessment. All assessment providers available through this service have agreed that they will discuss with you what will go in the report so you’ll be able to correct any factual inaccuracies and/or give you the opportunity to see the report before it’s sent to your employer.
+
+</p>
+<h2 class="govuk-heading-m">What happens after a workplace health assessment</h2>
+
+
+<p>A report will be prepared containing advice and recommendations, which could include:  </p>
+<ul class="govuk-list govuk-list--bullet">
+<li>adjustments to your workspace, such as a bigger screen or ergonomic chair </li>
+<li>a phased return to work or different working hours </li>
+<li>a referral to other services, like physiotherapy or counselling </li>
+</ul>
+
+<p>If you want to, you can add your own personal statement to accompany the report. You might do this, for example, if you feel there’s other relevant information you would like to make known.  </p>
+<p>After you and your employer have seen the report, you should both decide the best course of action to take. </p>
+
+
+
+<h2 class="govuk-heading-m">How to get a workplace health assessment</h2>
+
+<p>Search the list to find a workplace health provider to do an assessment for you. You can filter by specialism, location and cost.</p>
+
+<p>Once you have found a provider you should discuss the details with your employer. </p>
+
+<p>Your employer will be responsible for making first contact with the provider. When they do this, the provider will ask about:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li>the details of your situation</li>
+<li>who they recommend to do your assessment - a doctor, nurse or other health professional</li>
+<li>whether they need to see you in person - this could be to assess your workspace</li>
+</ul>
+<p>Your employer will pay for the assessment. </p>
+
+<a href="/phoenix/employer/register/v4/location"
+      <button class="govuk-button" data-module="govuk-button">
+  Browse providers
+  </button></a>
+  </div>
+
+
+<div class="govuk-grid-column-one-third">
+
+  <div class="app-step-nav-related app-step-nav-related--singular ">
+    <h2 class="app-step-nav-related__heading">
+      <span class="app-step-nav-related__pretitle">Related content</span>
+
+      <a href="https://www.gov.uk/access-to-work" class="govuk-body-s ">
+              Access to Work: get support if you have a disability or health condition </a>
+        <br><br>
+
+
+<a href="https://www.gov.uk/reasonable-adjustments-for-disabled-workers" class="govuk-body-s">
+        Reasonable adjustments for workers with disabilities or health conditions </a>
+<br><br>
+        <a href="https://www.gov.uk/definition-of-disability-under-equality-act-2010" class="govuk-body-s">
+                Definition of disability under the Equality Act 2010 </a>
+      <br><br>
+  <a href="https://www.gov.uk/rights-disabled-person" class="govuk-body-s">
+            Disability rights </a>
+
+
+    </h2>
+  </div>
+
+
+
+
+        </div>
+
+
+  </div>
+</main>
+    </div>
+
+{% endblock %}

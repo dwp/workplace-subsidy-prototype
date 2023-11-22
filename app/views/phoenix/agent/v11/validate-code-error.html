@@ -1,0 +1,72 @@
+{% extends "layout2.html" %}
+
+{% block pageTitle %}
+  Main menu
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#">Discount code not found</a>
+        </li>
+        <li>
+          <a href="#"><ul class="govuk-list govuk-list--bullet">
+            <li>you entered the code incorrectly</li>
+            <li>the provider made an error on their invoice</li>
+            <li>the code does not exist</li>
+            </ul></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div> 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      What is the discount code?
+    </h1>
+
+
+  <div class="govuk-form-group">
+
+    <div id="passport-issued-hint" class="govuk-hint">
+          For example, ABC 234
+        </div>
+        <div class="govuk-date-input" id="passport-issued">
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+
+              <input class="govuk-input govuk-date-input__input govuk-input--width-two-thirds" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+            </div>
+          </div>
+
+
+          </div>
+          </div>
+
+
+
+  <a href="validate-code-result"
+          <button class="govuk-button" data-module="govuk-button">Check the code</button>
+  </a>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends "layout2.html" %}
+
+{% block pageTitle %}
+  Main menu
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<span class="govuk-caption-l">Cordell Health Ltd</span>
+    <h1 class="govuk-heading-l">
+    Clinic details
+    </h1>
+
+    <dl class="govuk-summary-list govuk-!-margin-top-5">
+
+
+      
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Address
+      </dt>
+      <dd class="govuk-summary-list__value">
+        St Andrews House<br> St Andrew's Rd<br> Bristol <br>BS11 9DQ
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="change-clinic-address">
+          Change<span class="govuk-visually-hidden"> address</span>
+        </a>
+      </dd>
+    </div>
+
+
+    
+
+
+
+   
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+      Publication status
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+
+          Published
+          </strong>
+    
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="unpublish-provider">
+          Change<span class="govuk-visually-hidden"> provider visible</span>
+        </a>
+      </dd>
+    </div>
+
+
+
+  </dl>
+
+  
+
+
+
+</div>
+    </div>
+</div>
+
+  </div>
+
+{% endblock %}

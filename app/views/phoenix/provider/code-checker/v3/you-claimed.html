@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        You claimed the discount code
+
+      </h1>
+      <div class="govuk-panel__body">
+        <strong>WBY 69O73</strong>
+      </div>
+    </div>
+    <p>  We have sent you a confirmation email. </p>
+
+<h2 class="govuk-heading-m">    What happens next</h2>
+
+  <p>After you complete the assessment, you need to invoice [employer name] for:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>    20% of the cost of the assessment, including any travel costs</li>
+          <li>   100% of any travel costs that took the assessment over £400</li>
+</ul>
+
+<p>Invoice DWP for the remaining balance. You need to: </p>
+<ul class="govuk-list govuk-list--bullet">
+    <li>send the invoice to Shared Services Connected Ltd at <a href="#" class="govuk-link govuk-link--no-underline">APinvoices-DWP-U@gov.sscl.com</a></li>
+    <li>include the purchase order number </li>
+    <li>include the discount code</li>
+    <li>copy the email to DWP at <a href="#" class="govuk-link govuk-link--no-underline"> caxtonhouse.providersupport@dwp.gov.uk</a></li>
+</ul>
+
+<p>You should expect payment within 10 working days.</p>
+
+<p>You need to receive a new code for every assessment you deliver.</p>
+
+<p><a href="left">
+        Leave the service
+</a></p>
+
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}

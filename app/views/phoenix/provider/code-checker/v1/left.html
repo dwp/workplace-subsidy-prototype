@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">Thank you
+
+</h1>
+
+<p> You have now left the service.
+
+</p>
+
+<p>
+
+<a href="their-company">
+      What did you think of this service?
+</a></p>
+
+<h2 class="govuk-heading-s">You can also:
+
+</h2>
+<p><a href="their-company">
+      Go back to GOV.UK
+</a></p>
+
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}

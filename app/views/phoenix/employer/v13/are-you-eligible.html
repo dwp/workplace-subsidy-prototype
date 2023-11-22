@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Find out if you're eligible for this service
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">
+Check if you are eligible for the discount</h1>
+<p>To check if you are eligible we need to ask you for some information about your company.</p>
+
+
+
+
+
+
+
+
+<a href="location"
+      <button class="govuk-button" data-module="govuk-button">
+  Continue
+  </button></a>
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}

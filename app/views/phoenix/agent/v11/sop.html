@@ -1,0 +1,54 @@
+{% extends "layout2.html" %}
+
+
+
+{% block pageTitle %}
+  Main menu
+{% endblock %}
+
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" method="post">
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+
+      <h1 class="govuk-heading-l">
+        Is Cordell Health Ltd set up on the SOP payment system?
+      </h1>
+<p>Before publishing a provider's details you must also raise a purchase order number.</p>
+        <div class="govuk-radios" data-module="govuk-radios">
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="sop" name="sop" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="sop">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="sop" name="sop" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="sop-2">
+            No
+            </label>
+          </div>
+
+        </div>
+
+                  </fieldset>
+                </div>
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+</form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

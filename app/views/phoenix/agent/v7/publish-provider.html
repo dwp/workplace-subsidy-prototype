@@ -1,0 +1,63 @@
+{% extends "layout2.html" %}
+
+{% block pageTitle %}
+  Main menu
+{% endblock %}
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<form class="form" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<span class="govuk-caption-l">Cordell Health Ltd</span>
+              <h1 class="govuk-fieldset__heading">
+                Do you want to publish this clinic?
+
+              </h1>
+            </legend>
+
+<p>This will publish the clinic's details on the public register.</p>
+
+
+            <div class="govuk-radios" data-module="govuk-radios">
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="size-1" name="size" type="radio" value="micro">
+                <label class="govuk-label govuk-radios__label" for="size-1">
+                Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="size-2" name="size" type="radio" value="small">
+                <label class="govuk-label govuk-radios__label" for="size-2">
+                No
+                </label>
+              </div>
+
+
+
+            </div>
+
+          </fieldset>
+        </div>
+
+
+<a href="publish-provider-reason"
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+</a>
+
+</form>
+    </div>
+  </div>
+
+{% endblock %}

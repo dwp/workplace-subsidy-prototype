@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  What is the name of your company?
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-l">
+        What is the name of your company?
+      </h1>
+
+      <div id="email-hint" class="govuk-hint govuk-!-margin-bottom-6">
+        Enter the name that is registered with Companies House, not your company's trading name. </div>
+
+      <div class="govuk-form-group">
+
+  <input class="govuk-input" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name">
+</div>
+
+<a href="email"
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+</a>
+
+
+    </div>
+  </div>
+
+{% endblock %}

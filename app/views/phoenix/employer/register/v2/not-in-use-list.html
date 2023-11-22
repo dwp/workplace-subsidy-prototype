@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <div class="moj-search">
+
+      <form action="#" method="post">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+            Search
+          </label>
+
+
+          <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+        </div>
+
+        <button class="govuk-button moj-search__button " data-module="govuk-button">
+          Search
+        </button>
+
+      </form>
+    </div>
+
+
+
+    <h1 class="govuk-heading-l govuk-!-margin-top-6">Providers list</h1>
+<p class="govuk-body govuk-!-font-weight-bold">12 results</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p class="govuk-body"><a href="#" class="govuk-link govuk-link--no-underline govuk-!-font-weight-bold">Company A</a></p>
+<p> Text text text</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p class="govuk-body"><a href="#" class="govuk-link govuk-link--no-underline govuk-!-font-weight-bold">Company A</a></p>
+<p> Text text text</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p class="govuk-body"><a href="#" class="govuk-link govuk-link--no-underline govuk-!-font-weight-bold">Company A</a></p>
+<p> Text text text</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p class="govuk-body"><a href="#" class="govuk-link govuk-link--no-underline govuk-!-font-weight-bold">Company A</a></p>
+<p> Text text text</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p class="govuk-body"><a href="#" class="govuk-link govuk-link--no-underline govuk-!-font-weight-bold">Company A</a></p>
+<p> Text text text</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p class="govuk-body"><a href="#" class="govuk-link govuk-link--no-underline govuk-!-font-weight-bold">Company A</a></p>
+<p> Text text text</p>
+
+  </div>
+</div>
+
+{% endblock %}

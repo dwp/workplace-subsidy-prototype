@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Get discounted occupational health advice for an employee
+    </h1>
+</div>
+
+<div class="govuk-grid-column-two-thirds">
+
+
+
+<p>Use this service to help you find and pay for an occupational health assessment for an employee.</p>
+
+
+      <p>You should consider an assessment if an employee is finding it difficult to work because of: </p>
+
+
+          <ul class="govuk-list govuk-list--bullet">
+  <li>an injury, such as a broken leg</li>
+<li>a diagnosed or undiagnosed health concern </li>
+<li>a long-term health condition</li>
+<li>an impairment or disability</li>
+<li>their mental or physical health  </li>
+      </ul>
+<p>
+An assessment can help you understand what support an employee needs to stay in or return to work. This could include:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li>advice on any <a href="https://www.gov.uk/reasonable-adjustments-for-disabled-workers"> reasonable adjustments</a> you could make </li>
+<li>guidance on free and paid-for changes you could make to support them</li>
+<li>links to other organisations who may be able to help </li>
+</ul>
+
+<div class="govuk-inset-text">
+  There's different information if you're an employee. Read <a href="/phoenix/employee/v1/guide-page">how occupational health can help keep you healthy and safe at work</a>
+</div>
+
+<h2 class="govuk-heading-m">What you'll pay </h2>
+
+<p>The total cost of an occupational health assessment is between £100 and £400. Eligible businesses will get an 80% discount on the total cost. After discount, the amount you pay will be between £20 and £80. 
+</p>
+<p>Any further occupational health services are not discounted.</p>
+
+
+<h2 class="govuk-heading-m">Who can use this service </h2>
+
+<p>You are eligible if your business is registered in England or Wales and you have one of the following:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>1 to 50 employees, and your yearly turnover is £10.2 million or less, or your yearly balance sheet is £5.1 million or less</li>
+  <li>51 to 250 employees, and your yearly turnover is £22.8 million or less, or your yearly balance sheet is £11.4 million or less</li>
+</ul>
+
+
+<h2 class="govuk-heading-m">Before you start </h2>
+
+<p>
+You'll need your employer PAYE reference number - you will find this on letters from HMRC.
+</p>
+<p>You do not need to provide any personal information about your employee at this stage.
+</p>
+
+
+
+
+      <a href="are-you-eligible" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+        Start now
+        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+        </svg>
+      </a>
+
+<p>You can also:</p>
+<ul class="govuk-list govuk-list--bullet">
+
+<li>see <a href="how-assess-works">guidance on how an occupational health assessment works</a></li>
+<li><a href="">find a discounted occupational health provider</a></li>
+</ul>
+
+      <p>The online service is also available in <a href="#">Welsh (Cymraeg)</a>.</p>
+
+
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <div class="app-step-nav-related app-step-nav-related--singular ">
+        <h2 class="app-step-nav-related__heading">
+          <span class="app-step-nav-related__pretitle">Related content</span>
+
+       <a href="https://www.support-disability-healthconditions-atwork.dwp.gov.uk/support-and-manage-disabled-employees-and-employees-with-health-conditions-at-work" class="govuk-body-s">  Supporting and managing disabled employees and employees with health conditions </a>
+
+<br><br>
+
+   <a href="https://www.gov.uk/access-to-work" class="govuk-body-s">
+            Access to Work: get support if you have a disability or health condition </a>
+        </h2>
+      </div>
+
+
+
+
+            </div>
+
+
+      </div>
+
+
+
+
+  </div>
+{% endblock %}

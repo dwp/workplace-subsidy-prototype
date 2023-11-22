@@ -1,0 +1,125 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+  <form class="form" method="post">
+        <div class="govuk-form-group">
+
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
+              <h1 class="govuk-fieldset__heading">
+                Where would you like the assessment to take place?
+              </h1>
+              </legend>
+
+              <div class="govuk-inset-text">
+<p> You can select a provider based on its location. You should consider that this may not be where your employee's assessment takes place. 
+</p>
+            <p>  The provider will discuss your employee's situation with you and may recommend:</p>
+            <ul class="govuk-list govuk-list--bullet">
+
+            <li>  an online or telephone assessment</li>
+            <li>  an in-person assessment at the employee's workplace
+ </li>
+</ul>
+
+        </div>
+
+            <div class="govuk-form-group">
+
+      <div id="waste-hint" class="govuk-hint">
+        Select all options that are relevant to you.
+      </div>
+      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            East Anglia
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          London
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Midlands
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            North East
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            North West
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            South East
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            South West
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Wales
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Yorkshire
+          </label>
+        </div>
+
+
+      </div>
+
+    </fieldset>
+  </div>
+
+
+
+
+<a href="list"
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+</a>
+
+</form>
+    </div>
+  </div>
+
+{% endblock %}

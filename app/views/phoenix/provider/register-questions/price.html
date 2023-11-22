@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+  <form class="form" method="post">
+        <div class="govuk-form-group">
+
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
+              <h1 class="govuk-fieldset__heading">
+                How much do you charge for the Occupational Health Assessment?
+              </h1>
+            </legend>
+
+
+
+
+            <div class="govuk-form-group">
+
+    <label class="govuk-label" for="sub-type">
+        Doctor
+    </label>
+    <select class="govuk-select govuk-!-width-three-quarters" id="sort" name="sort">
+    <option value="published">£101-£150</option>
+    <option value="updated" >£151-£200</option>
+    <option value="views">£201-£250</option>
+    <option value="comments">£251-£300</option>
+    <option value="comments">£301-£350</option>
+      <option value="comments">Above £351</option>
+        <option value="comments">We do not provide the Occupational Health Assessment with a doctor</option>
+  </select>
+  </div>
+
+  <div class="govuk-form-group">
+
+  <label class="govuk-label" for="sub-type">
+  Nurse
+  </label>
+  <select class="govuk-select govuk-!-width-three-quarters" id="sort" name="sort">
+  <option value="published">£101-£150</option>
+  <option value="updated" >£151-£200</option>
+  <option value="views">£201-£250</option>
+  <option value="comments">£251-£300</option>
+  <option value="comments">£301-£350</option>
+  <option value="comments">Above £351</option>
+  <option value="comments">We do not provide the Occupational Health Assessment with a nurse</option>
+  </select>
+  </div>
+
+  <div class="govuk-form-group">
+
+  <label class="govuk-label" for="sub-type">
+  Standard assessment
+  </label>
+  <select class="govuk-select govuk-!-width-three-quarters" id="sort" name="sort">
+  <option value="published">£101-£150</option>
+  <option value="updated" >£151-£200</option>
+  <option value="views">£201-£250</option>
+  <option value="comments">£251-£300</option>
+  <option value="comments">£301-£350</option>
+  <option value="comments">Above £351</option>
+  <option value="comments">We do not provide the standard Occupational Health Assessment</option>
+  </select>
+  </div>
+
+
+        </div>
+
+
+<a href="stop"
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+</a>
+
+</form>
+    </div>
+  </div>
+
+{% endblock %}

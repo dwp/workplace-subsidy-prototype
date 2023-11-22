@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  How the listed workplace health providers have been evaluated 
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">How the listed workplace health providers have been evaluated </h1>
+
+      <p>
+        All the workplace health providers listed in this service have had to go through a range of eligibility checks to prove that they:      </p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li>  have the required professional industry qualifications and governance procedures and policies  </li>
+<li>  can deliver a quality, professional assessment   </li>
+
+</ul>
+
+
+<p>They must either be accredited with  <a href="https://www.seqohs.org/" class="govuk-link">SEQOHS (opens in a new tab)</a> (Safe, Effective Quality Occupational Health Service) or they must have shown us:
+</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>proof of registration to a professional body </li>
+<li>evidence of clinical governance </li>
+<li>evidence of proper complaints or feedback mechanisms </li>
+<li>evidence of professional data management </li>
+<li>evidence of a referral pathway </li>
+</ul>
+
+
+
+
+<p>  In addition, all workplace health providers have declared that:  </p>
+
+  <ul class="govuk-list govuk-list--bullet">
+<li>  they will have an initial conversation (or interaction) with the employer to understand the context of their business
+  </li>
+  <li>  they will have a conversation with the employee during the assessment to discuss what will be included in the report and/or the employee will be given the option to see the report prior to sending it to their employer 
+</li>
+<li>the person undertaking assessment(s) is, or has oversight from, a qualified health professional </li>
+<li>the cost for a standard assessment is below £400    </li>
+
+</ul>
+
+
+
+<a href="location"
+      <button class="govuk-button" data-module="govuk-button">
+  Find a provider
+  </button></a>
+
+
+
+
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}

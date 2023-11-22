@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  What is your email address?
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" method="post">
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+<span class="govuk-caption-l">Cordell Health Ltd</span>
+      <h1 class="govuk-heading-l">
+        Do you want to add another clinic?
+      </h1>
+
+        <div class="govuk-radios" data-module="govuk-radios">
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="branch" name="branch" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="branch">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="branch" name="branch" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="branch-2">
+            No
+            </label>
+          </div>
+
+        </div>
+
+                  </fieldset>
+                </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+</form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

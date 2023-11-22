@@ -1,0 +1,37 @@
+{% extends "layout2.html" %}
+
+{% block pageTitle %}
+  Main menu
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      Discount code not found
+    </h1>
+
+<p>This could be because:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li>you entered the code incorrectly</li>
+<li>the provider made an error on their invoice</li>
+<li>the code does not exist</li>
+</ul>
+
+<p>Try entering the code again. If it is still not valid, ask the provider to check they put the correct code on their invoice.</p>
+
+
+  <a href="validate-code"
+          <button class="govuk-button" data-module="govuk-button">Try again</button>
+  </a>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

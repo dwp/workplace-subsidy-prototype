@@ -1,0 +1,130 @@
+{% extends "layout2.html" %}
+
+{% block pageTitle %}
+  Main menu
+{% endblock %}
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+
+  <div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">
+     Contact details</h1>
+
+
+
+      <!--COLUMN 1-->
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="customer-surname">
+            Provider name
+        </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="claimid" name="claimid" type="text">
+
+        </div>
+
+  <!--COLUMN 2-->
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="customer-surname">
+        Full name of person who sent application
+    </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="claimid" name="claimid" type="text">
+
+    </div>
+
+    <!--COLUMN 12-->
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="customer-surname">
+          Email address
+      </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="claimid" name="claimid" type="text">
+
+      </div>
+
+
+  <!--COLUMN 4-->
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="customer-surname">
+      Phone number
+    </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="claimid" name="claimid" type="text">
+
+    </div>
+
+
+
+<!--COLUMN 11-->
+<div class="govuk-form-group">
+  <label class="govuk-label" for="customer-surname">
+      Website address (optional)
+  </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="claimid" name="claimid" type="text">
+
+  </div>
+
+
+  <h2 class="govuk-heading-m">
+     Eligibility</h2>
+
+
+  <!--COLUMN 2-->
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="customer-surname">
+    Healthcare professional's full name
+    </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="claimid" name="claimid" type="text">
+
+    </div>
+
+
+  <!--COLUMN 4-->
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="customer-surname">
+      Healthcare professional's GMC, HCPC or NMC number
+    </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="claimid" name="claimid" type="text">
+
+    </div>
+
+    <!--COLUMN 3-->
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="customer-surname">
+          Healthcare professional's occupation 
+      </label>
+      <select class="govuk-select govuk-!-width-two-thirds" id="sort" name="sort">
+  <option value="published"></option>
+  <option value="updated" >Doctor</option>
+  <option value="views">Nurse</option>
+  <option value="comments">Occupational therapist</option>
+  <option value="comments">Physiotherapist</option>
+  <option value="comments">Psychologist</option>
+  </select>
+
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload-1">
+          Upload healthcare professional's qualification
+        </label>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+
+<a href="add-new-2"
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+</a>
+
+
+
+
+      </div>
+    
+
+  </div>
+
+{% endblock %}

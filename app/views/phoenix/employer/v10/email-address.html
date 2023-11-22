@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  What is your email address?
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-l">
+      What is your email address?
+      </h1>
+
+
+
+
+
+
+        <div class="govuk-form-group">
+  <label class="govuk-label" for="email">
+    Email address
+  </label>
+
+  <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+</div>
+
+
+
+<a href="feedback"
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+</a>
+
+
+    </div>
+  </div>
+
+{% endblock %}

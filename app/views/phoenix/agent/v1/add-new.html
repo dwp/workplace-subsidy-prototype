@@ -1,0 +1,247 @@
+{% extends "layout2.html" %}
+
+{% block pageTitle %}
+  Main menu
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+      <main class="govuk-main-wrapper">
+
+  <div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">
+     Add a provider</h1>
+     <h2 class="govuk-heading-m">
+        Contact details</h2>
+
+    <!--COLUMN 6-->
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="customer-surname">
+          Provider name
+      </label>
+    <input class="govuk-input" id="event-name" name="event-name" type="text">
+      </div>
+
+      <!--COLUMN 1-->
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="customer-surname">
+            Name of person who sent application
+        </label>
+      <input class="govuk-input" id="event-name" name="event-name" type="text">
+        </div>
+
+        <!--COLUMN 12-->
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="customer-surname">
+              Email address
+          </label>
+      <input class="govuk-input" id="event-name" name="event-name" type="text">
+          </div>
+
+
+        <!--COLUMN 4-->
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="customer-surname">
+            Phone number
+          </label>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
+          </div>
+
+          <!--COLUMN 11-->
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="customer-surname">
+                Website address
+            </label>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
+            </div>
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+  <h2 class="govuk-heading-m">Address</h2>
+
+  <!--COLUMN 5-->
+  <div class="govuk-form-group">
+
+    <div class="govuk-form-group">
+    <label class="govuk-label" for="address-line-1">
+      Address line 1
+    </label>
+    <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-line-2">
+      Address line 2 (optional)
+    </label>
+    <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-town">
+      Town or city
+    </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-county">
+      County (optional)
+    </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-postcode">
+      Postcode
+    </label>
+    <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
+  </div>
+
+
+    </div>
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+  <h2 class="govuk-heading-m">Eligibility</h2>
+
+  <!--COLUMN 2-->
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="customer-surname">
+        Healthcare professional's name
+    </label>
+    <input class="govuk-input" id="event-name" name="event-name" type="text">
+    </div>
+
+  <!--COLUMN 3-->
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="customer-surname">
+        Healthcare professional's GMC, HCPC or NMC number
+    </label>
+    <input class="govuk-input" id="event-name" name="event-name" type="text">
+
+    </div>
+
+
+    <!--COLUMN 7-->
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="customer-surname">
+          Healthcare professional's occupation 
+      </label>
+      <select class="govuk-select govuk-!-width-two-thirds" id="sort" name="sort">
+  <option value="published"></option>
+  <option value="updated" >Doctor</option>
+  <option value="views">Nurse</option>
+  <option value="comments">Occupational therapist</option>
+  <option value="comments">Physiotherapist</option>
+  <option value="comments">Psychologist</option>
+</select>
+      </div>
+
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="file-upload-1">
+        Upload healthcare professional's qualification
+      </label>
+      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+    </div>
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      <h2 class="govuk-heading-m">Assessment details</h2>
+
+
+
+      <!--COLUMN 13-->
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="claimid">
+            Assessment price range
+        </label>
+      <input class="govuk-input" id="event-name" name="event-name" type="text">
+        </div>
+
+
+
+      <!--COLUMN 15-->
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="claimid">
+            Distance able to travel to do an in-person assessment
+        </label>
+      <input class="govuk-input" id="event-name" name="event-name" type="text">
+        </div>
+
+      <!--COLUMN 16-->
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="claimid">
+          Assessment methods
+        </label>
+        <div id="waste-hint" class="govuk-hint">
+     Select all that apply.
+   </div>
+   <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+ <div class="govuk-checkboxes__item">
+   <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+   <label class="govuk-label govuk-checkboxes__label" for="organisation">
+   Workplace mental health assessment
+   </label>
+ </div>
+ <div class="govuk-checkboxes__item">
+   <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+   <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+     Workplace physical health assessment
+   </label>
+ </div>
+ <div class="govuk-checkboxes__item">
+   <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+   <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+   Phone
+   </label>
+ </div>
+ <div class="govuk-checkboxes__item">
+   <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+   <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+   Video call
+   </label>
+ </div>
+ <div class="govuk-checkboxes__item">
+   <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+   <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+   Home visit
+   </label>
+ </div>
+ <div class="govuk-checkboxes__item">
+   <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+   <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+   At a clinic
+   </label>
+ </div>
+ <div class="govuk-checkboxes__item">
+   <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+   <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+   At a workplace
+   </label>
+ </div>
+   </div>
+        </div>
+
+
+</div>
+</div>
+
+<a href="added-notification"
+        <button class="govuk-button" data-module="govuk-button">Add provider</button>
+</a>
+
+
+
+
+      </div>
+      </main>
+
+  </div>
+
+{% endblock %}

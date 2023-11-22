@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  What is your email address?
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-l">
+        What is your email address?
+      </h1>
+
+
+      <div class="govuk-form-group">
+
+        <div id="email-hint" class="govuk-hint govuk-!-margin-bottom-6">
+          We will use this to send you a copy of the discount code.
+          We may also use this to contact you after any assessment to get your feedback on the quality of the service you received.
+        </div>
+        <label class="govuk-label" for="email">
+          Email address
+        </label>
+        <input class="govuk-input " id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+      </div>
+
+
+
+<a href="check-answers"
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+</a>
+<div>
+  <a class="govuk-link" href="#">I do not have an email address</a>
+</div>
+
+    </div>
+  </div>
+
+{% endblock %}

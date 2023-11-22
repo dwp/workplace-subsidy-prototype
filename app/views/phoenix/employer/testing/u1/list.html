@@ -1,0 +1,443 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Find a workplace health provider
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+<div class="govuk-grid-column-full-width">
+<!--
+<div style="float: right;">
+<p class="govuk-body"> <a href="/phoenix/employer/v7/start-page" class="govuk-link">Go back to the start page</a></p>
+</div> -->
+
+  <h1 class="govuk-heading-l">Find a workplace health provider</h1>
+</div>
+
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+    <div class="moj-search">
+
+      <form action="#" method="post">
+
+        <div class="govuk-form-group">
+
+          <div id="search-hint" class="govuk-hint moj-search__hint ">
+                 You can search by company name
+               </div>
+
+          <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+        </div>
+
+        <button class="govuk-button moj-search__button " data-module="govuk-button">
+          Search
+        </button>
+
+      </form>
+    </div>
+</div>
+</div>
+
+<div class="govuk-grid-row">
+
+
+  <div class="govuk-grid-column-one-third ">
+
+<h2 class="govuk-heading-m govuk-!-margin-top-6">Location</h2>
+
+          <div class="govuk-form-group">
+    <label class="govuk-label" for="width-10">
+      Enter your postcode
+    </label>
+    <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="width-10">
+      Distance
+    </label>
+      <select class="govuk-select govuk-input--width-90" id="sort" name="sort">
+      <option value="published"selected>5 miles</option>
+      <option value="updated" >10 miles</option>
+      <option value="views">15 miles</option>
+      <option value="comments">20 miles</option>
+      <option value="comments">25 miles</option>
+    </select>
+    </div>
+
+<h2 class="govuk-heading-m govuk-!-margin-top-8">Delivery mode</h2>
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Remote (telephone)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                    Remote (video)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                    In-person (clinic)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                    In-person (home)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                    In-person (workplace)
+                  </label>
+                </div>
+
+              </div>
+
+            </fieldset>
+
+
+
+
+
+
+
+    </div>
+
+
+    <h2 class="govuk-heading-m govuk-!-margin-top-8">Worked with small or medium-sized businesses</h2>
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                    No
+                  </label>
+                </div>
+
+              </div>
+
+            </fieldset>
+
+
+
+
+
+
+
+    </div>
+
+<!--    <h2 class="govuk-heading-m govuk-!-margin-top-8">Assessment provided</h2>
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Physical health
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                  Mental health
+                  </label>
+                </div>
+
+              </div>
+
+            </fieldset>
+
+
+
+
+
+
+
+    </div> -->
+
+
+
+  <p>
+      <a class="govuk-link block govuk-!-margin-bottom-6" href="">Clear filters</a></p>
+
+    </form>
+  </div>
+
+
+  <div class="govuk-grid-column-two-thirds">
+
+
+<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-6">7 results</p>
+<div id="search-hint" class="govuk-hint moj-search__hint ">Distances are measured in a straight line from your location. Travel distance may vary.</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p class="govuk-body-s ">0.4 miles away</p>
+<p class="govuk-body"><a href="provider-details1" class="govuk-link  govuk-!-font-weight-bold">CORDELL HEALTH LTD</a></p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <ul class="govuk-list">
+      <li>
+        <span class="govuk-hint">Location:</span>
+          <span> 382 Rayners Lane, Middlesex, HA5 5DY</span>
+          </li>
+
+            <li>
+  <span class="govuk-hint">Price range after 80% discount:
+</span>
+  <span> £20 - £80 (without discount £100 - £400) </span></li>
+  <li>
+  <span class="govuk-hint">Worked with small or medium-sized businesses: </span>
+  <span>Yes</span>
+  </li>
+  <li>
+  <span class="govuk-hint">Type of consultation:  </span>
+  <span>Remote (telephone), Remote (video), In-person (clinic), In-person (home), In-person (workplace) </span>
+  </li>
+  </ul>
+</div>
+</div>
+
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p class="govuk-body-s ">0.5 miles away</p>
+<p class="govuk-body"><a href="#" class="govuk-link  govuk-!-font-weight-bold">HEALTHWORK</a></p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <ul class="govuk-list">
+      <li>
+        <span class="govuk-hint">Location:</span>
+          <span>493 Yeading Lane, London, UB5 6LN </span>
+          </li>
+
+            <li>
+  <span class="govuk-hint">Price range after 80% discount:
+</span>
+  <span> £20 - £80 (without discount £100 - £400) </span></li>
+  <li>
+  <span class="govuk-hint">Worked with small or medium-sized businesses: </span>
+  <span>Yes</span>
+  </li>
+  <li>
+  <span class="govuk-hint">Type of consultation:  </span>
+  <span>Remote (telephone), Remote (video), In-person (clinic), In-person (home)</span>
+  </li>
+  </ul>
+</div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p class="govuk-body-s ">1.8 miles away</p>
+<p class="govuk-body"><a href="provider-details2" class="govuk-link govuk-!-font-weight-bold">INNOVATE HEALTHCARE MANAGEMENT GROUP</a></p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <ul class="govuk-list">
+      <li>
+        <span class="govuk-hint">Location:</span>
+          <span> 1000 Greenford Road, Greenford, Greater London, UB6 0UW</span>
+          </li>
+
+            <li>
+  <span class="govuk-hint">Price range after 80% discount:
+  </span>
+  <span> £20 - £80 (without discount £100 - £400) </span></li>
+  <li>
+  <span class="govuk-hint">Worked with small or medium-sized businesses: </span>
+  <span>Yes</span>
+  </li>
+  <li>
+  <span class="govuk-hint">Type of consultation:  </span>
+  <span>Remote (telephone), Remote (video), In-person (home)</span>
+  </li>
+  </ul>
+</div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p class="govuk-body-s ">3.7 miles away</p>
+<p class="govuk-body"><a href="provider-details4" class="govuk-link  govuk-!-font-weight-bold">KAYS MEDICAL</a></p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <ul class="govuk-list">
+      <li>
+        <span class="govuk-hint">Location:</span>
+          <span>46 Egerton Road, London, UB3 7GS</span>
+          </li>
+
+            <li>
+  <span class="govuk-hint">Price range after 80% discount:
+  </span>
+  <span> £20 - £80 (without discount £100 - £400) </span></li>
+  <li>
+  <span class="govuk-hint">Worked with small or medium-sized businesses: </span>
+  <span>Yes</span>
+  </li>
+  <li>
+  <span class="govuk-hint">Type of consultation:  </span>
+  <span>Remote (telephone), Remote (video), In-person (clinic), In-person (home)</span>
+  </li>
+  </ul>
+</div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p class="govuk-body-s ">10.4 miles away</p>
+<p class="govuk-body"><a href="provider-details5" class="govuk-link  govuk-!-font-weight-bold">BESPOKE WELLBEING</a></p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <p>Bespoke Wellbeing provides workplace physical health assessments only.</p>
+    <ul class="govuk-list">
+      <li>
+        <span class="govuk-hint">Location:</span>
+          <span>6 Pendennis Rd, London, SW16 2SW</span>
+          </li>
+
+            <li>
+  <span class="govuk-hint">Price range after 80% discount:
+  </span>
+  <span> £20 - £60 (without discount £100 - £300) </span></li>
+  <li>
+  <span class="govuk-hint">Worked with small or medium-sized businesses: </span>
+  <span>Yes</span>
+  </li>
+  <li>
+  <span class="govuk-hint">Type of consultation:  </span>
+  <span>Remote (telephone), Remote (video), In-person (workplace)</span>
+  </li>
+  </ul>
+</div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p class="govuk-body-s ">24.9 miles away</p>
+<p class="govuk-body"><a href="provider-details3" class="govuk-link  govuk-!-font-weight-bold">MEDIGOLD HEALTH</a></p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <ul class="govuk-list">
+      <li>
+        <span class="govuk-hint">Location:</span>
+          <span> 11 Leadenhall St, London, EC3V 1LP </span>
+          </li>
+
+            <li>
+  <span class="govuk-hint">Price range after 80% discount:
+</span>
+  <span> £20 - £80 (without discount £100 - £400) </span></li>
+  <li>
+  <span class="govuk-hint">Worked with small or medium-sized businesses: </span>
+  <span>Yes</span>
+  </li>
+  <li>
+  <span class="govuk-hint">Type of consultation:  </span>
+  <span>Remote (telephone), Remote (video), In-person (clinic), In-person (home)</span>
+  </li>
+  </ul>
+</div>
+</div>
+
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p class="govuk-body-s ">31.8 miles away</p>
+<p class="govuk-body"><a href="provider-details6" class="govuk-link  govuk-!-font-weight-bold">PSYCHOLOGY EXPERTS</a></p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <p>Psychology Experts provides workplace mental health assessments only.</p>
+    <ul class="govuk-list">
+      <li>
+        <span class="govuk-hint">Location:</span>
+          <span> 5 Westbourne Grove, Hove, BN3 5PJ </span>
+          </li>
+
+            <li>
+  <span class="govuk-hint">Price range after 80% discount:
+</span>
+  <span> £40 - £80 (without discount £200 - £400) </span></li>
+  <li>
+  <span class="govuk-hint">Worked with small or medium-sized businesses: </span>
+  <span>Yes</span>
+  </li>
+  <li>
+  <span class="govuk-hint">Type of consultation:  </span>
+  <span>Remote (telephone), Remote (video), In-person (workplace)</span>
+  </li>
+  </ul>
+</div>
+</div>
+
+
+<nav class="moj-pagination" aria-label="Pagination navigation">
+
+  <ul class="moj-pagination__list">
+    <li class="moj-pagination__item  moj-pagination__item--prev">
+      <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> page</span></a>
+    </li>
+
+    <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=1" aria-label="Page 1 of 30">1</a></li>
+
+    <li class="moj-pagination__item moj-pagination__item--active" aria-label="Page 2 of 30" aria-current="page">2</li>
+
+    <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3" aria-label="Page 3 of 30">3</a></li>
+
+    <li class="moj-pagination__item moj-pagination__item--dots">…</li>
+
+    <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=5" aria-label="Page 5 of 30">5</a></li>
+
+    <li class="moj-pagination__item  moj-pagination__item--next">
+      <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> page</span></a>
+    </li>
+  </ul>
+  <p class="moj-pagination__results">Showing <b>10</b> to <b>20</b> of <b>30</b> pages</p>
+</nav>
+
+
+
+  </div>
+
+
+</div>
+
+{% endblock %}

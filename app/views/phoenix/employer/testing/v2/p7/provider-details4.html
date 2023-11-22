@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Cordell Health Ltd - London
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">Partners in Health    </h1>
+  <p>Partners in Health provides workplace health assessments on full range of conditions. </p>
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Address</th>
+      <td class="govuk-table__cell">
+        The Hollies Penrhiw Lane<br> Machen<br> Caerphilly<br> CF83 8RQ 
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Phone number</th>
+      <td class="govuk-table__cell">+44 117207 6190</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Email address</th>
+      <td class="govuk-table__cell">enquiries@cordellhealth.co.uk</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Cancellation policy</th>
+      <td class="govuk-table__cell">Free cancellation within 48 hours</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Website</th>
+      <td class="govuk-table__cell">This provider does not have a website</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+<a href="list"
+      <button class="govuk-button" data-module="govuk-button">
+  Return to providers list
+  </button></a>
+  </div>
+  </div>
+
+
+{% endblock %}

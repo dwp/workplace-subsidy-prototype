@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">Find an occupational health provider</h1>
+
+      <p>
+        Search the list to find a provider who can give you a discounted occupational health assessment for your employee.  </p>
+      <p>  Select a provider then use the details provided to contact them directly. The provider will talk to you about:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>  how complex your employee's situation is</li>
+<li>  who they recommend to do the assessment - this could be a doctor, nurse or other health professional </li>
+</ul>
+
+<p>  They'll also talk to you about whether they need to see your employee in person. This could be for a range of reasons, such as: </p>
+  <ul class="govuk-list govuk-list--bullet">
+<li>  your employee has communication difficulties</li>
+<li>  the provider may need to assess their workspace</li>
+</ul>
+
+<h2 class="govuk-heading-m">
+
+What the assessment will cost  </h2>
+
+<p>If you’re eligible for the 80% discount, the assessment will usually cost between £20 and £80.  </p>
+<p>The actual cost of an occupational health (OH) assessment from our service is normally between £100 and £400.</p>
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Why the cost of an assessment varies
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    The cost of an assessment may vary due to factors such as:
+    <ul class="govuk-list govuk-list--bullet">
+  <li>the method of delivery. Most assessments will be by phone or video conference. However, some assessments may need an in-person or onsite meeting. These will usually involve an extra cost.
+</li>
+<li>  the complexity of the case. For example, a case involving a broken arm may be more straightforward than a case involving a sensitive mental health condition.
+</li>
+<li>  who carries out the assessment. Some assessments can be done by a physiotherapist, while others may require a nurse or a doctor.
+</li>
+</ul>
+  </div>
+</details>
+
+
+
+<p>The final cost will usually be discussed and agreed upon during the initial conversation between the employer and the OH provider they have selected.
+  </p>
+  <p>The 80% discount only applies up to an assessment cost of £400.
+    </p>
+
+  <p>In some cases where an in-person assessment has been agreed, there may be additional travel costs. Any further costs over £400 are not discounted.   </p>
+
+
+  <details class="govuk-details" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        See examples of how the discount works
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+
+
+
+
+<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Example 1</p>
+
+<p>A telephone assessment by a physiotherapist.<br>
+Cost £100. Final cost to employer with 80% discount = £20</p>
+
+<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Example 2</p>
+
+<p>A video conference assessment by a doctor.<br>
+Cost £300. Final cost to employer with 80% discount = £60</p>
+<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Example 3</p>
+
+<p>An in-person assessment by a doctor, at the employee’s workplace.<br>
+Cost £350 plus £100 travel costs. Final cost to employer with 80% discount = £130</p>
+<p>In this case the total cost including travel is £450. The 80% discount applies up to £400, and the remaining £50 cost above this is paid in full by the employer.</p>
+
+    </div>
+  </details>
+
+
+
+
+
+
+
+
+<p>If your employee does not attend the appointment as arranged, you will have to pay 100% of the cost. However, regular and open engagement with your employee about the assessment process can reduce the chances of non-attendance.</p>
+<a href="location"
+      <button class="govuk-button" data-module="govuk-button">
+  Find a provider
+  </button></a>
+
+
+
+
+  <p>The providers in the list have been through an evaluation process, but we do not check their individual services. When choosing a provider, it is important you check their services will meet your needs.</p>
+<p>  Read more about <a href="evaluation">how providers have been evaluated</a>.</p>
+
+
+
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}

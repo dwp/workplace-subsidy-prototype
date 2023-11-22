@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  PAYE
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+<div class="govuk-form-group">
+
+  <h1 class="govuk-heading-l">What is your employer PAYE reference?</h1>
+
+  <div id="email-hint" class="govuk-hint govuk-!-margin-bottom-6">
+  This is a 3 digit tax office number, a forward slash, and a tax office employer reference like 123/AB456. It will be on letters from HMRC about PAYE.
+      </div>
+
+<label class="govuk-label " for="national-insurance-number" >
+    Employer PAYE reference
+  </label>
+
+  <input class="govuk-input govuk-input--width-20"  id="event-name" name="event-name" type="text">
+</div>
+
+
+<a href="email"
+      <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button></a>
+
+    </div>
+  </div>
+  </main>
+  </div>
+{% endblock %}

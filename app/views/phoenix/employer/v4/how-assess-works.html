@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">
+Using occupational health to help an employee <h1>
+
+
+<p>
+An employer may have concerns about an employee because:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li>there's been a change in how the employee is performing at work</li>
+<li>the employee has been off sick more often than normal </li>
+<li>the employee is long-term sick (off work sick for more than 4 weeks)</li>
+</ul>
+
+<p>
+If an employer has concerns, they can ask the employee if they'll agree to an occupational health assessment. 
+</p>
+
+<p>The employee does not have to agree to it, but it's a good idea as it can help them:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li>get back to work </li>
+<li>get any support they might need </li>
+</ul>
+
+<h2 class="govuk-heading-m"> What happens in an occupational health assessment </h2>
+
+<p>During the assessment, an occupational health adviser will talk to the employee. The adviser could be a doctor, nurse, or other occupational health professional. 
+</p>
+
+<p>They will ask the employee about:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li>their health and any treatment they're having</li>
+<li>their usual work activities</li>
+<li>their general lifestyle and activities outside work </li>
+</ul>
+
+<p>The conversation is confidential. The adviser will not share anything without the employee's consent.  
+</p>
+
+<h2 class="govuk-heading-m">What happens after the assessment</h2>
+
+<p>The occupational health adviser will send a report to the employee. They will check with the employee if they can show the report to their employer. 
+</p>
+
+
+<p>The report will contain advice and recommendations, which could include:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>adjustments to the employee's workspace, such as a bigger screen or ergonomic chair
+</li>
+<li>a phased return to work or different working hours</li>
+<li>a referral to other services, like physiotherapy</li>
+</ul>
+
+
+
+<p>The employer and employee should then decide the best course of action. </p>
+
+
+
+
+<a href="/phoenix/employer/register/v2/location"
+      <button class="govuk-button" data-module="govuk-button">
+  Search for a provider
+  </button></a>
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}

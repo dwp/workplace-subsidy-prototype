@@ -1,0 +1,232 @@
+{% extends "layout2.html" %}
+
+{% block pageTitle %}
+  Cordell Health Ltd Clinics
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="search-provider">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <span class="govuk-caption-l">Provider details</span>
+    <h1 class="govuk-heading-l">
+      Cordell Health Ltd
+    </h1>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+
+<!--
+      <nav class="moj-side-navigation govuk-!-margin-top-5" aria-label="Side navigation">
+        <ul class="moj-side-navigation__list">
+          <li class="moj-side-navigation__item">
+            <a href="provider-details-2">Provider details</a>
+          </li>
+          <li class="moj-side-navigation__item moj-side-navigation__item--active">
+            <a href="provider-details-5" aria-current="location">Clinic details</a>
+          </li>
+
+
+        </ul>
+      </nav> -->
+
+    </div>
+
+
+  <div class="govuk-grid-column-two-thirds">
+
+    
+
+    <dl class="govuk-summary-list govuk-!-margin-top-5">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+        Company name
+        </dt>
+        <dd class="govuk-summary-list__value">
+        Cordell Health Ltd
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="change-company-name">
+            Change<span class="govuk-visually-hidden"> provider name</span>
+          </a>
+        </dd>
+      </div>
+
+
+     
+
+
+
+
+      
+</dl>
+
+    <h2 class="govuk-heading-m govuk-!-margin-top-7">
+      Clinic details
+    </h2>
+
+   
+    <dl class="govuk-summary-list govuk-!-margin-top-5">
+
+
+
+
+
+      <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Address
+      </dt>
+      <dd class="govuk-summary-list__value">
+        St Andrews House<br> St Andrew's Rd<br> Bristol <br>BS11 9DQ
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="change-clinic-address">
+          Change<span class="govuk-visually-hidden"> address</span>
+        </a>
+      </dd>
+    </div>
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+        Email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+        cordell@example.com
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="change-email-clinic">
+            Change<span class="govuk-visually-hidden"> email address</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Phone number
+        </dt>
+        <dd class="govuk-summary-list__value">07700 900457</dd>
+
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> phone number</span>
+          </a>
+        </dd>
+      </div>
+
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+      Website
+      </dt>
+      <dd class="govuk-summary-list__value">
+      https://www.cordell.co.uk/
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="change-website-clinic">
+          Change<span class="govuk-visually-hidden"> website address</span>
+        </a>
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+    Assessment price range
+    </dt>
+    <dd class="govuk-summary-list__value">
+    £200 to £400
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="change-price-range">
+      Change<span class="govuk-visually-hidden"> price range</span>
+    </a>
+    </dd>
+    </div>
+
+    
+
+
+   
+
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Assessment methods
+    </dt>
+    <dd class="govuk-summary-list__value">
+    Workplace mental health assessment
+    <br>
+     Workplace physical health assessment
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="change-methods-clinic">
+      Change<span class="govuk-visually-hidden"> name</span>
+    </a>
+    </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Assessment types
+      </dt>
+      <dd class="govuk-summary-list__value">
+
+        <p class="govuk-body">
+Phone<br> Video call<br> 
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="change-types-clinic">
+          Change<span class="govuk-visually-hidden"> contact details</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Distance health professionals can travel
+      </dt>
+      <dd class="govuk-summary-list__value">
+      50 miles
+      </dd>
+      <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="change-travel-distance">
+        Change<span class="govuk-visually-hidden"> travel distance</span>
+      </a>
+      </dd>
+      </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+      Publication status
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+
+          Published
+          </strong>
+    
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="unpublish-provider">
+          Change<span class="govuk-visually-hidden"> provider visible</span>
+        </a>
+      </dd>
+    </div>
+
+
+
+  </dl>
+
+
+
+
+      </div>
+
+  </div>
+
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Cordell Health Ltd - London
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">Staying Well At Work     </h1>
+  <p>Staying Well At Work provides workplace health assessments on full range of conditions. </p>
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Address</th>
+      <td class="govuk-table__cell">
+      Staying well at work Centre<br> Talbot Road<br> Llantrisant <br>CF72 8AW
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Phone number</th>
+      <td class="govuk-table__cell">+44 117207 6190</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Email address</th>
+      <td class="govuk-table__cell">enquiries@cordellhealth.co.uk</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Cancellation policy</th>
+      <td class="govuk-table__cell">Free cancellation within 48 hours</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Website</th>
+    <td class="govuk-table__cell"><a href="https://www.rctcbc.gov.uk/EN/GetInvolved/StayingWellAtWork/StayingWellAtWork.aspx " class="govuk-link" rel="noreferrer noopener" target="_blank">Staying Well At Work website (opens in new tab)</a></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+<a href="list"
+      <button class="govuk-button" data-module="govuk-button">
+  Return to providers list
+  </button></a>
+  </div>
+  </div>
+
+
+{% endblock %}

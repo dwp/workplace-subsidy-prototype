@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">
+What subsidised occupational health services can provide </h1>
+
+      <p>Occupational health services can provide a range of support for employers.</p>
+
+    <p>  They are usually paid for, but can save you time and money by helping to keep an employee in work. </p>
+
+      <p>Eligible businesses can buy certain occupational health services at an 80% discount. These are:</p>
+<ul class="govuk-list govuk-list--bullet">
+      <li>  tailored advice about an employee's specific health condition or impairment </li>
+    <li>  help with deciding on any changes you might need to make at work </li>
+    <li>  workplace assessments</li>
+    <li>  advice on supporting your employee to manage their health</li>
+
+      </ul>
+
+<a href="are-you-eligible"
+      <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button></a>
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}

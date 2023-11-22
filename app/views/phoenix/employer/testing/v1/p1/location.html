@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Where do you want your workplace health provider to be located?
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+  <form class="form" method="post">
+        <div class="govuk-form-group">
+
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
+              <h1 class="govuk-fieldset__heading">
+                Where do you want your workplace health provider to be located?
+              </h1>
+              </legend>
+
+              <div class="govuk-inset-text">
+<p> Things to consider when choosing the location of a provider: </p>
+                <ul class="govuk-list govuk-list--bullet">
+
+            <li>
+most workplace health assessments will be done remotely (by telephone or video conference). Remote assessments are very efficient and effective, and are usually all that is needed to produce a comprehensive assessment report </li>
+            <li>  in some cases, an in-person assessment may be agreed as the best way to do the assessment. In person assessments may be at the employee's home, workplace or at the provider’s clinic
+ </li>
+ <li>some employees may not necessarily be based where your company or organisation is, for example, they may work from home </li>
+ <li>follow-up treatments or programmes may be recommended after an assessment, and this may influence your choice of provider location </li>
+</ul>
+
+        </div>
+        <div id="search-hint" class="govuk-hint moj-search__hint ">
+We will use your postcode to show you the nearest providers to you, that provide assessments.</div>
+        <div class="govuk-form-group">
+  <label class="govuk-label" for="width-10">
+    Enter your postcode
+  </label>
+  <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+</div>
+
+
+
+    </fieldset>
+  </div>
+
+
+
+
+<a href="list"
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+</a>
+
+</form>
+    </div>
+  </div>
+
+{% endblock %}

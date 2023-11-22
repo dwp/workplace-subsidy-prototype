@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  You are not eligible to use this service 
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">
+You are not eligible to use this service </h1>
+
+
+
+<p>You can only use this service if your company has up to 250 employees.
+</p>
+
+<h2 class="govuk-heading-m">
+Find other support </h2>
+<p>If your employee has a physical or mental health condition or disability, they may be eligible for support through <a href="https://www.gov.uk/access-to-work" class="govuk-link" rel="noreferrer noopener" target="_blank">Access to Work (opens in a new tab).</a></p>
+
+<p>Find out <a href="https://www.gov.uk/reasonable-adjustments-for-disabled-workers" class="govuk-link" rel="noreferrer noopener" target="_blank">what reasonable adjustments you must make for workers with disabilities or health conditions (opens in a new tab).</a></p>
+
+
+
+
+
+
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}

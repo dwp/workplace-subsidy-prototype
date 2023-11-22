@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+  <form class="form" method="post">
+        <div class="govuk-form-group">
+
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
+              <h1 class="govuk-fieldset__heading">
+                Where are you based?
+              </h1>
+            </legend>
+            <div class="govuk-form-group">
+
+      <div id="waste-hint" class="govuk-hint">
+        Select all that apply.
+      </div>
+      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+          <label class="govuk-label govuk-checkboxes__label" for="waste">
+            All UK
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            London
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            South East
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            South West
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Wales
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Midlands
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            East Anglia
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Yorkshire
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            North West
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            North East
+          </label>
+        </div>
+
+
+      </div>
+
+    </fieldset>
+  </div>
+
+
+
+
+<a href="specialisation"
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+</a>
+
+</form>
+    </div>
+  </div>
+
+{% endblock %}

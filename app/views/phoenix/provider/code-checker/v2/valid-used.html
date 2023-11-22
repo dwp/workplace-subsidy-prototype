@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">This discount code has already been claimed
+
+</h1>
+
+
+<p>Check with the employer who gave you the code. You can ask them to go back to the ‘Get an 80% discount on an occupational health assessment’ service to get another code.
+
+
+</p>
+
+<p><a href="left">
+        Leave the service
+</a></p>
+
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}

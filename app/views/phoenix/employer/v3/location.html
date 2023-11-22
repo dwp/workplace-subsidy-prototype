@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+  <form class="form" method="post">
+        <div class="govuk-form-group">
+
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<span class="govuk-caption-l">Find out if you're eligible</span>
+              <h1 class="govuk-fieldset__heading">
+              Where is your business registered?
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="register" name="register" type="radio" value="england">
+                <label class="govuk-label govuk-radios__label" for="register">
+                  England and Wales
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="register-2" name="register" type="radio" value="wales">
+                <label class="govuk-label govuk-radios__label" for="register-2">
+                  Wales
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="register-3" name="register" type="radio" value="scotland">
+                <label class="govuk-label govuk-radios__label" for="register-3">
+                  Scotland
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="register-4" name="register" type="radio" value="ireland">
+                <label class="govuk-label govuk-radios__label" for="register-4">
+                  Northern Ireland
+                </label>
+              </div>
+
+
+            </div>
+
+          </fieldset>
+        </div>
+
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+</form>
+    </div>
+  </div>
+
+{% endblock %}

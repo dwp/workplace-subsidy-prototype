@@ -1,0 +1,141 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">Find a workplace health provider</h1>
+
+      <p>
+        Use this part of the service to find a provider to give you an 80% discounted workplace health assessment for your employee.  
+<p>You can use filters to get a list of providers who most match your needs.  </p>
+
+            <p>  Select a provider from the list, then contact them directly by email or phone.  </p>
+            <p>Most providers should be able to offer assessments for all conditions and situations, but you should check this when you contact them.  </p>
+
+    <p>The provider will talk to you about: </p>
+<ul class="govuk-list govuk-list--bullet">
+<li>  the key details of your employee's situation</li>
+<li>  who they recommend to do the assessment - this could be a doctor, nurse or other health professional  </li>
+</ul>
+
+<p>  They'll also discuss whether they need to see your employee in person. This could be for a range of reasons, such as: </p>
+  <ul class="govuk-list govuk-list--bullet">
+<li>  your employee has different ways of communicating </li>
+<li>  the provider may need to assess their workspace</li>
+</ul>
+
+<h2 class="govuk-heading-m">
+
+What the assessment will cost  </h2>
+
+<p>If you’re eligible for the 80% discount, the assessment will usually cost between £20 and £80.  </p>
+<p>The actual cost of a workplace health assessment from our service is normally between £100 and £400.</p>
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Why the cost of an assessment varies
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    The cost of an assessment may vary due to factors such as:
+    <ul class="govuk-list govuk-list--bullet">
+  <li>the method of delivery. Most assessments will be by phone or video conference. However, some assessments may need an in-person or onsite meeting. These will usually involve an extra cost.
+</li>
+<li>  the complexity of the case. Naturally, some health issues are more straightforward than others.
+</li>
+<li>  who carries out the assessment. Some assessments can be done by a physiotherapist, while others may require a nurse or a doctor.
+</li>
+</ul>
+  </div>
+</details>
+
+
+
+<p>The final cost will usually be discussed and agreed upon during the initial conversation between the employer and the workplace health provider they have selected.
+  </p>
+  <p>The 80% discount only applies up to an assessment cost of £400.
+    </p>
+
+  <p>In some cases where an in-person assessment has been agreed, there may be additional travel costs. Any further costs over £400 are not discounted.   </p>
+
+
+  <details class="govuk-details" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        See examples of how the discount works
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+
+
+
+
+<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Example 1</p>
+<p>The costs of each assessment in these examples are estimates.  They are not meant to show what an individual health provider may charge for each assessment.  </p>
+<p>Telephone assessment by a physiotherapist. <br>
+Actual cost £100 <br>
+Cost charged to employer after 80% discount = £20 </p>
+
+<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Example 2</p>
+
+<p>Video conference assessment by a doctor.<br>
+Actual cost £300
+<br>Cost charged to employer after 80% discount = £60</p>
+<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Example 3 (with travel costs) </p>
+
+<p>In-person assessment by a nurse, at the employee’s home. <br>
+Actual cost = £200 + £100 travel costs = £300
+<br>
+Cost charged to employer after 80% discount = £60 </p>
+<p>In this case the total cost, including travel, does not go over the £400 limit. This means the entire cost qualifies for the discount. </p>
+
+<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Example 4 (with travel costs) </p>
+
+<p>In-person assessment by a doctor, at the employee’s workplace.<br>
+Actual cost = £350 + £100 travel costs = £450
+<br>
+Cost charged to employer after 80% discount = £130 </p>
+<p>In this case the total cost, including travel, goes over the £400 limit. The 80% discount applies up to £400, and the remaining £50 cost above this is not discounted. </p>
+
+
+    </div>
+  </details>
+
+
+
+
+
+<a href="location"
+      <button class="govuk-button" data-module="govuk-button">
+  Find a provider
+  </button></a>
+
+
+
+
+  <p>The providers in the list have been through an evaluation process, but we do not check their individual services. When choosing a provider, it is important you check their services will meet your needs.</p>
+<p>  Read more about <a href="evaluation">how providers have been evaluated</a>.</p>
+
+
+
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}

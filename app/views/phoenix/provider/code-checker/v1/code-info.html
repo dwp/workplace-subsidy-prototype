@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">This discount code is a valid code
+</h1>
+
+<div class="govuk-inset-text">
+  Make sure that the company name matches your data.
+</div>
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Code details</caption>
+  <thead class="govuk-table__head">
+
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">DWP discount code</th>
+      <td class="govuk-table__cell">WBY 6HS 9OA</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Status</th>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--green">
+  Active
+</strong>
+
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Generated on</th>
+      <td class="govuk-table__cell">20 May 2022</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Company name</th>
+      <td class="govuk-table__cell">Philips</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<a href="left"
+        <button class="govuk-button" data-module="govuk-button">Leave service</button>
+</a>
+<p><a href="what-is-code">
+        Check another code
+</a></p>
+
+
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}
