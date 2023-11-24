@@ -1925,7 +1925,10 @@ else if(assessmentType.includes('workplacevisit'))
 { 
         res.redirect('/phoenix/agent/v12/distance');
 }
-
+else if(assessmentType.includes('visit'))
+{ 
+        res.redirect('/phoenix/agent/v12/distance');
+}
 
 else {
         res.redirect('/phoenix/agent/v12/check-answers-clinic');
@@ -1949,6 +1952,10 @@ router.post('/phoenix/agent/v12/add-new-clinic', function (req, res) {
               res.redirect('/phoenix/agent/v12/add-new-clinic-distance');
       }
       else if(assessmentType.includes('workplacevisit'))
+      { 
+              res.redirect('/phoenix/agent/v12/add-new-clinic-distance');
+      }
+      else if(assessmentType.includes('agreedvisit'))
       { 
               res.redirect('/phoenix/agent/v12/add-new-clinic-distance');
       }
@@ -1979,7 +1986,10 @@ router.post('/phoenix/agent/v12/add-clinic-2', function (req, res) {
       { 
               res.redirect('/phoenix/agent/v12/add-clinic-2-distance');
       }
-      
+      else if(assessmentType.includes('agreedvisit'))
+      { 
+              res.redirect('/phoenix/agent/v12/add-clinic-2-distance');
+      }
       
       else {
               res.redirect('/phoenix/agent/v12/add-clinic-2-check-clinic');
