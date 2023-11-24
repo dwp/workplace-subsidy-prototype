@@ -1858,3 +1858,148 @@ router.post('/phoenix/agent/v10/add-clinic-2', function (req, res) {
                         res.redirect('/phoenix/agent/v11/add-new-2');
                 };
             })
+
+    //////////            AGENT    VERSION 12
+//Add branch
+
+router.post('/phoenix/agent/v12/want-add-branch', function (req, res) {
+        const branch = req.session.data['branch'];
+        if (branch === "yes") {
+                res.redirect('/phoenix/agent/v12/add-new-2');
+    
+        } else {
+                res.redirect('/phoenix/agent/v12/added-branch');
+        };
+    })
+  
+    
+    
+    //add new clinic publish
+    
+    router.post('/phoenix/agent/v12/add-new-clinic-publish', function (req, res) {
+        const publish = req.session.data['publish'];
+        if (publish === "yes") {
+                res.redirect('/phoenix/agent/v12/add-new-clinic-confirmation');
+    
+        } else {
+                res.redirect('/phoenix/agent/v12/add-new-clinic-notpublished');
+        };
+    })
+    
+    
+    //remove (delete) clinic
+    
+    router.post('/phoenix/agent/v12/delete-clinic-cordell', function (req, res) {
+        const removeclinic = req.session.data['removeclinic'];
+        if (removeclinic === "yes") {
+                res.redirect('/phoenix/agent/v12/delete-clinic-cordell-reason');
+    
+        } else {
+                res.redirect('/phoenix/agent/v12/clinic-details-cordell');
+        };
+    
+    
+    })
+
+
+    //assessment methods and types routing
+
+
+
+    router.post('/phoenix/agent/v12/add-new-2', function (req, res) {
+  var assessmentType = req.session.data['assessmentType']
+
+if(assessmentType.includes('mental'))
+{
+        res.redirect('/phoenix/agent/v12/distance');
+}
+else if(assessmentType.includes('physical'))
+{ 
+        res.redirect('/phoenix/agent/v12/distance');
+}
+else if(assessmentType.includes('homevisit'))
+{ 
+        res.redirect('/phoenix/agent/v12/distance');
+}
+else if(assessmentType.includes('workplacevisit'))
+{ 
+        res.redirect('/phoenix/agent/v12/distance');
+}
+
+
+else {
+        res.redirect('/phoenix/agent/v12/check-answers-clinic');
+}})
+
+//add new clinic routing check provider
+
+router.post('/phoenix/agent/v12/add-new-clinic', function (req, res) {
+        var assessmentType = req.session.data['assessmentType']
+      
+      if(assessmentType.includes('mental'))
+      {
+              res.redirect('/phoenix/agent/v12/add-new-clinic-distance');
+      }
+      else if(assessmentType.includes('physical'))
+      { 
+              res.redirect('/phoenix/agent/v12/add-new-clinic-distance');
+      }
+      else if(assessmentType.includes('homevisit'))
+      { 
+              res.redirect('/phoenix/agent/v12/add-new-clinic-distance');
+      }
+      else if(assessmentType.includes('workplacevisit'))
+      { 
+              res.redirect('/phoenix/agent/v12/add-new-clinic-distance');
+      }
+      
+      
+      else {
+              res.redirect('/phoenix/agent/v12/add-clinic-check-answers');
+      }})
+
+      //add new clinic routing add-clinic-2
+
+router.post('/phoenix/agent/v12/add-clinic-2', function (req, res) {
+        var assessmentType = req.session.data['assessmentType']
+      
+      if(assessmentType.includes('mental'))
+      {
+              res.redirect('/phoenix/agent/v12/add-clinic-2-distance');
+      }
+      else if(assessmentType.includes('physical'))
+      { 
+              res.redirect('/phoenix/agent/v12/add-clinic-2-distance');
+      }
+      else if(assessmentType.includes('homevisit'))
+      { 
+              res.redirect('/phoenix/agent/v12/add-clinic-2-distance');
+      }
+      else if(assessmentType.includes('workplacevisit'))
+      { 
+              res.redirect('/phoenix/agent/v12/add-clinic-2-distance');
+      }
+      
+      
+      else {
+              res.redirect('/phoenix/agent/v12/add-clinic-2-check-clinic');
+      }})
+
+      router.post('/phoenix/agent/v12/add-another-clinic-2', function (req, res) {
+        const branch = req.session.data['branch'];
+        if (branch === "yes") {
+                res.redirect('/phoenix/agent/v12/add-clinic-2');
+    
+        } else {
+                res.redirect('/phoenix/agent/v12/added-clinic-2-check-answers');
+        };
+    })
+
+    router.post('/phoenix/agent/v12/distance', function (req, res) {
+        const distance = req.session.data['distance'];
+        if (distance === "no") {
+                res.redirect('/phoenix/agent/v12/distance-can-travel');
+        } else {
+                res.redirect('/phoenix/agent/v12/check-answers-clinic');
+        };
+    })
