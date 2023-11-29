@@ -2013,3 +2013,16 @@ router.post('/phoenix/agent/v12/add-clinic-2', function (req, res) {
                 res.redirect('/phoenix/agent/v12/check-answers-clinic');
         };
     })
+
+//     router.post('/phoenix/agent/v12/manage-whitelist', function (req, res) {
+//         res.render('/phoenix/agent/v12/manage-whitelist-email-added')
+//     })
+
+router.post('/phoenix/agent/v12/manage-whitelist-remove', function (req, res) {
+        var removeEmailAnswer = req.session.data['removeemail'];
+        if (removeEmailAnswer === "yes") {
+                res.redirect('/phoenix/agent/v12/manage-whitelist-email-removed');
+        } else {
+                res.redirect('/phoenix/agent/v12/manage-whitelist');
+        };
+    })

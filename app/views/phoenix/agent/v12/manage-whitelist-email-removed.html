@@ -1,0 +1,82 @@
+{% extends "layout2.html" %}
+
+{% block pageTitle %}
+  Manage email whitelist
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="?" method="post">
+
+      <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+        aria-labelledby="govuk-notification-banner-title"
+        data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            Success
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <h3 class="govuk-notification-banner__heading">
+            {{ data['email-whitelist'] or 'test@test.com' }} removed from whitelist
+          </h3>
+          {# <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">example@department.gov.uk</a> if you think there’s a problem.</p> #}
+        </div>
+      </div>
+
+      <h1 class="govuk-heading-l">
+        Manage email whitelist
+      </h1>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="email">
+          Enter an email address
+        </label>
+        {# <div id="email-hint" class="govuk-hint">
+          We’ll only use this to send you a receipt
+        </div> #}
+        <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Add email to whitelist
+      </button>
+
+    </form>
+
+      <br><br>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Whitelisted emails</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Emails</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-!-width-one-quarter"></th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-body govuk-!-font-weight-regular">test@test.com</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="manage-whitelist-remove" class="govuk-link">Remove</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-body govuk-!-font-weight-regular">{{ data['email-whitelist'] or 'test@test.com' }}</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="manage-whitelist-remove" class="govuk-link">Remove</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+{% endblock %}
