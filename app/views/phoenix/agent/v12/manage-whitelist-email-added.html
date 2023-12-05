@@ -28,7 +28,7 @@
         </div>
         <div class="govuk-notification-banner__content">
           <h3 class="govuk-notification-banner__heading">
-            {{ data['email-whitelist'] or 'test@test.com' }} added to whitelist
+            {{ data['email-whitelist'] or 'joe.bloggs@employer.com' }} added to whitelist
           </h3>
           {# <a class="govuk-notification-banner__link" href="menu">Go to Tasks menu</a> #}
         </div>
@@ -66,15 +66,15 @@
         </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body govuk-!-font-weight-regular">test@test.com</th>
+            <th scope="row" class="govuk-table__header govuk-body govuk-!-font-weight-regular">joe.bloggs@employer.com</th>
             <td class="govuk-table__cell govuk-table__cell--numeric"><a href="manage-whitelist-remove" class="govuk-link">Remove</a></td>
           </tr>
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body govuk-!-font-weight-regular">test@test.com</th>
+            <th scope="row" class="govuk-table__header govuk-body govuk-!-font-weight-regular">joe.bloggs@employer.com</th>
             <td class="govuk-table__cell govuk-table__cell--numeric"><a href="manage-whitelist-remove" class="govuk-link">Remove</a></td>
           </tr>
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body govuk-!-font-weight-regular">{{ data['email-whitelist'] or 'test@test.com' }}</th>
+            <th scope="row" class="govuk-table__header govuk-body govuk-!-font-weight-regular">{{ data['email-whitelist'] or 'joe.bloggs@employer.com' }}</th>
             <td class="govuk-table__cell govuk-table__cell--numeric"><a href="manage-whitelist-remove" class="govuk-link">Remove</a></td>
           </tr>
         </tbody>
