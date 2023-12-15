@@ -29,9 +29,9 @@
                   </thead>
                   <tbody class="govuk-table__body">
                       <tr scope="row" class="govuk-table__row">
-                          <td class="govuk-table__cell">Cookie 1</td>
-                          <td class="govuk-table__cell">Plain language description of cookie purpose</td>
-                          <td class="govuk-table__cell">Cookie duration</td>
+                          <td class="govuk-table__cell">sessions_claim</td>
+                          <td class="govuk-table__cell">To remember where you are in the application and your previous answers so you can move back and forward through the website</td>
+                          <td class="govuk-table__cell">90 minutes or when you close your browser</td>
                       </tr>
                       <tr scope="row" class="govuk-table__row">
                           <td class="govuk-table__cell">Cookie 2</td>
@@ -51,18 +51,18 @@
                   </thead>
                   <tbody class="govuk-table__body">
                       <tr scope="row" class="govuk-table__row">
-                          <td class="govuk-table__cell">Cookie 1</td>
-                          <td class="govuk-table__cell">Plain language description of cookie purpose</td>
-                          <td class="govuk-table__cell">Cookie duration</td>
+                          <td class="govuk-table__cell">seen_cookie_message</td>
+                          <td class="govuk-table__cell">Saves your cookie consent settings</td>
+                          <td class="govuk-table__cell">1 year</td>
                       </tr>
-                      <tr scope="row" class="govuk-table__row">
+                      {# <tr scope="row" class="govuk-table__row">
                           <td class="govuk-table__cell">Cookie 2</td>
                           <td class="govuk-table__cell">Plain language description of cookie purpose</td>
                           <td class="govuk-table__cell">Cookie duration</td>
-                      </tr>
+                      </tr> #}
                   </tbody>
               </table>
-              <h3 class="govuk-heading-m" id="performance_cookies_desc">Performance cookies</h3>
+              {# <h3 class="govuk-heading-m" id="performance_cookies_desc">Performance cookies</h3>
               <table class="govuk-table" aria-describedby="performance_cookies_desc">
                   <thead class="govuk-table__header">
                       <tr>
@@ -83,7 +83,7 @@
                           <td class="govuk-table__cell">Cookie duration</td>
                       </tr>
                   </tbody>
-              </table>
+              </table> #}
           </div>
       </details>
       </div>
@@ -110,14 +110,14 @@
                       </thead>
                       <tbody class="govuk-table__body">
                           <tr scope="row" class="govuk-table__row">
-                              <td class="govuk-table__cell">Cookie 1</td>
-                              <td class="govuk-table__cell">Plain language description of cookie purpose</td>
-                              <td class="govuk-table__cell">Cookie duration</td>
+                              <td class="govuk-table__cell">_ga</td>
+                              <td class="govuk-table__cell">Counts how many people visit the website by tracking if they’ve visited before</td>
+                              <td class="govuk-table__cell">60 minutes or when you close your browser</td>
                           </tr>
                           <tr scope="row" class="govuk-table__row">
-                              <td class="govuk-table__cell">Cookie 1</td>
-                              <td class="govuk-table__cell">Plain language description of cookie purpose</td>
-                              <td class="govuk-table__cell">Cookie duration</td>
+                              <td class="govuk-table__cell">_gat</td>
+                              <td class="govuk-table__cell">Counts how many pages are viewed and how often</td>
+                              <td class="govuk-table__cell">10 minutes</td>
                           </tr>
                       </tbody>
                   </table>
@@ -143,7 +143,11 @@
                   </div>
               </fieldset>
           </div>
-          <button class="govuk-button">Save cookie settings</button>
+          {# <button class="govuk-button">Save cookie settings</button> #}
+          {{ govukButton({
+            text: "Save cookie settings",
+            href: "/"
+          }) }}
       </form>
   </div>
 </div>
