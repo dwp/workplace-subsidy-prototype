@@ -40,7 +40,16 @@
 {% endblock %}
 
 {% block header %}
-<header class="govuk-header" role="banner" data-module="govuk-header">
+
+{{ 
+  govukHeader({
+    homepageUrl: "/",
+    serviceName: "Get a workplace health assessment to support an employee's health and disability",
+    serviceUrl: "/"
+  })
+}}
+
+{# <header class="govuk-header" role="banner" data-module="govuk-header">
   <div class="govuk-header__container govuk-width-container">
     <div class="govuk-header__logo">
       <a href="#" class="govuk-header__link govuk-header__link--homepage">
@@ -65,7 +74,7 @@
       </a>
 
   </div>
-</header>
+</header> #}
 
 {% endblock %}
 
