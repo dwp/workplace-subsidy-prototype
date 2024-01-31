@@ -52,8 +52,11 @@
     </div>
 
 
-
-    <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+    {{ govukButton({
+      text: "Save and continue",
+      href: "clinic-details-cordell"
+    }) }}
+    {# <button class="govuk-button" data-module="govuk-button">Save and continue</button> #}
 
 
 </form>
