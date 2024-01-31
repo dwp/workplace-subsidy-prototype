@@ -208,8 +208,11 @@
         
 
 
-
-             <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+            {{ govukButton({
+              text: "Save and continue",
+              href: "check-answers-clinic"
+            }) }}
+             {# <button class="govuk-button" data-module="govuk-button">Save and continue</button> #}
             </form>
 
       </div>
