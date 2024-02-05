@@ -1028,7 +1028,7 @@ router.post('/phoenix/employer/v15/location', function (req, res) {
         } else if (size === "micro") {
                 res.redirect('/phoenix/employer/v15/turnover');
         } else  if (size === "medium") {
-                res.redirect('/phoenix/employer/v15/turnover');
+                res.redirect('/phoenix/employer/v15/turnover-medium');
         } else {
                 res.redirect('/phoenix/employer/v15/not-eligible-size');
         };
@@ -1037,29 +1037,100 @@ router.post('/phoenix/employer/v15/location', function (req, res) {
     
     //turnover
     
+
     router.post('/phoenix/employer/v15/turnover', function (req, res) {
-        const turnover = req.session.data['turnover'];
-         if (turnover === "no") {
-                res.redirect('/phoenix/employer/v15/balance-sheet');
+
+        // Make a variable and give it the value from 'how-many-balls'
+        var turnover = req.session.data['turnover']
+
+        // Check whether the variable matches a condition
+        if (turnover == "turnover-eligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v15/you-may-be-eligible')
+        }
+        if (turnover == "turnover-ineligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v15/balance-sheet')
+        }
+        // else {
+        // // Send user to ineligible page
+        // res.redirect('basic-employee-contributions')
+        // }
+
+        })
+
+
+        //turnover-medium
     
-        } else {
-                res.redirect('/phoenix/employer/v15/you-may-be-eligible');
-        };
-    })
+
+    router.post('/phoenix/employer/v15/turnover-medium', function (req, res) {
+
+        // Make a variable and give it the value from 'how-many-balls'
+        var turnover = req.session.data['turnover']
+
+        // Check whether the variable matches a condition
+        if (turnover == "turnover-eligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v15/you-may-be-eligible')
+        }
+        if (turnover == "turnover-ineligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v15/balance-sheet-medium')
+        }
+        // else {
+        // // Send user to ineligible page
+        // res.redirect('basic-employee-contributions')
+        // }
+
+        })
     
     
     
     //balance sheet
-    
+
     router.post('/phoenix/employer/v15/balance-sheet', function (req, res) {
-        const balance = req.session.data['balance'];
-         if (balance === "no") {
-                res.redirect('/phoenix/employer/v15/not-eligible-balance-sheet2');
-        } else {
-                res.redirect('/phoenix/employer/v15/you-may-be-eligible');
-        };
-    
-    })
+
+        // Make a variable and give it the value from 'how-many-balls'
+        var balance = req.session.data['balance']
+
+        // Check whether the variable matches a condition
+        if (balance == "balance-eligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v15/you-may-be-eligible')
+        }
+        if (balance == "balance-ineligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v15/not-eligible-balance-sheet')
+        }
+        // else {
+        // // Send user to ineligible page
+        // res.redirect('basic-employee-contributions')
+        // }
+
+        })
+
+        //balance-sheet-medium
+
+        router.post('/phoenix/employer/v15/balance-sheet-medium', function (req, res) {
+
+                // Make a variable and give it the value from 'how-many-balls'
+                var balance = req.session.data['balance']
+
+                // Check whether the variable matches a condition
+                if (balance == "balance-eligible") {
+                // Send user to next page
+                res.redirect('/phoenix/employer/v15/you-may-be-eligible')
+                }
+                if (balance == "balance-ineligible") {
+                // Send user to next page
+                res.redirect('/phoenix/employer/v15/not-eligible-balance-sheet2')
+                }
+                // else {
+                // // Send user to ineligible page
+                // res.redirect('basic-employee-contributions')
+                // }
+
+                })
     
     //email address
     
@@ -1072,6 +1143,9 @@ router.post('/phoenix/employer/v15/location', function (req, res) {
         };
     
     })
+
+
+       
 
 
 
