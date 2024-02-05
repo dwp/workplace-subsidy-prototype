@@ -1,0 +1,44 @@
+{% extends "layout-employer.html" %}
+
+{% block pageTitle %}
+  What is your email address?
+{% endblock %}
+
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-l">
+      What is your email?
+      </h1>
+
+
+      <div class="govuk-form-group">
+        
+        <p>
+          We will email you a copy of your discount code.
+        </p>
+        <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+      </div>
+
+
+
+
+
+<a href="check-answers"
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+</a>
+
+
+    </div>
+  </div>
+
+{% endblock %}
