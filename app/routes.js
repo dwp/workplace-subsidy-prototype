@@ -1003,6 +1003,76 @@ router.post('/phoenix/employer/v14/location', function (req, res) {
     
     })
 
+ //////////            EMPLOYER    VERSION 15 ( private beta)
+//Location
+
+router.post('/phoenix/employer/v15/location', function (req, res) {
+        const register = req.session.data['register'];
+        if (register === "england") {
+                res.redirect('/phoenix/employer/v15/business-size');
+        } else if (register === "wales") {
+                      res.redirect('/phoenix/employer/v15/business-size');
+        } else if (register === "ireland") {
+                        res.redirect('/phoenix/employer/v15/not-eligible-location-ni');
+        } else {
+                res.redirect('/phoenix/employer/v15/not-eligible-location');
+        };
+    })
+    
+    //business-size
+    
+    router.post('/phoenix/employer/v15/business-size', function (req, res) {
+        const size = req.session.data['size'];
+         if (size === "small") {
+                res.redirect('/phoenix/employer/v15/turnover');
+        } else if (size === "micro") {
+                res.redirect('/phoenix/employer/v15/turnover');
+        } else  if (size === "medium") {
+                res.redirect('/phoenix/employer/v15/turnover');
+        } else {
+                res.redirect('/phoenix/employer/v15/not-eligible-size');
+        };
+    })
+    
+    
+    //turnover
+    
+    router.post('/phoenix/employer/v15/turnover', function (req, res) {
+        const turnover = req.session.data['turnover'];
+         if (turnover === "no") {
+                res.redirect('/phoenix/employer/v15/balance-sheet');
+    
+        } else {
+                res.redirect('/phoenix/employer/v15/you-may-be-eligible');
+        };
+    })
+    
+    
+    
+    //balance sheet
+    
+    router.post('/phoenix/employer/v15/balance-sheet', function (req, res) {
+        const balance = req.session.data['balance'];
+         if (balance === "no") {
+                res.redirect('/phoenix/employer/v15/not-eligible-balance-sheet2');
+        } else {
+                res.redirect('/phoenix/employer/v15/you-may-be-eligible');
+        };
+    
+    })
+    
+    //email address
+    
+    router.post('/phoenix/employer/v15/contact-method', function (req, res) {
+        const email = req.session.data['email'];
+         if (email === "yes") {
+                res.redirect('/phoenix/employer/v15/email');
+        } else {
+                res.redirect('/phoenix/employer/v15/phone-number');
+        };
+    
+    })
+
 
 
 //////////            AGENT    VERSION 3
