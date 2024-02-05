@@ -1,7 +1,7 @@
 {% extends "layout-employer.html" %}
 
 {% block pageTitle %}
-    How many employees work for your company at the moment?
+How many employees do you have?
 {% endblock %}
 
 
@@ -22,7 +22,7 @@
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 <!--<span class="govuk-caption-l">Find out if you're eligible</span>-->
               <h1 class="govuk-fieldset__heading">
-                How many employees work for your company?
+                How many employees do you have?
 
               </h1>
             </legend>
@@ -38,27 +38,49 @@
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="size-1" name="size" type="radio" value="micro">
                 <label class="govuk-label govuk-radios__label" for="size-1">
-                  1 to 9 employees
+                  1 to 4 employees
                 </label>
               </div>
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="size-2" name="size" type="radio" value="small">
+                <input class="govuk-radios__input" id="size-2" name="size" type="radio" value="micro">
                 <label class="govuk-label govuk-radios__label" for="size-2">
-                10 to 49 employees
+                  5 to 9 employees
                 </label>
               </div>
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="size-3" name="size" type="radio" value="medium">
+                <input class="govuk-radios__input" id="size-3" name="size" type="radio" value="small">
                 <label class="govuk-label govuk-radios__label" for="size-3">
-                  50 to 250 employees
+                  10 to 24 employees
                 </label>
               </div>
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="size-4" name="size" type="radio" value="large">
+                <input class="govuk-radios__input" id="size-4" name="size" type="radio" value="small">
                 <label class="govuk-label govuk-radios__label" for="size-4">
+                  25 to 49 employees
+                </label>
+              </div>
+              
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="size-5" name="size" type="radio" value="medium">
+                <label class="govuk-label govuk-radios__label" for="size-5">
+                  50 to 99 employees
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="size-6" name="size" type="radio" value="medium">
+                <label class="govuk-label govuk-radios__label" for="size-6">
+                  100 to 250 employees
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="size-7" name="size" type="radio" value="large">
+                <label class="govuk-label govuk-radios__label" for="size-7">
                   More than 250 employees
                 </label>
               </div>
