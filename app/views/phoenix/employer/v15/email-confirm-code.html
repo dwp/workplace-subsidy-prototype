@@ -21,7 +21,7 @@ Check your email
         </legend>
         </div>
         
-        <p class="govuk-body">We have sent a code to: <strong>{{ data['undertaking-admin-email'] or "user@company.com" }}</strong>.</p>
+        <p class="govuk-body">We have sent an access code to: <strong>{{ data['undertaking-admin-email'] or "user@company.com" }}</strong>.</p>
         
         {# <div class="govuk-warning-text">
         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
@@ -31,11 +31,11 @@ Check your email
         </strong>
         </div> #}
         
-        <p class="govuk-body">For your security, the code will expire after X minutes.</p>
+        <p class="govuk-body">For your security, the access code will expire after [X seconds/minutes/hours].</p>
         
         <div class="govuk-form-group">
         <label class="govuk-label" for="event-name">
-        Enter code
+        Enter access code
         </label>
         <label class="govuk-hint" for="event-name">
         For example, DNCLRK
@@ -45,7 +45,7 @@ Check your email
         
         {{ govukButton({
         text: "Continue",
-        href: "start-page"
+        href: "check-answers"
         }) }}
         
         <details class="govuk-details" data-module="govuk-details">
