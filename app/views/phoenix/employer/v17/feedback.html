@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  What is your email address?
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+
+      <h1 class="govuk-heading-l">
+        Can we contact you for feedback about the assessment? 
+      </h1>
+
+
+
+        <p>We will ask you about the quality of the service you and the employee received.</p>
+
+
+        <div class="govuk-radios" data-module="govuk-radios">
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="feedback" name="feedback" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="feedback">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="feedback" name="feedback" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="feedback-2">
+            No
+            </label>
+          </div>
+</div>
+
+</fieldset>
+</div>
+
+
+<a href="check-answers"
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+</a>
+
+
+    </div>
+  </div>
+
+{% endblock %}

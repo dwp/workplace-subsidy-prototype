@@ -1002,6 +1002,77 @@ router.post('/phoenix/employer/v16/location', function (req, res) {
         };
     
     })
+
+
+//////////            EMPLOYER    VERSION 17 (post-pilot)
+
+//Location
+
+router.post('/phoenix/employer/v17/location', function (req, res) {
+        const register = req.session.data['register'];
+        if (register === "england") {
+                res.redirect('/phoenix/employer/v17/business-size');
+       
+        } else if (register === "ireland") {
+                        res.redirect('/phoenix/employer/v17/not-eligible-location-ni');
+        } else {
+                res.redirect('/phoenix/employer/v17/not-eligible-location');
+        };
+    })
+    
+    //business-size
+    
+    router.post('/phoenix/employer/v17/business-size', function (req, res) {
+        const size = req.session.data['size'];
+         if (size === "small") {
+                res.redirect('/phoenix/employer/v17/turnover');
+        } else if (size === "micro") {
+                res.redirect('/phoenix/employer/v17/turnover');
+        } else  if (size === "medium") {
+                res.redirect('/phoenix/employer/v17/turnover');
+        } else {
+                res.redirect('/phoenix/employer/v17/not-eligible-size');
+        };
+    })
+    
+    
+    //turnover
+    
+    router.post('/phoenix/employer/v17/turnover', function (req, res) {
+        const turnover = req.session.data['turnover'];
+         if (turnover === "no") {
+                res.redirect('/phoenix/employer/v17/balance-sheet');
+    
+        } else {
+                res.redirect('/phoenix/employer/v17/you-may-be-eligible');
+        };
+    })
+    
+    
+    
+    //balance sheet
+    
+    router.post('/phoenix/employer/v17/balance-sheet', function (req, res) {
+        const balance = req.session.data['balance'];
+         if (balance === "no") {
+                res.redirect('/phoenix/employer/v17/not-eligible-balance-sheet2');
+        } else {
+                res.redirect('/phoenix/employer/v17/you-may-be-eligible');
+        };
+    
+    })
+    
+    //email address
+    
+    router.post('/phoenix/employer/v17/contact-method', function (req, res) {
+        const email = req.session.data['email'];
+         if (email === "yes") {
+                res.redirect('/phoenix/employer/v17/email');
+        } else {
+                res.redirect('/phoenix/employer/v17/phone-number');
+        };
+    
+    })
     
 
     //////////            EMPLOYER    VERSION 14 ( private beta)
