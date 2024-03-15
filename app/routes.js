@@ -1143,6 +1143,19 @@ router.post('/phoenix/employer/v17/location', function (req, res) {
         };
     
     })
+
+
+     //main contact
+    
+     router.post('/phoenix/employer/v17/contact', function (req, res) {
+        const mainName = req.session.data['mainName'];
+         if (mainName === "yes") {
+                res.redirect('/phoenix/employer/v17/employer-name');
+        } else {
+                res.redirect('/phoenix/employer/v17/contact-main-details');
+        };
+    
+    })
     
 
     //////////            EMPLOYER    VERSION 14 ( private beta)
