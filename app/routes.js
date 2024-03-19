@@ -1010,10 +1010,10 @@ router.post('/phoenix/employer/v16/location', function (req, res) {
 
 router.post('/phoenix/employer/v17/location', function (req, res) {
         const register = req.session.data['register'];
-        if (register === "england") {
+        if (register === "England and Wales") {
                 res.redirect('/phoenix/employer/v17/business-size');
        
-        } else if (register === "ireland") {
+        } else if (register === "Northern Ireland") {
                         res.redirect('/phoenix/employer/v17/not-eligible-location-ni');
         } else {
                 res.redirect('/phoenix/employer/v17/not-eligible-location');
