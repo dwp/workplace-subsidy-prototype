@@ -30,14 +30,14 @@
 
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
-                  Company registration
+                  Organisation registration
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    England and Wales
+                    {{ data['register'] or "England and Wales" }}
                   </dd>
                   <dd class="govuk-summary-list__actions">
                     <a class="govuk-link" href="location">
-                      Change<span class="govuk-visually-hidden"> Change company registration</span>
+                      Change<span class="govuk-visually-hidden"> organisation registration</span>
                     </a>
                   </dd>
                 </div>
@@ -48,8 +48,7 @@
                   Number of employees
                   </dt>
                   <dd class="govuk-summary-list__value">
-
-                    <p class="govuk-body">1 to 9 employees</p>
+                    <p class="govuk-body">1 to 4 employees</p>
                   </dd>
                   <dd class="govuk-summary-list__actions">
                     <a class="govuk-link" href="business-size">
@@ -61,7 +60,7 @@
 
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                What was your turnover for the last financial year?
+                  Yearly turnover
                 </dt>
                 <dd class="govuk-summary-list__value">
 
@@ -76,12 +75,11 @@
 
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  What was your balance sheet total for the last financial year?
-
+                  Yearly balance
                 </dt>
                 <dd class="govuk-summary-list__value">
 
-                  <p class="govuk-body">Less than £5.1 million</p>
+                  <p class="govuk-body">£1 million to £5.1 million</p>
                 </dd>
                 <dd class="govuk-summary-list__actions">
                   <a class="govuk-link" href="balance-sheet">
@@ -97,82 +95,91 @@
 
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
-                  What is your name?
+                  Name of your organisation
                   </dt>
                   <dd class="govuk-summary-list__value">
-                   <p>Anya</p> <p>Johnson</p>
+                   ABC Limited
                   </dd>
                 
                   <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="business-name-change">
-                      Change<span class="govuk-visually-hidden"> company name</span>
+                    <a class="govuk-link" href="business-name">
+                      Change<span class="govuk-visually-hidden"> organisation name</span>
                     </a>
                   </dd>
                 </div>
 
                 
-
-
-
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
-                    How can we send you the discount code?
+                  Main contact
                   </dt>
                   <dd class="govuk-summary-list__value">
-
-                    <p class="govuk-body">Email</p>
+                   No
                   </dd>
-                  
-                    <dd class="govuk-summary-list__actions">
-                      <a class="govuk-link" href="contact-method">
-                        Change<span class="govuk-visually-hidden"> email address</span>
-                      </a>
-                    </dd>
                 
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="contact">
+                      Change<span class="govuk-visually-hidden"> main contact</span>
+                    </a>
+                  </dd>
                 </div>
 
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
-                    Email address
+                  Main contact's contact details
                   </dt>
                   <dd class="govuk-summary-list__value">
-
-                    <p class="govuk-body">phillips@example.com</p>
+                   joebloggs@organisation.com<br>07123456789
                   </dd>
-                  
-                    <dd class="govuk-summary-list__actions">
-                      <a class="govuk-link" href="email">
-                        Change<span class="govuk-visually-hidden"> email address</span>
-                      </a>
-                    </dd>
                 
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="contact-main-details">
+                      Change<span class="govuk-visually-hidden"> main contact's contact details</span>
+                    </a>
+                  </dd>
                 </div>
-            
 
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                Company name
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  Philips
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="business-name-change">
-                    Change<span class="govuk-visually-hidden"> company name</span>
-                  </a>
-                </dd>
-              </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                  Main contact name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                   Joe Bloggs
+                  </dd>
+                
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="employer-name">
+                      Change<span class="govuk-visually-hidden"> main contact name</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Your contact details
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                   janedoe@organisation.com<br>07987654321
+                  </dd>
+                
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="contact-details">
+                      Change<span class="govuk-visually-hidden"> your contact details</span>
+                    </a>
+                  </dd>
+                </div>
+
             
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Which sector does your company belong to?
+                  Organisation sector
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  Wholesale or retail
+                  Education, health or government
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="business-name-change">
-                    Change<span class="govuk-visually-hidden"> company name</span>
+                  <a class="govuk-link" href="sector">
+                    Change<span class="govuk-visually-hidden"> sector of organisation</span>
                   </a>
                 </dd>
               </div>
