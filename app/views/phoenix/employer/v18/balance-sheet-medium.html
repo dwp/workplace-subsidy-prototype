@@ -1,0 +1,102 @@
+{% extends "layout-employer.html" %}
+
+{% block pageTitle %}
+What is your yearly balance?
+{% endblock %}
+
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" method="post">
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    What is your yearly balance?
+                  </h1>
+                </legend>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="balance-1" name="balance" type="radio" value="balance-eligible">
+                    <label class="govuk-label govuk-radios__label" for="balance-1">
+                      £1 to £49,999
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="balance-2" name="balance" type="radio" value="balance-eligible">
+                    <label class="govuk-label govuk-radios__label" for="balance-2">
+                      £50,000 to £99,000
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="balance-3" name="balance" type="radio" value="balance-eligible">
+                    <label class="govuk-label govuk-radios__label" for="balance-3">
+                      £100,000 to £249,999
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="balance-4" name="balance" type="radio" value="balance-eligible">
+                    <label class="govuk-label govuk-radios__label" for="balance-4">
+                      £250,000 to £499,999
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="balance-5" name="balance" type="radio" value="balance-eligible">
+                    <label class="govuk-label govuk-radios__label" for="balance-5">
+                      £500,000 to £999,999
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="balance-6" name="balance" type="radio" value="balance-eligible">
+                    <label class="govuk-label govuk-radios__label" for="balance-6">
+                      £1 million to £5.1 million
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="balance-7" name="balance" type="radio" value="balance-eligible">
+                    <label class="govuk-label govuk-radios__label" for="balance-7">
+                      £5.1 million to £10.2 million 
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="balance-8" name="balance" type="radio" value="balance-eligible">
+                    <label class="govuk-label govuk-radios__label" for="balance-8">
+                      £10.3 million to £18 million
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="balance-9" name="balance" type="radio" value="balance-ineligible">
+                    <label class="govuk-label govuk-radios__label" for="balance-9">
+                      More than £18 million 
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+        </div>
+
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+</form>
+    </div>
+  </div>
+
+{% endblock %}
