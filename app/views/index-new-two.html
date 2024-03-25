@@ -1,0 +1,221 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      Employer UI
+      </h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <h2 class="govuk-heading-l">
+      Private Beta 
+      </h2>
+  
+  <h2 class="govuk-heading-m">
+  Version 18 - Sprint 28
+  </h2>
+  
+  <h3 class="govuk-heading-s">Changes</h3>
+  <ul class="govuk-list govuk-list--bullet">
+  <li>Access the service screen</li>
+  </ul>
+  
+  <h3 class="govuk-heading-s">Relevant links</h3>
+  <p><a href="">View on Mural</a></p>
+  
+  <br>
+  
+  {{ govukButton({
+  text: 'View prototype',
+  href: '/manage-case/v12/case-list/my-cases'
+  }) }}
+
+
+  {% set v3 %}
+
+  <h2 class="govuk-heading-m">
+    Version 3
+    </h2>
+  
+  <h3 class="govuk-heading-s">Changes</h3>
+  <p>Updates following co-design session with procurement ops team.</p>
+  <ul class="govuk-list govuk-list--bullet">
+  <li>Split contact form into initial triage and consultaion</li>
+  <li>Added case list</li>
+  <li>Added status based workflow</li>
+  </ul>
+  
+  <h3 class="govuk-heading-s">Research notes</h3>
+  <p>No research done yet</p>
+  <!--<p><a href="#0">View user research report</a>.<p>-->
+  
+  {{ govukButton({
+  text: 'View prototype',
+  href: '/manage-case/v3/case-list'
+  }) }}
+  
+  
+  {% endset %}
+  
+  {% set v2 %}
+  
+  <h3 class="govuk-heading-s">Changes</h3>
+  <p>Updates following co-design session with procurement ops team.</p>
+  <ul class="govuk-list govuk-list--bullet">
+  <li>Added detailed questions in call back form.</li>
+  </ul>
+  
+  <h3 class="govuk-heading-s">Research notes</h3>
+  <p><a href="https://miro.com/app/board/o9J_lHuWMxw=/?moveToWidget=3074457359682518159&cot=14" target="_blank">Notes from co-design with procurement ops</a> </p>
+  <!--<p><a href="#0">View user research report</a>.<p>-->
+  
+  {{ govukButton({
+  text: 'View prototype',
+  href: '/manage-case/v2/new-case/task-list'
+  }) }}
+  
+  {% endset %}
+  
+  
+  {% set v1 %}
+  <p>First version, no changes.</p>
+  
+  <h3 class="govuk-heading-s">Research notes</h3>
+  <p>Information about the research.</p>
+  <p><a href="https://miro.com/app/board/o9J_lHuWMxw=/?moveToWidget=3074457359051393820&cot=14" target="_blank">Notes from co-design with procurement ops</a> </p>
+  {{ govukButton({
+  text: 'View prototype',
+  href: '/manage-case/v1/new-case/task-list'
+  }) }}
+  {% endset %}
+  
+  
+  
+  {{ govukAccordion({
+  items: [
+  {
+  heading: { text: 'Version 3' },
+  content: { html: v3 }
+  },{
+  heading: { text: 'Version 2' },
+  content: { html: v2 }
+  },{
+  heading: { text: 'Version 1' },
+  content: { html: v1 }
+  }
+  ]
+  }) }}
+  </div>
+  <div class="govuk-grid-column-one-half">
+    <h2 class="govuk-heading-l">
+      Public Beta 
+      </h2>
+  
+  <h2 class="govuk-heading-m">
+  Version 17 - Sprint 28
+  </h2>
+  
+  <h3 class="govuk-heading-s">Changes</h3>
+  <ul class="govuk-list govuk-list--bullet">
+  <li>Access the service screen</li>
+  </ul>
+  
+  <h3 class="govuk-heading-s">Relevant links</h3>
+  <p><a href="">View on Mural</a></p>
+  
+  <br>
+  
+  {{ govukButton({
+  text: 'View prototype',
+  href: '/manage-case/v12/case-list/my-cases'
+  }) }}
+  
+
+  
+  {% set v3 %}
+
+  <h2 class="govuk-heading-m">
+    Version 3
+    </h2>
+  
+  <h3 class="govuk-heading-s">Changes</h3>
+  <p>Updates following co-design session with procurement ops team.</p>
+  <ul class="govuk-list govuk-list--bullet">
+  <li>Split contact form into initial triage and consultaion</li>
+  <li>Added case list</li>
+  <li>Added status based workflow</li>
+  </ul>
+  
+  <h3 class="govuk-heading-s">Research notes</h3>
+  <p>No research done yet</p>
+  <!--<p><a href="#0">View user research report</a>.<p>-->
+  
+  {{ govukButton({
+  text: 'View prototype',
+  href: '/manage-case/v3/case-list'
+  }) }}
+  
+  
+  {% endset %}
+  
+  {% set v2 %}
+  
+  <h3 class="govuk-heading-s">Changes</h3>
+  <p>Updates following co-design session with procurement ops team.</p>
+  <ul class="govuk-list govuk-list--bullet">
+  <li>Added detailed questions in call back form.</li>
+  </ul>
+  
+  <h3 class="govuk-heading-s">Research notes</h3>
+  <p><a href="https://miro.com/app/board/o9J_lHuWMxw=/?moveToWidget=3074457359682518159&cot=14" target="_blank">Notes from co-design with procurement ops</a> </p>
+  <!--<p><a href="#0">View user research report</a>.<p>-->
+  
+  {{ govukButton({
+  text: 'View prototype',
+  href: '/manage-case/v2/new-case/task-list'
+  }) }}
+  
+  {% endset %}
+  
+  
+  
+  
+  
+  {% set v1 %}
+  <p>First version, no changes.</p>
+  
+  <h3 class="govuk-heading-s">Research notes</h3>
+  <p>Information about the research.</p>
+  <p><a href="https://miro.com/app/board/o9J_lHuWMxw=/?moveToWidget=3074457359051393820&cot=14" target="_blank">Notes from co-design with procurement ops</a> </p>
+  {{ govukButton({
+  text: 'View prototype',
+  href: '/manage-case/v1/new-case/task-list'
+  }) }}
+  {% endset %}
+  
+  
+  
+  {{ govukAccordion({
+  items: [
+  {
+  heading: { text: 'Version 3' },
+  content: { html: v3 }
+  },{
+  heading: { text: 'Version 2' },
+  content: { html: v2 }
+  },{
+  heading: { text: 'Version 1' },
+  content: { html: v1 }
+  }
+  ]
+  }) }}
+  </div>
+</div>
+
+</div>
+</div>
+{% endblock %}
