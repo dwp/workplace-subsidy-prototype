@@ -1,0 +1,83 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    
+    <h1 class="govuk-heading-xl">
+      Agent UI
+    </h1>
+
+    <h2 class="govuk-heading-l">
+      Private Beta
+    </h2>
+
+  <h2 class="govuk-heading-m">
+  Version 12
+  </h2>
+  
+  <h3 class="govuk-heading-s">Changes</h3>
+  <ul class="govuk-list govuk-list--bullet">
+  <li>Added link to Performance data dashboard in Tasks menu</li>
+  <li>Updated CYA and Check clinic details pages' content for Provider to keep address private</li>
+  <li>Change of the term from "Price" to "Cost"</li>
+  <li>Added hint text in scenario where Provider has chosen not to publish their address to show that a clinic's address isn't on the public Register when accessing clinic details and CYA</li>
+  <li>Address not displayed checkbox and content to allow Providers to choose if their address is displayed on the public register</li>
+  <li>Added the date voucher was generated to voucher check</li>
+  <li>Primary button label for Provider CYA changed to 'Publish' from 'Save and continue'</li>
+  <li>Voucher code checker - 'What happens next' content</li>
+  <li>Performance data dashboard</li>
+  <li>Manage email whitelist (employee allow list journey)</li>
+  <li>Routes - JavaScript bug fixing, design of missing screens (that are live in production), fixing routes and user flows — See <a href="https://app.mural.co/t/dwpdigital7412/m/dwpdigital7412/1702309070443/907aa5c2e43c403b6e425bb0e88ef380e717e1e0?sender=u57f46f1ebfd00e6e8d919712" class="govuk-link" rel="noreferrer noopener" target="_blank">Mural</a></li>
+  <li>Primary CTAs changed to 'Save and continue'</li>
+  <li>'Action' label for Table pattern</li>
+  <li>Go to tasks menu bug fixes</li>
+  <li>Assessment methods checkbox bug fixes</li>
+  <li>Internal service header padding fix</li>
+  </ul>
+  
+  <br>
+  
+  {{ govukButton({
+  text: 'View prototype',
+  href: '/phoenix/agent/v12/menu'
+  }) }}
+
+  <br><br>
+
+  {% set vPhoenix %}
+
+  <h2 class="govuk-heading-m">
+    Earlier versions
+    </h2>
+  
+  <p>Access version history from Team Phoenix</p>
+
+  <br>
+  
+  {{ govukButton({
+  text: 'View versions',
+  href: '/index-phoenix'
+  }) }}
+  
+  {% endset %}
+
+  
+  {{ govukAccordion({
+  items: [
+  {
+  heading: { text: 'Earlier versions' },
+  content: { html: vPhoenix }
+  }
+  ]
+  }) }}
+
+  </div>
+  </div>
+
+{% endblock %}

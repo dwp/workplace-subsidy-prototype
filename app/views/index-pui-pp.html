@@ -1,0 +1,78 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    
+    <h1 class="govuk-heading-xl">
+      Provider UI
+    </h1>
+
+    <h2 class="govuk-heading-l">
+      Public Beta
+    </h2>
+
+  <h2 class="govuk-heading-m">
+  Version 10
+  </h2>
+  
+  <h3 class="govuk-heading-s">Changes</h3>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Anonymised location in provider results list</li>
+    <li>Removed full stops in links</li>
+    <li>‘Go back to the start page’ linked to correct guidance page</li>
+    <li>Added anonymised provider list (filter version)</li>
+    <li>Anonymised three variations (full address, town and postcode only, filters) of Provider results list for user testing</li>
+    <li>Cleaned up partial addresses, made P1 and P2 the same</li>
+    <li>Add random address results page, clear selected filters</li>
+    <li>Add random address results page, clear selected filters</li>
+    <li>Add non-filters page (v2) and generic OHP details</li>
+    <li>Added Filtering on search results with partial and full addresses</li>
+  </ul>
+  
+  <br>
+  
+  {{ govukButton({
+  text: 'View prototype',
+  href: '/phoenix/employer/register/v10/location'
+  }) }}
+
+  <br><br>
+
+
+  {% set vPhoenix %}
+
+  <h2 class="govuk-heading-m">
+    Earlier versions
+    </h2>
+  
+  <p>Access version history from Team Phoenix</p>
+
+  <br>
+  
+  {{ govukButton({
+  text: 'View versions',
+  href: '/index-phoenix'
+  }) }}
+  
+  {% endset %}
+
+  
+  {{ govukAccordion({
+  items: [
+  {
+  heading: { text: 'Earlier versions' },
+  content: { html: vPhoenix }
+  }
+  ]
+  }) }}
+
+  </div>
+  </div>
+
+{% endblock %}
