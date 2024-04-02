@@ -1,0 +1,106 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    
+    <h1 class="govuk-heading-xl">
+      Employer UI
+    </h1>
+
+    <h2 class="govuk-heading-l">
+      Public Beta
+    </h2>
+
+    <p>Includes additional data requirements for the evaluation.</p>
+
+  <h2 class="govuk-heading-m">
+  Version 17
+  </h2>
+  
+  <h3 class="govuk-heading-s">Changes</h3>
+  <ul class="govuk-list govuk-list--bullet">
+  <li>Anonymised location in provider results list</li>
+  <li>Removed full stops in links</li>
+  <li>Updated CYA screen layout</li>
+  <li>Added screener/eligibility check screens (organisation's location, number of employees, yearly turnover, balance sheet) and employer voucher application screens (organisation name, main and applicant contact details and organisation sector) for evaluation granular data collection for SMEs — See <a href="https://app.mural.co/t/dwpdigital7412/m/dwpdigital7412/1706797932382/68a0dbd5c532066b911fc5d06eebc156f6791476?sender=u57f46f1ebfd00e6e8d919712" class="govuk-link" rel="noreferrer noopener" target="_blank">Mural</a></li>
+  <li>'Company' term changed to 'Organisation'</li>
+  </ul>
+  
+  <br>
+  
+  {{ govukButton({
+  text: 'View prototype',
+  href: '/phoenix/employer/v17/email-address-gate'
+  }) }}
+
+  <br><br>
+
+  {% set v16 %}
+
+  <h2 class="govuk-heading-m">
+    Version 16
+    </h2>
+  
+  <h3 class="govuk-heading-s">Changes</h3>
+  <ul class="govuk-list govuk-list--bullet">
+  <li>Updated Apply page</li>
+  <li>Updated Eligibility page</li>
+  <li>Updated How the discount scheme works page</li>
+  <li>Updated Using workplace health assessments to support an employee</li>
+  <li>Updated What is a workplace health assessment</li>
+  <li>Updated start page content</li>
+  <li>Reorder main stream content navigation options</li>
+  <li>Added OTP ('Check your email') screens for eligibility checks and returning users</li>
+  <li>Updated employer guidance to mainstream content</li>
+  </ul>
+
+  <br>
+  
+  {{ govukButton({
+  text: 'View prototype',
+  href: '/phoenix/employer/v16/email-address-gate'
+  }) }}
+  
+  {% endset %}
+
+  {% set vPhoenix %}
+
+  <h2 class="govuk-heading-m">
+    Earlier versions
+    </h2>
+  
+  <p>Access version history from Team Phoenix</p>
+
+  <br>
+  
+  {{ govukButton({
+  text: 'View versions',
+  href: '/index-phoenix'
+  }) }}
+  
+  {% endset %}
+
+  
+  {{ govukAccordion({
+  items: [
+  {
+  heading: { text: 'Version 16' },
+  content: { html: v16 }
+  },
+  {
+  heading: { text: 'Earlier versions' },
+  content: { html: vPhoenix }
+  }
+  ]
+  }) }}
+
+  </div>
+  </div>
+
+{% endblock %}

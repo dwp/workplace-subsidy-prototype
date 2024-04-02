@@ -1,0 +1,76 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    
+    <h1 class="govuk-heading-xl">
+      Provider UI
+    </h1>
+
+    <h2 class="govuk-heading-l">
+      Private Beta
+    </h2>
+
+  <h2 class="govuk-heading-m">
+  Version 8
+  </h2>
+  
+  <h3 class="govuk-heading-s">Changes</h3>
+  <ul class="govuk-list govuk-list--bullet">
+  <li>Reverted anonymised providers in provider results list</li>
+  <li>Anonymised location in provider results list</li>
+  <li>Removed full stops in links</li>
+  <li>'Back to results' button from primary to secondary in 'how providers have been evaluated' page</li>
+  <li>Added a 'dummy' Register</li>
+  <li>Added pagination component to Provider results list</li>
+  <li>Change of the term from "Price" to "Cost"</li>
+  <li>Prototype filter variations scenario links for user testing</li>
+  <li>Added three variations (full address, town and postcode only, filters) to Provider results list for user testing — See <a href="https://app.mural.co/t/dwpdigital7412/m/dwpdigital7412/1705922861786/26197e7ea9d5162662a38a2e7dbddef25c32c51b?sender=u57f46f1ebfd00e6e8d919712" class="govuk-link" rel="noreferrer noopener" target="_blank">Mural</a></li>
+</ul>
+  
+  <br>
+  
+  {{ govukButton({
+  text: 'View prototype',
+  href: '/phoenix/employer/register/v8/location'
+  }) }}
+
+  <br><br>
+
+  {% set vPhoenix %}
+
+  <h2 class="govuk-heading-m">
+    Earlier versions
+    </h2>
+  
+  <p>Access version history from Team Phoenix</p>
+
+  <br>
+  
+  {{ govukButton({
+  text: 'View versions',
+  href: '/index-phoenix'
+  }) }}
+  
+  {% endset %}
+
+  
+  {{ govukAccordion({
+  items: [
+  {
+  heading: { text: 'Earlier versions' },
+  content: { html: vPhoenix }
+  }
+  ]
+  }) }}
+
+  </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,168 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    
+    <h1 class="govuk-heading-xl">
+      Employer UI
+    </h1>
+
+    <h2 class="govuk-heading-l">
+      Private Beta
+    </h2>
+
+  <h2 class="govuk-heading-m">
+  Version 18
+  </h2>
+  
+  <h3 class="govuk-heading-s">Changes</h3>
+  <ul class="govuk-list govuk-list--bullet">
+  <li>'What is your email address?' replaced with 'Access the service' screen</li>
+  </ul>
+  
+  <br>
+  
+  {{ govukButton({
+  text: 'View prototype',
+  href: '/phoenix/employer/v18/email-address-gate'
+  }) }}
+
+  <br><br>
+
+  {% set v15 %}
+
+  <h2 class="govuk-heading-m">
+    Version 15
+    </h2>
+  
+  <h3 class="govuk-heading-s">Changes</h3>
+  <ul class="govuk-list govuk-list--bullet">
+  <li>Removed full stops in links</li>
+  <li>Unchecked auto email radio button selection when landing on page</li>
+  <li>Added Check your email access screen and Returning SME journey</li>
+  <li>Added print link to voucher code confirmation page</li>
+  <li>Content updates to voucher code confirmation page</li>
+  <li>Bullet 5 updated on 'How the discount scheme works' page</li>
+  <li>'Back to results' button from primary to secondary in 'how providers have been evaluated' page</li>
+  <li>Added content on voucher code confirmation page for when an Email or SMS fails and what a user does next</li>
+  <li>Updated content around free or funded onward support on 'How the discount scheme works' page</li>
+  <li>Update content on code generation page to state that codes apply to one employee rather than whole company</li>
+  <li>Added screens for returning user journey scenario in email, employer's regional location, number of employees, turnover, balance sheet and eligibility</li>
+  <li>Removed previous 'location' page</li>
+  <li>Added 'How many employees do you have?' screen</li>
+  <li>Added 'Where is your company registered?' screen</li>
+  <li>Change of the term from "Price" to "Cost"</li>
+  <li>Hint text added to 'What is your email address?' screen</li>
+  <li>Added phase banner</li>
+  <li>Added service name</li>
+  </ul>
+
+  <br>
+  
+  {{ govukButton({
+  text: 'View prototype',
+  href: '/phoenix/employer/v15/email-address-gate'
+  }) }}
+  
+  {% endset %}
+
+  {% set v14 %}
+
+  <h2 class="govuk-heading-m">
+    Version 14
+    </h2>
+  
+  <h3 class="govuk-heading-s">Changes</h3>
+  <ul class="govuk-list govuk-list--bullet">
+  <li>Prototype filter variations scenario links for user testing</li>
+  <li>Added filter list variations (full address, town and postcode only, filters) to Provider results list for user testing — See <a href="https://app.mural.co/t/dwpdigital7412/m/dwpdigital7412/1705922861786/26197e7ea9d5162662a38a2e7dbddef25c32c51b?sender=u57f46f1ebfd00e6e8d919712" class="govuk-link" rel="noreferrer noopener" target="_blank">Mural</a></li>
+  <li>Accessibility statement content fix</li>
+  <li>Updated 'How the discount scheme works' page content</li>
+  <li>Added Feedback link to phase banner</li>
+  <li>Added Feedback survey</li>
+  <li>Added Beta banner</li>
+  <li>Replaced 'I agree – send my application' button with 'Continue' on CYA page</li>
+  <li>Removed terminology around 'agree' on CYA page</li>
+  <li>Updated Declaration page content</li>
+  </ul>
+
+  <br>
+  
+  {{ govukButton({
+  text: 'View prototype',
+  href: '/phoenix/employer/v14/email-address-gate'
+  }) }}
+  
+  {% endset %}
+
+  {% set v12 %}
+
+  <h2 class="govuk-heading-m">
+    Version 12
+    </h2>
+  
+  <h3 class="govuk-heading-s">Changes</h3>
+  <ul class="govuk-list govuk-list--bullet">
+  <li>Accessibility statement</li>
+  <li>Cookies page</li>
+  <li>Cookies banner</li>
+  </ul>
+
+  <br>
+  
+  {{ govukButton({
+  text: 'View prototype',
+  href: '/phoenix/employer/v12/email-address-gate'
+  }) }}
+  
+  {% endset %}
+
+  {% set vPhoenix %}
+
+  <h2 class="govuk-heading-m">
+    Earlier versions
+    </h2>
+  
+  <p>Access version history from Team Phoenix</p>
+
+  <br>
+  
+  {{ govukButton({
+  text: 'View versions',
+  href: '/index-phoenix'
+  }) }}
+  
+  {% endset %}
+
+  
+  {{ govukAccordion({
+  items: [
+  {
+  heading: { text: 'Version 15' },
+  content: { html: v15 }
+  },
+  {
+  heading: { text: 'Version 14' },
+  content: { html: v14 }
+  },
+  {
+  heading: { text: 'Version 12' },
+  content: { html: v12 }
+  },
+  {
+  heading: { text: 'Earlier versions' },
+  content: { html: vPhoenix }
+  }
+  ]
+  }) }}
+
+  </div>
+  </div>
+
+{% endblock %}
