@@ -1,13 +1,10 @@
-{% extends "layout.html" %}
+{% extends "layout-employer.html" %}
 
 {% block pageTitle %}
   Where do you want your workplace health provider to be located?
 {% endblock %}
 
-{% block header %}
-  <!-- Blank header with no service name for the start page -->
-  {{ govukHeader() }}
-{% endblock %}
+
 
 {% block beforeContent %}
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
@@ -26,13 +23,15 @@
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 
               <h1 class="govuk-fieldset__heading">
-                Enter your employee's postcode
+               
+Where is your company registered?
+
               </h1>
               </legend>
 
 
         <p>
-          This can be their home or workplace postcode. We will use it to find their nearest providers.
+          This is the postcode of your head office.
         </p>
 
  
@@ -47,7 +46,7 @@
 
 
 
-<a href="list-anonymised"
+<a href="list"
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 </a>
 
