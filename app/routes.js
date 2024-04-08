@@ -1156,6 +1156,149 @@ router.post('/phoenix/employer/v17/location', function (req, res) {
         };
     
     })
+
+
+//////////            EMPLOYER    VERSION 19-gds-a-r (GDS Alpha Reassessment)
+
+//Location
+
+router.post('/phoenix/employer/v19-gds-a-r/location', function (req, res) {
+        const register = req.session.data['register'];
+        if (register === "england") {
+                res.redirect('/phoenix/employer/v19-gds-a-r/business-size');
+        } else if (register === "wales") {
+                      res.redirect('/phoenix/employer/v19-gds-a-r/business-size');
+        } else if (register === "ireland") {
+                        res.redirect('/phoenix/employer/v19-gds-a-r/not-eligible-location-ni');
+        } else {
+                res.redirect('/phoenix/employer/v19-gds-a-r/not-eligible-location');
+        };
+    })
+    
+    //business-size
+    
+    router.post('/phoenix/employer/v19-gds-a-r/business-size', function (req, res) {
+        const size = req.session.data['size'];
+         if (size === "small") {
+                res.redirect('/phoenix/employer/v19-gds-a-r/turnover');
+        } else if (size === "micro") {
+                res.redirect('/phoenix/employer/v19-gds-a-r/turnover');
+        } else  if (size === "medium") {
+                res.redirect('/phoenix/employer/v19-gds-a-r/turnover-medium');
+        } else {
+                res.redirect('/phoenix/employer/v19-gds-a-r/not-eligible-size');
+        };
+    })
+    
+    
+    //turnover
+    
+
+    router.post('/phoenix/employer/v19-gds-a-r/turnover', function (req, res) {
+
+        // Make a variable and give it the value from 'how-many-balls'
+        var turnover = req.session.data['turnover']
+
+        // Check whether the variable matches a condition
+        if (turnover == "turnover-eligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v19-gds-a-r/you-may-be-eligible')
+        }
+        if (turnover == "turnover-ineligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v19-gds-a-r/balance-sheet')
+        }
+        // else {
+        // // Send user to ineligible page
+        // res.redirect('basic-employee-contributions')
+        // }
+
+        })
+
+
+        //turnover-medium
+    
+
+    router.post('/phoenix/employer/v19-gds-a-r/turnover-medium', function (req, res) {
+
+        // Make a variable and give it the value from 'how-many-balls'
+        var turnover = req.session.data['turnover']
+
+        // Check whether the variable matches a condition
+        if (turnover == "turnover-eligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v19-gds-a-r/you-may-be-eligible')
+        }
+        if (turnover == "turnover-ineligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v19-gds-a-r/balance-sheet-medium')
+        }
+        // else {
+        // // Send user to ineligible page
+        // res.redirect('basic-employee-contributions')
+        // }
+
+        })
+    
+    
+    
+    //balance sheet
+
+    router.post('/phoenix/employer/v19-gds-a-r/balance-sheet', function (req, res) {
+
+        // Make a variable and give it the value from 'how-many-balls'
+        var balance = req.session.data['balance']
+
+        // Check whether the variable matches a condition
+        if (balance == "balance-eligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v19-gds-a-r/you-may-be-eligible')
+        }
+        if (balance == "balance-ineligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v19-gds-a-r/not-eligible-balance-sheet')
+        }
+        // else {
+        // // Send user to ineligible page
+        // res.redirect('basic-employee-contributions')
+        // }
+
+        })
+
+        //balance-sheet-medium
+
+        router.post('/phoenix/employer/v19-gds-a-r/balance-sheet-medium', function (req, res) {
+
+                // Make a variable and give it the value from 'how-many-balls'
+                var balance = req.session.data['balance']
+
+                // Check whether the variable matches a condition
+                if (balance == "balance-eligible") {
+                // Send user to next page
+                res.redirect('/phoenix/employer/v19-gds-a-r/you-may-be-eligible')
+                }
+                if (balance == "balance-ineligible") {
+                // Send user to next page
+                res.redirect('/phoenix/employer/v19-gds-a-r/not-eligible-balance-sheet2')
+                }
+                // else {
+                // // Send user to ineligible page
+                // res.redirect('basic-employee-contributions')
+                // }
+
+                })
+    
+    //email address
+    
+    router.post('/phoenix/employer/v19-gds-a-r/contact-method', function (req, res) {
+        const email = req.session.data['email'];
+         if (email === "yes") {
+                res.redirect('/phoenix/employer/v19-gds-a-r/email');
+        } else {
+                res.redirect('/phoenix/employer/v19-gds-a-r/phone-number');
+        };
+    
+    })
     
 
     //////////            EMPLOYER    VERSION 14 ( private beta)
