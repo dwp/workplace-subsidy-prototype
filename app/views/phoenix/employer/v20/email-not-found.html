@@ -1,0 +1,49 @@
+{% extends "layout-employer.html" %}
+
+
+
+{% block pageTitle %}
+Email not found
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Email not found
+      </h1>
+
+      <p>
+        You must enter the email address that you used to register for this pilot.
+      </p>
+
+      <p>
+        Find out more about <a href="https://oh-service.herokuapp.com/phoenix/employer/v20/how-scheme">how the discount scheme works</a>.
+      </p>
+
+      <p>
+        You can <a href="email-address-gate">try again</a> or <a href="/">leave the service</a>.
+      </p>
+
+      {# {{ govukButton({
+        text: "Try again"
+      }) }}
+
+      {{ govukButton({
+        text: "Leave the service",
+        classes: "govuk-button--secondary"
+      }) }} #}
+
+    </div>
+  </div>
+
+{% endblock %}
