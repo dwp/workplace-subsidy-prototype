@@ -1158,7 +1158,7 @@ router.post('/phoenix/employer/v17/location', function (req, res) {
     })
 
 
-//////////            EMPLOYER    VERSION 19-gds-a-r (GDS Alpha Reassessment)
+//////////            EMPLOYER VERSION 19-gds-a-r (GDS Alpha Reassessment)
 
 //Location
 
@@ -1296,6 +1296,149 @@ router.post('/phoenix/employer/v19-gds-a-r/location', function (req, res) {
                 res.redirect('/phoenix/employer/v19-gds-a-r/email');
         } else {
                 res.redirect('/phoenix/employer/v19-gds-a-r/phone-number');
+        };
+    
+    })
+
+
+//////////            EMPLOYER VERSION 20 (public beta)
+
+//Location
+
+router.post('/phoenix/employer/v20/location', function (req, res) {
+        const register = req.session.data['register'];
+        if (register === "england") {
+                res.redirect('/phoenix/employer/v20/business-size');
+        } else if (register === "wales") {
+                      res.redirect('/phoenix/employer/v20/business-size');
+        } else if (register === "ireland") {
+                        res.redirect('/phoenix/employer/v20/not-eligible-location-ni');
+        } else {
+                res.redirect('/phoenix/employer/v20/not-eligible-location');
+        };
+    })
+    
+    //business-size
+    
+    router.post('/phoenix/employer/v20/business-size', function (req, res) {
+        const size = req.session.data['size'];
+         if (size === "small") {
+                res.redirect('/phoenix/employer/v20/turnover');
+        } else if (size === "micro") {
+                res.redirect('/phoenix/employer/v20/turnover');
+        } else  if (size === "medium") {
+                res.redirect('/phoenix/employer/v20/turnover-medium');
+        } else {
+                res.redirect('/phoenix/employer/v20/not-eligible-size');
+        };
+    })
+    
+    
+    //turnover
+    
+
+    router.post('/phoenix/employer/v20/turnover', function (req, res) {
+
+        // Make a variable and give it the value from 'how-many-balls'
+        var turnover = req.session.data['turnover']
+
+        // Check whether the variable matches a condition
+        if (turnover == "turnover-eligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v20/you-may-be-eligible')
+        }
+        if (turnover == "turnover-ineligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v20/balance-sheet')
+        }
+        // else {
+        // // Send user to ineligible page
+        // res.redirect('basic-employee-contributions')
+        // }
+
+        })
+
+
+        //turnover-medium
+    
+
+    router.post('/phoenix/employer/v20/turnover-medium', function (req, res) {
+
+        // Make a variable and give it the value from 'how-many-balls'
+        var turnover = req.session.data['turnover']
+
+        // Check whether the variable matches a condition
+        if (turnover == "turnover-eligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v20/you-may-be-eligible')
+        }
+        if (turnover == "turnover-ineligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v20/balance-sheet-medium')
+        }
+        // else {
+        // // Send user to ineligible page
+        // res.redirect('basic-employee-contributions')
+        // }
+
+        })
+    
+    
+    
+    //balance sheet
+
+    router.post('/phoenix/employer/v20/balance-sheet', function (req, res) {
+
+        // Make a variable and give it the value from 'how-many-balls'
+        var balance = req.session.data['balance']
+
+        // Check whether the variable matches a condition
+        if (balance == "balance-eligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v20/you-may-be-eligible')
+        }
+        if (balance == "balance-ineligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v20/not-eligible-balance-sheet')
+        }
+        // else {
+        // // Send user to ineligible page
+        // res.redirect('basic-employee-contributions')
+        // }
+
+        })
+
+        //balance-sheet-medium
+
+        router.post('/phoenix/employer/v20/balance-sheet-medium', function (req, res) {
+
+                // Make a variable and give it the value from 'how-many-balls'
+                var balance = req.session.data['balance']
+
+                // Check whether the variable matches a condition
+                if (balance == "balance-eligible") {
+                // Send user to next page
+                res.redirect('/phoenix/employer/v20/you-may-be-eligible')
+                }
+                if (balance == "balance-ineligible") {
+                // Send user to next page
+                res.redirect('/phoenix/employer/v20/not-eligible-balance-sheet2')
+                }
+                // else {
+                // // Send user to ineligible page
+                // res.redirect('basic-employee-contributions')
+                // }
+
+                })
+    
+    //email address
+    
+    router.post('/phoenix/employer/v20/contact-method', function (req, res) {
+        const email = req.session.data['email'];
+         if (email === "yes") {
+                res.redirect('/phoenix/employer/v20/email');
+        } else {
+                res.redirect('/phoenix/employer/v20/phone-number');
         };
     
     })

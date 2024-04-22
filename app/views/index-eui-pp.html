@@ -20,27 +20,47 @@
     <p>Includes additional data requirements for the evaluation.</p>
 
   <h2 class="govuk-heading-m">
-  Version 17
+  Version 20 - Sprint 30
   </h2>
   
   <h3 class="govuk-heading-s">Changes</h3>
   <ul class="govuk-list govuk-list--bullet">
-  <li>Anonymised location in provider results list</li>
-  <li>Removed full stops in links</li>
-  <li>Updated CYA screen layout</li>
-  <li>Returning user/employer scenario including OTP screen</li>
-  <li>Added screener/eligibility check screens (organisation's location, number of employees, yearly turnover, balance sheet) and employer voucher application screens (organisation name, main and applicant contact details and organisation sector) for evaluation granular data collection for SMEs — See <a href="https://app.mural.co/t/dwpdigital7412/m/dwpdigital7412/1706797932382/68a0dbd5c532066b911fc5d06eebc156f6791476?sender=u57f46f1ebfd00e6e8d919712" class="govuk-link" rel="noreferrer noopener" target="_blank">Mural</a></li>
-  <li>'Company' term changed to 'Organisation'</li>
+    <li> — See <a href="https://app.mural.co/t/dwpdigital7412/m/dwpdigital7412/1706188250419/2493d8638aa32eb9a45c3c7e589c4d36140a8ef4?wid=0-1713349079301" class="govuk-link" rel="noreferrer noopener" target="_blank">SME Digital Journey with returning flow V4 in Mural</a></li>
   </ul>
   
   <br>
   
   {{ govukButton({
   text: 'View prototype',
-  href: '/phoenix/employer/v17/email-address-gate'
+  href: '/phoenix/employer/v20/start-page'
   }) }}
 
   <br><br>
+
+  {% set v17 %}
+
+  <h2 class="govuk-heading-m">
+    Version 17
+    </h2>
+    
+    <h3 class="govuk-heading-s">Changes</h3>
+    <ul class="govuk-list govuk-list--bullet">
+    <li>Anonymised location in provider results list</li>
+    <li>Removed full stops in links</li>
+    <li>Updated CYA screen layout</li>
+    <li>Returning user/employer scenario including OTP screen</li>
+    <li>Added screener/eligibility check screens (organisation's location, number of employees, yearly turnover, balance sheet) and employer voucher application screens (organisation name, main and applicant contact details and organisation sector) for evaluation granular data collection for SMEs — See <a href="https://app.mural.co/t/dwpdigital7412/m/dwpdigital7412/1706797932382/68a0dbd5c532066b911fc5d06eebc156f6791476?sender=u57f46f1ebfd00e6e8d919712" class="govuk-link" rel="noreferrer noopener" target="_blank">Mural</a></li>
+    <li>'Company' term changed to 'Organisation'</li>
+    </ul>
+
+  <br>
+  
+  {{ govukButton({
+  text: 'View prototype',
+  href: '/phoenix/employer/v17/email-address-gate'
+  }) }}
+  
+  {% endset %}
 
   {% set v16 %}
 
@@ -90,6 +110,10 @@
   
   {{ govukAccordion({
   items: [
+  {
+  heading: { text: 'Version 17' },
+  content: { html: v17 }
+  },
   {
   heading: { text: 'Version 16' },
   content: { html: v16 }
