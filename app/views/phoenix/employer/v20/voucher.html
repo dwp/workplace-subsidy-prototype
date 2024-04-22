@@ -1,10 +1,13 @@
-{% extends "layout-employer.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
 Your discount code
 {% endblock %}
 
-
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
 
 
 
@@ -28,11 +31,7 @@ Your discount code
 
 <p>We have sent you a confirmation email with your discount code.</p>
 
-<p>In the meantime you can <a href="#" onclick="window.print();return false;">print this page</a> or write down the discount code.</p>
-
-<p>Your discount code does not have an expiry date.</p>
-
-
+<p>It does not have an expiry date.</p>
 
 
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
@@ -49,7 +48,7 @@ Your discount code
 
 
 
-<a href="/phoenix/employer/register/v8/location-gds-a-r"
+<a href="/phoenix/employer/register/v10/list-filters"
       <button class="govuk-button govuk-!-margin-top-4" data-module="govuk-button">
     Find a provider
   </button></a>
@@ -57,13 +56,14 @@ Your discount code
   <h2 class="govuk-heading-m">Get another discount code </h2>
 
 
-  <p>For every assessment, you will need to get a new discount code. You can create a discount code for any of your employees, including yourself.</p>
-  <p>Employees can have more assessments for ongoing or new cases.  You will have to create new discount codes for each one.</p>
+  <p>You can use this scheme for all employees, including yourself.  </p>
+  <p>Employees can have more assessments for ongoing or new cases. </p>
+  <p>For every assessment, you will need to get a new discount code by answering the eligibility questions again. </p>
 
-  <p><a href="start-page">Get another discount code</a></p>
-  <p>Find out more about <a href="how-scheme">how the discount scheme works</a>.</p>
 
-<p><a href="#" onclick="window.print();return false;">Print this page</a></p>
+  <p><a href="apply">Get another discount code</a></p>
+
+<p><a href="">Print this page</a></p>
 
     </div>
   </div>

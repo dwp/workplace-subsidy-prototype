@@ -1303,15 +1303,24 @@ router.post('/phoenix/employer/v19-gds-a-r/location', function (req, res) {
 
 //////////            EMPLOYER VERSION 20 (public beta)
 
+//have you registered before
+
+router.post('/phoenix/employer/v20/have-you-registered', function (req, res) {
+        if (req.session.data['haveRegistered'] === "yes") {
+        res.redirect('/phoenix/employer/v20/email-address-gate')
+        } else {
+        res.redirect('/phoenix/employer/v20/are-you-eligible')
+        }
+    })
+
 //Location
 
 router.post('/phoenix/employer/v20/location', function (req, res) {
         const register = req.session.data['register'];
-        if (register === "england") {
+        if (register === "England and Wales") {
                 res.redirect('/phoenix/employer/v20/business-size');
-        } else if (register === "wales") {
-                      res.redirect('/phoenix/employer/v20/business-size');
-        } else if (register === "ireland") {
+       
+        } else if (register === "Northern Ireland") {
                         res.redirect('/phoenix/employer/v20/not-eligible-location-ni');
         } else {
                 res.redirect('/phoenix/employer/v20/not-eligible-location');
@@ -1336,7 +1345,6 @@ router.post('/phoenix/employer/v20/location', function (req, res) {
     
     //turnover
     
-
     router.post('/phoenix/employer/v20/turnover', function (req, res) {
 
         // Make a variable and give it the value from 'how-many-balls'
@@ -1357,7 +1365,6 @@ router.post('/phoenix/employer/v20/location', function (req, res) {
         // }
 
         })
-
 
         //turnover-medium
     
@@ -1386,6 +1393,7 @@ router.post('/phoenix/employer/v20/location', function (req, res) {
     
     
     //balance sheet
+    
 
     router.post('/phoenix/employer/v20/balance-sheet', function (req, res) {
 
@@ -1439,6 +1447,19 @@ router.post('/phoenix/employer/v20/location', function (req, res) {
                 res.redirect('/phoenix/employer/v20/email');
         } else {
                 res.redirect('/phoenix/employer/v20/phone-number');
+        };
+    
+    })
+
+
+     //main contact
+    
+     router.post('/phoenix/employer/v20/contact', function (req, res) {
+        const mainName = req.session.data['mainName'];
+         if (mainName === "yes") {
+                res.redirect('/phoenix/employer/v20/employer-name');
+        } else {
+                res.redirect('/phoenix/employer/v20/contact-main-details');
         };
     
     })
