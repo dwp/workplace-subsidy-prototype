@@ -1,6 +1,9 @@
-{% extends "layout-employer.html" %}
+{% extends "layout.html" %}
 
-
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
 
 {% block pageTitle %}
 Check your email

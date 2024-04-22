@@ -1,10 +1,13 @@
-{% extends "layout-employer.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
   You are eligible for this service
 {% endblock %}
 
-
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
 
 
 
@@ -41,6 +44,7 @@ What you will need</h2>
       <button class="govuk-button" data-module="govuk-button">
   Continue
   </button></a>
+  
   </div>
   </div>
 </main>

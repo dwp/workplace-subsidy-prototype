@@ -1,6 +1,9 @@
-{% extends "layout-employer.html" %}
+{% extends "layout.html" %}
 
-
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
 
 {% block pageTitle %}
 Email not found
@@ -27,7 +30,7 @@ Email not found
       </p>
 
       <p>
-        Find out more about <a href="https://oh-service.herokuapp.com/phoenix/employer/v20/how-scheme">how the discount scheme works</a>.
+        Find out more about <a href="https://oh-service.herokuapp.com/phoenix/employer/v15/how-scheme">how the discount scheme works</a>.
       </p>
 
       <p>
