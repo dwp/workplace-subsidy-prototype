@@ -1,0 +1,200 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-l">
+        Check your answers
+      </h1>
+
+      {% if data['receiveHow'] === 'Text message' %}
+      {% set html %}
+      {% endset %}
+
+      {{ govukSummaryList({
+        rows: [
+        {
+          key: {
+            text: "How would you like to receive your discount code?"
+          },
+          value: {
+            text: data.receiveHow
+          },
+          actions: {
+            items: [
+              {
+                href: "contact-method",
+                text: "Change",
+                visuallyHiddenText: "Contact method"
+              }
+            ]
+          }
+        }
+        ,
+        {
+          key: {
+            text: "Mobile number"
+          },
+          value: {
+            text: "07123456789"
+          },
+          actions: {
+            items: [
+              {
+                href: "phone-number",
+                text: "Change",
+                visuallyHiddenText: "Mobile number"
+              }
+            ]
+          }
+        }
+      ]
+      }) }}
+
+      {% else %}
+
+      {% endif %}
+
+      {% if data['receiveHow'] === 'Email' and data['rightEmail'] === 'No' %}
+      {% set html %}
+      {% endset %}
+
+      {{ govukSummaryList({
+        rows: [
+        {
+          key: {
+            text: "How would you like to receive your discount code?"
+          },
+          value: {
+            text: data.receiveHow
+          },
+          actions: {
+            items: [
+              {
+                href: "contact-method",
+                text: "Change",
+                visuallyHiddenText: "Contact method"
+              }
+            ]
+          }
+        }
+        ,
+        {
+          key: {
+            text: "Do you want your discount code to be sent to " + (data.emailAddress or "joebloggs@organistion.com") + "?"
+          },
+          value: {
+            text: data.rightEmail
+          },
+          actions: {
+            items: [
+              {
+                href: "email-address",
+                text: "Change",
+                visuallyHiddenText: "Email address"
+              }
+            ]
+          }
+        }
+        ,
+        {
+            key: {
+              text: "Tell us the email you would like your discount code sent to"
+            },
+            value: {
+              text: data.emailAddressChanged or "janedoe@organistion.com"
+            },
+            actions: {
+              items: [
+                {
+                  href: "email",
+                  text: "Change",
+                  visuallyHiddenText: "Email address"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      {% else %}
+
+      {% endif %}
+
+      {% if data['receiveHow'] === 'Email' and data['rightEmail'] === 'Yes' %}
+      {% set html %}
+      {% endset %}
+
+      {{ govukSummaryList({
+        rows: [
+        {
+          key: {
+            text: "How would you like to receive your discount code?"
+          },
+          value: {
+            text: data.receiveHow
+          },
+          actions: {
+            items: [
+              {
+                href: "contact-method",
+                text: "Change",
+                visuallyHiddenText: "Contact method"
+              }
+            ]
+          }
+        }
+        ,
+        {
+          key: {
+            text: "Do you want your discount code to be sent to " + (data.emailAddress or "joebloggs@organistion.com") + "?"
+          },
+          value: {
+            text: data.rightEmail
+          },
+          actions: {
+            items: [
+              {
+                href: "email-address",
+                text: "Change",
+                visuallyHiddenText: "Email address"
+              }
+            ]
+          }
+        }
+        ]
+      }) }}
+
+      {% else %}
+
+      {% endif %}
+
+      {# <p>
+        We will use this information to send your discount code or contact you about the service.
+      </p> #}
+
+        {{ govukButton({
+          text: "Confirm",
+          href: "discount-code"
+        }) }}
+
+    </div>
+  </div>
+{% endblock %}

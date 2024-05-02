@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  What is your email address?
+How would you like to receive your discount code?
 {% endblock %}
 
 {% block header %}
@@ -29,23 +29,22 @@
           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                How can we send you the discount code?
+                How would you like to receive your discount code?
               </h1>
             </legend>
            
-            
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="email" name="email" type="radio" value="yes" data-aria-controls="conditional-email" checked="email">
-                <label class="govuk-label govuk-radios__label" for="email">
+                <input class="govuk-radios__input" id="receiveHow" name="receiveHow" type="radio" value="Email" data-aria-controls="conditional-email">
+                <label class="govuk-label govuk-radios__label" for="receiveHow">
                   Email
                 </label>
               </div>
             
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="email-2" name="email" type="radio" value="no" data-aria-controls="conditional-contact-2">
-                <label class="govuk-label govuk-radios__label" for="email-2">
-              Text message
+                <input class="govuk-radios__input" id="receiveHow-2" name="receiveHow" type="radio" value="Text message" data-aria-controls="conditional-contact-2">
+                <label class="govuk-label govuk-radios__label" for="receiveHow-2">
+                Text message
                 </label>
               </div>
        

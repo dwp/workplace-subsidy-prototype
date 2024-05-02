@@ -136,10 +136,10 @@
                     </a>
                   </dd>
                 </div>
-
+          
             </dl>
 
-
+            
       <h2 class="govuk-heading-m">Declaration</h2>
 
       <p>By sending the application you confirm that the information you have given to the Department of Work and Pensions (DWP) is complete and correct.</p>
@@ -186,11 +186,10 @@
 
       <p>DWP may update these declarations at any time.</p>
 
-      <form action="account-confirmation" method="post" novalidate>
-        <button type="submit" class="govuk-button" data-module="govuk-button">
-          Continue
-        </button>
-      </form>
+        {{ govukButton({
+          text: "Continue",
+          href: "contact-method"
+        }) }}
 
 
             </div>

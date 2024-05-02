@@ -3,7 +3,8 @@
 // https://prototype-kit.service.gov.uk/docs/routes
 //
 
-const govukPrototypeKit = require('govuk-prototype-kit')
+const govukPrototypeKit = require('govuk-prototype-kit');
+const { data } = require('jquery');
 const router = govukPrototypeKit.requests.setupRouter()
 
 // Add your routes here
@@ -1307,7 +1308,7 @@ router.post('/phoenix/employer/v19-gds-a-r/location', function (req, res) {
 
 router.post('/phoenix/employer/v20/have-you-registered', function (req, res) {
         if (req.session.data['haveRegistered'] === "yes") {
-        res.redirect('/phoenix/employer/v20/email-address-gate')
+        res.redirect('/phoenix/employer/v20/email-address-gate-returning')
         } else {
         res.redirect('/phoenix/employer/v20/are-you-eligible')
         }
@@ -1326,6 +1327,29 @@ router.post('/phoenix/employer/v20/location', function (req, res) {
                 res.redirect('/phoenix/employer/v20/not-eligible-location');
         };
     })
+
+    //business-name
+
+    router.get(`/phoenix/employer/v20/business-name`, function (req, res) {
+        res.render(`/phoenix/employer/v20/business-name`, {
+        data: req.session.data
+        })
+        })
+        
+        router.post(`/phoenix/employer/v20/business-name`, function (req, res) {
+        res.redirect(`/phoenix/employer/v20/sector`)
+        })
+
+//email-address-gate
+router.get(`/phoenix/employer/v20/email-address-gate`, function (req, res) {
+        res.render(`/phoenix/employer/v20/email-address-gate`, {
+        data: req.session.data
+        })
+        })
+        
+        router.post(`/phoenix/employer/v20/email-address-gate`, function (req, res) {
+        res.redirect(`/phoenix/employer/v20/email-confirm-code-1`)
+        })
     
     //business-size
     
@@ -1439,17 +1463,62 @@ router.post('/phoenix/employer/v20/location', function (req, res) {
 
                 })
     
-    //email address
+    //contact method
     
     router.post('/phoenix/employer/v20/contact-method', function (req, res) {
-        const email = req.session.data['email'];
-         if (email === "yes") {
-                res.redirect('/phoenix/employer/v20/email');
-        } else {
-                res.redirect('/phoenix/employer/v20/phone-number');
-        };
+        var receiveHow = req.session.data['receiveHow']
+        if (receiveHow === "Email") {
+                res.redirect('/phoenix/employer/v20/email-address')
+        }
+        if (receiveHow === "Text message") {
+                res.redirect('/phoenix/employer/v20/phone-number')
+        }
     
     })
+
+    //email address
+
+router.post('/phoenix/employer/v20/email-address', function (req, res) {
+        if (req.session.data['rightEmail'] === "Yes") {
+        res.redirect('/phoenix/employer/v20/check-answers-discount')
+        } else {
+        res.redirect('/phoenix/employer/v20/email')
+        }
+    })
+
+    //email recognised
+
+router.post('/phoenix/employer/v20/email-recognised', function (req, res) {
+        if (req.session.data['detailsFound'] === "yes") {
+        res.redirect('/phoenix/employer/v20/check-answers')
+        } else {
+        res.redirect('/phoenix/employer/v20/account-homepage-returning')
+        }
+    })
+
+    //email changed
+
+router.get(`/phoenix/employer/v20/email`, function (req, res) {
+        res.render(`/phoenix/employer/v20/email`, {
+        data: req.session.data
+        })
+        })
+        
+        router.post(`/phoenix/employer/v20/email`, function (req, res) {
+        res.redirect(`/phoenix/employer/v20/check-answers-discount`)
+        })
+
+    //mobile phone number
+
+router.get(`/phoenix/employer/v20/phone-number`, function (req, res) {
+        res.render(`/phoenix/employer/v20/phone-number`, {
+        data: req.session.data
+        })
+        })
+        
+        router.post(`/phoenix/employer/v20/phone-number`, function (req, res) {
+        res.redirect(`/phoenix/employer/v20/check-answers-discount`)
+        })
 
 
      //main contact
@@ -1462,6 +1531,16 @@ router.post('/phoenix/employer/v20/location', function (req, res) {
                 res.redirect('/phoenix/employer/v20/contact-main-details');
         };
     
+    })
+
+    //discount
+
+router.post('/phoenix/employer/v20/discount-code', function (req, res) {
+        if (req.session.data['haveRegistered'] === "yes") {
+        res.redirect('/phoenix/employer/v20/account-homepage-returning')
+        } else {
+        res.redirect('/phoenix/employer/v20/account-homepage-returning')
+        }
     })
     
 
