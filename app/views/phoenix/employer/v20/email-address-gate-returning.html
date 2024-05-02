@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -24,9 +24,9 @@
       What is your email address?
     </label>
   </h1>
-  <div id="event-name-hint" class="govuk-hint">
+  {# <div id="event-name-hint" class="govuk-hint">
     Enter the same email address that you used to register for the pilot.
-  </div>
+  </div> #}
   <input class="govuk-input" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email">
 </div>
 
@@ -50,7 +50,7 @@
 </tr>
 <br><br>
 <p class="govuk-body">
-<a href="email-address-gate" class="govuk-link">Scenario: First time user</a><br>
+{# <a href="email-address-gate" class="govuk-link">Scenario: First time user</a><br> #}
 <a href="email-not-found" class="govuk-link">Scenario: Email not found</a><br>
 </p>
 
