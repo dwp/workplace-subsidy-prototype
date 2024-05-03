@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Do you want your discount code to be sent to {{ data['emailAddress'] or "joebloggs@organistion.com" }}?
+Do you want your discount code sent to {{ data['emailAddress'] or "joebloggs@organistion.com" }}?
 {% endblock %}
 
 {% block header %}
@@ -24,7 +24,7 @@ Do you want your discount code to be sent to {{ data['emailAddress'] or "joeblog
         <fieldset class="govuk-fieldset" aria-describedby="rightEmail-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              Do you want your discount code to be sent to {{ data['emailAddress'] or "joebloggs@organistion.com" }}?
+              Do you want your discount code sent to {{ data['emailAddress'] or "joebloggs@organistion.com" }}?
             </h1>
           </legend>
           {# <div id="rightEmail-hint" class="govuk-hint">
