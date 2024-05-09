@@ -1,0 +1,207 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+
+              <h1 class="govuk-heading-l">Check your answers </h1>
+
+              <h2 class="govuk-heading-m">Eligibility details</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                  Organisation registration
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ data['register'] or "England and Wales" }}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="location">
+                      Change<span class="govuk-visually-hidden"> organisation registration</span>
+                    </a>
+                  </dd>
+                </div>
+
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                  Number of employees
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">1 to 4 employees</p>
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="business-size">
+                      Change<span class="govuk-visually-hidden"> contact details</span>
+                    </a>
+                  </dd>
+                </div>
+
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Yearly turnover
+                </dt>
+                <dd class="govuk-summary-list__value">
+
+                  <p class="govuk-body">More than £10.2 million</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="turnover">
+                    Change<span class="govuk-visually-hidden"> turnover for the last financial year</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Yearly balance
+                </dt>
+                <dd class="govuk-summary-list__value">
+
+                  <p class="govuk-body">£1 million to £5.1 million</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="balance-sheet">
+                    Change<span class="govuk-visually-hidden"> balance sheet total for last financial year</span>
+                  </a>
+                </dd>
+              </div>
+            </dl>
+
+              <h2 class="govuk-heading-m">Organisation details</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                  Name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                   ABC Limited
+                  </dd>
+                
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="business-name">
+                      Change<span class="govuk-visually-hidden"> organisation name</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Sector
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Education, health or government
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="sector">
+                      Change<span class="govuk-visually-hidden"> sector of organisation</span>
+                    </a>
+                  </dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                  Email address
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ data['emailAddress'] or "joebloggs@organisation.com" }}
+                  </dd>
+                
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="email-address-gate">
+                      Change<span class="govuk-visually-hidden"> email address</span>
+                    </a>
+                  </dd>
+                </div>
+
+            </dl>
+
+
+      <h2 class="govuk-heading-m">Declaration</h2>
+
+      <p>By sending the application you confirm that the information you have given to the Department of Work and Pensions (DWP) is complete and correct.</p>
+
+      <h3 class="govuk-heading-s">Using the service</h3>
+      <p>You understand that:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>you will need to pay 20% of the cost of any workplace health assessments you arrange</li>
+        <li>if the cost of the assessment is more than the DWP cap of £400 per assessment, for example, due to travel costs - you will need to agree in advance that you will pay the difference to the provider in full</li>
+        <li>you can only use discount codes with health care providers on the DWP register</li>
+        <li>If you need to make a complaint about a health care provider, you must contact them directly</li>
+      </ul>
+
+      <h3 class="govuk-heading-s">Changes to the service</h3>
+      <p>You understand that DWP may:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>change the eligibility requirements</li>
+        <li>change the discount amount</li>
+        <li>pause or stop the service at any time</li>
+      </ul>
+
+      <h3 class="govuk-heading-s">Liability</h3>
+      <p>You understand that DWP is not liable for:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the quality of health care provider’s assessments</li>
+        <li>any losses or additional costs you may receive because of a health care provider</li>
+      </ul>
+
+      <h3 class="govuk-heading-s">Your data</h3>
+      <p>You understand that DWP:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>will process your information as explained in the DWP <a href="https://www.gov.uk/government/organisations/department-for-work-pensions/about/personal-information-charter" class="govuk-link" rel="noreferrer noopener" target="_blank">Personal Information Charter (opens in a new tab)</a></li>
+        <li>will share your personal data with a research supplier contracted by DWP to independently evaluate the service</li>
+        <li>this research supplier may contact you to take part in voluntary research about the service you and your employee received</li>
+        <li>may do further checks on your organisation's eligibility</li>
+      </ul>
+
+      <p>If you deliberately give wrong information or collude with a provider to exploit the service, you may:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>be prosecuted</li>
+        <li>have to pay a financial penalty</li>
+        <li>have to pay back the full cost of any discounted assessments</li>
+      </ul>
+
+      <p>DWP may update these declarations at any time.</p>
+
+      <form action="account-confirmation" method="post" novalidate>
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm
+        </button>
+      </form>
+
+
+            </div>
+          </div>
+        </main>
+      </div>
+
+
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}
