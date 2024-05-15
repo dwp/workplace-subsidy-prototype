@@ -111,3 +111,14 @@
   {% endblock %}
   <!-- GOV.UK Prototype Kit {{releaseVersion}} -->
 {% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    var AppFrontend = {};
+  </script>
+  <script src="/public/javascripts/components/filter-toggle-button.js"></script>
+{% endblock %} 
+
+
+
