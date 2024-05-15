@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  How the listed workplace health providers have been evaluated
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">How we evaluate workplace health providers</h1>
+
+      <p>
+        Each workplace health provider will need to:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>  provide evidence that at least  one healthcare professional has a qualification in occupational health</li>
+<li>agree to a declaration about the service they will provide  </li>
+
+</ul>
+
+
+<h2 class="govuk-heading-m">Evidence</h2>
+
+<p>We ask for evidence of healthcare provider professionals' qualifications and registration numbers.
+</p>
+<p>A registration number ensures that a healthcare professional is fit to practise.</p>
+
+<h2 class="govuk-heading-m">Declarations</h2>
+
+<p>Each workplace health provider has declared their service has:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>clinical governance</li>
+<li>complaints procedures</li>
+<li>feedback opportunities</li>
+<li>data management policies</li>
+<li>referral pathways </li>
+</ul>
+
+
+
+
+
+
+<a href="javascript:window.history.back()"
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Back to results
+  </button></a>
+
+
+
+
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}

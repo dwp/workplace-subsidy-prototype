@@ -1,0 +1,724 @@
+{% extends "layout.html" %} {% block pageTitle %} Find a workplace health
+provider {% endblock %} {% block header %}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader() }} {% endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-4">
+        <p class="govuk-body">
+          <a href="/phoenix/employer/v16/start-page" class="govuk-link"
+            >Go back to the start page</a
+          >
+        </p>
+        <h1 class="govuk-heading-l">Find a workplace health provider</h1>
+        <h2 class="govuk-heading-m">How to book an assessment</h2>
+        <ol class="govuk-list govuk-list--number">
+          <li>Search the list of providers.</li>
+          <li>Contact a provider to book an assessment.</li>
+          <li>Give the provider your discount code.</li>
+        </ol>
+        <p>
+          When choosing a provider it is important you check their services will
+          meet your needs. Read about
+          <a href="evaluation">how providers have been evaluated</a>.
+        </p>
+      </div>
+    </div>
+    
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <div class="moj-filter">
+          <div class="moj-filter__header">
+            <div class="moj-filter__header-title">
+              <h2 class="govuk-heading-m">Filter</h2>
+            </div>
+
+            <div class="moj-filter__header-action"></div>
+          </div>
+
+          <div class="moj-filter__content">
+            <!--div class="moj-filter__selected">
+              <div class="moj-filter__selected-heading">
+                <div class="moj-filter__heading-title">
+                  <h2 class="govuk-heading-m">Selected filters</h2>
+                </div>
+
+                <div class="moj-filter__heading-action">
+                  <p>
+                    <a class="govuk-link govuk-link--no-visited-state" href=""
+                      >Clear</a
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Cost</h3>
+
+              <ul class="moj-filter-tags">
+                <li>
+                  <a class="moj-filter__tag" href="/path/to/remove/this"
+                    ><span class="govuk-visually-hidden"
+                      >Remove this filter</span
+                    >
+                    £20 to 40</a
+                  >
+                </li>
+
+                <li>
+                  <a class="moj-filter__tag" href="/path/to/remove/this"
+                    ><span class="govuk-visually-hidden"
+                      >Remove this filter</span
+                    >
+                    £50 to £70</a
+                  >
+                </li>
+              </ul>
+
+              <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Assessment methods</h3>
+
+              <ul class="moj-filter-tags">
+                <li>
+                  <a class="moj-filter__tag" href="/path/to/remove/this"
+                    ><span class="govuk-visually-hidden"
+                      >Remove this filter</span
+                    >
+                    Phone</a
+                  >
+                </li>
+              </ul>
+            </div-->
+
+            <div class="moj-filter__options">
+              <button
+                type="submit"
+                class="govuk-button"
+                data-module="govuk-button"
+                data-test-id="submit-button"
+              >
+                Apply filters
+              </button>
+
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-label--m" for="keywords">
+                  Location
+                </label>
+                <div id="authentication-code-hint" class="govuk-hint">
+                  Enter a postcode
+                </div>
+
+                <input
+                  class="govuk-input"
+                  id="keywords"
+                  name="keywords"
+                  type="text"
+                />
+              </div>
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend
+                    class="govuk-fieldset__legend govuk-fieldset__legend--m"
+                  >
+                    Cost
+                  </legend>
+
+                  <div
+                    class="govuk-checkboxes govuk-checkboxes--small"
+                    data-module="govuk-checkboxes"
+                  >
+                    <div class="govuk-checkboxes__item">
+                      <input
+                        class="govuk-checkboxes__input"
+                        id="type"
+                        name="type"
+                        type="checkbox"
+                        value="1"
+                      />
+                      <label
+                        class="govuk-label govuk-checkboxes__label"
+                        for="type"
+                      >
+                        £20 to £40
+                      </label>
+                    </div>
+
+                    <div class="govuk-checkboxes__item">
+                      <input
+                        class="govuk-checkboxes__input"
+                        id="type-2"
+                        name="type"
+                        type="checkbox"
+                        value="2"
+                      />
+                      <label
+                        class="govuk-label govuk-checkboxes__label"
+                        for="type-2"
+                      >
+                      £50 to £70
+                      </label>
+                    </div>
+
+                    <div class="govuk-checkboxes__item">
+                      <input
+                        class="govuk-checkboxes__input"
+                        id="type-3"
+                        name="type"
+                        type="checkbox"
+                        value="3"
+                      />
+                      <label
+                        class="govuk-label govuk-checkboxes__label"
+                        for="type-3"
+                      >
+                      £80 and above
+                      </label>
+                    </div>
+
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend
+                    class="govuk-fieldset__legend govuk-fieldset__legend--m"
+                  >
+                    Assessment methods
+                  </legend>
+
+                  <div
+                    class="govuk-checkboxes govuk-checkboxes--small"
+                    data-module="govuk-checkboxes"
+                  >
+                    <div class="govuk-checkboxes__item">
+                      <input
+                        class="govuk-checkboxes__input"
+                        id="status"
+                        name="status"
+                        type="checkbox"
+                        value="complete"
+                      />
+                      <label
+                        class="govuk-label govuk-checkboxes__label"
+                        for="status"
+                      >
+                        Phone
+                      </label>
+                    </div>
+
+                    <div class="govuk-checkboxes__item">
+                      <input
+                        class="govuk-checkboxes__input"
+                        id="status-2"
+                        name="status"
+                        type="checkbox"
+                        value="incomplete"
+                      />
+                      <label
+                        class="govuk-label govuk-checkboxes__label"
+                        for="status-2"
+                      >
+                        Video call
+                      </label>
+                    </div>
+
+                    <div class="govuk-checkboxes__item">
+                      <input
+                        class="govuk-checkboxes__input"
+                        id="status-3"
+                        name="status"
+                        type="checkbox"
+                        value="inprogress"
+                      />
+                      <label
+                        class="govuk-label govuk-checkboxes__label"
+                        for="status-3"
+                      >
+                        Home visit
+                      </label>
+                    </div>
+
+                    <div class="govuk-checkboxes__item">
+                      <input
+                        class="govuk-checkboxes__input"
+                        id="status-4"
+                        name="status"
+                        type="checkbox"
+                        value="inprogress"
+                      />
+                      <label
+                        class="govuk-label govuk-checkboxes__label"
+                        for="status-4"
+                      >
+                        At a clinic
+                      </label>
+                    </div>
+
+                    <div class="govuk-checkboxes__item">
+                      <input
+                        class="govuk-checkboxes__input"
+                        id="status-5"
+                        name="status"
+                        type="checkbox"
+                        value="inprogress"
+                      />
+                      <label
+                        class="govuk-label govuk-checkboxes__label"
+                        for="status-5"
+                      >
+                        At a workplace
+                      </label>
+                    </div>
+
+                    <div class="govuk-checkboxes__item">
+                      <input
+                        class="govuk-checkboxes__input"
+                        id="status-6"
+                        name="status"
+                        type="checkbox"
+                        value="inprogress"
+                      />
+                      <label
+                        class="govuk-label govuk-checkboxes__label"
+                        for="status-6"
+                      >
+                        At an agreed location
+                      </label>
+                    </div>
+
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body-l govuk-!-font-weight-bold govuk-!-margin-top-0">
+          7 results
+        </p>
+    
+        <hr
+          class="govuk-section-break govuk-section-break--m govuk-section-break--visible"
+        />
+    
+        <p class="govuk-body">
+          <a
+            href="https://cordellhealth.co.uk"
+            class="govuk-link"
+            rel="noreferrer noopener"
+            target="_blank"
+            >Provider 1 (opens in new tab)</a
+          >
+        </p>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <ul class="govuk-list">
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold">Location:</span>
+                <span>Dorchester, DT1 1XJ</span>
+              </li>
+    
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Cost after 80% discount:
+                </span>
+                <span> £20 to £80 </span>
+              </li>
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Assessment methods:
+                </span>
+                <span>Phone, video call, home visit, at a clinic, at an agreed
+                  location</span>
+              </li>
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Phone number:
+                </span>
+                <span>+44 117 207 6190 </span>
+              </li>
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Email address:
+                </span>
+                <span>admin@provider1.co.uk</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <hr
+          class="govuk-section-break govuk-section-break--m govuk-section-break--visible"
+        />
+    
+        <p class="govuk-body">
+          <a
+            href="https://healthworkltd.com"
+            class="govuk-link"
+            rel="noreferrer noopener"
+            target="_blank"
+            >Provider 2 (opens in new tab)</a
+          >
+        </p>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <ul class="govuk-list">
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold">Location:</span>
+                <span>5 Colliton Park, Dorchester, Dorset, DT1 1XJ</span>
+              </li>
+    
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Cost after 80% discount:
+                </span>
+                <span> £20 to £80 </span>
+              </li>
+    
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Assessment methods:
+                </span>
+                <span
+                  >Phone, video call, home visit, at a clinic, at an agreed
+                  location</span
+                >
+              </li>
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Phone number:
+                </span>
+                <span>+44 161 831 9701 </span>
+              </li>
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Email address:
+                </span>
+                <span>admin@provider2.co.uk</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <hr
+          class="govuk-section-break govuk-section-break--m govuk-section-break--visible"
+        />
+    
+        <p class="govuk-body">
+          <a
+            href="https://innovatehealthcare.co.uk/"
+            class="govuk-link"
+            rel="noreferrer noopener"
+            target="_blank"
+            >Provider 3 (opens in new tab)
+          </a>
+        </p>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <ul class="govuk-list">
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold">Location:</span>
+                <span>
+                  South Walks House, Charles Street, Dorchester, Dorset, DT1 1EE </span
+                >
+              </li>
+    
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Cost after 80% discount:
+                </span>
+                <span> £20 to £80 </span>
+              </li>
+    
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Assessment methods:
+                </span>
+                <span>Video call, at a clinic, at a workplace </span>
+              </li>
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Phone number:
+                </span>
+                <span>+44 161 527 7405</span>
+              </li>
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Email address:
+                </span>
+                <span>admin@provider3.co.uk</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <hr
+          class="govuk-section-break govuk-section-break--m govuk-section-break--visible"
+        />
+    
+        <p class="govuk-body">
+          <a
+            href="https://www.kaysmedical.com/"
+            class="govuk-link"
+            rel="noreferrer noopener"
+            target="_blank"
+            >Provider 4 (opens in new tab)</a
+          >
+        </p>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <ul class="govuk-list">
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold">Location:</span>
+                <span>Dorchester, DT1 1EE</span>
+              </li>
+    
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Cost after 80% discount:
+                </span>
+                <span> £20 to £80 </span>
+              </li>
+    
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Assessment methods:
+                </span>
+                <span>Phone, home visit, at a clinic, at a workplace </span>
+              </li>
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Phone number:
+                </span>
+                <span>+44 779 521 4663 </span>
+              </li>
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Email address:
+                </span>
+                <span>admin@provider4.co.uk</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <hr
+          class="govuk-section-break govuk-section-break--m govuk-section-break--visible"
+        />
+    
+        <p class="govuk-body">
+          <a
+            href="https://www.bespokewellbeing.co.uk/"
+            class="govuk-link"
+            rel="noreferrer noopener"
+            target="_blank"
+            >Provider 5 (opens in new tab)</a
+          >
+        </p>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <ul class="govuk-list">
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold">Location:</span>
+                <span>Bridport, DT6 3NY</span>
+              </li>
+    
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Cost after 80% discount:
+                </span>
+                <span> £20 to £60 </span>
+              </li>
+    
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Assessment methods:
+                </span>
+                <span
+                  >Phone, video call, at a clinic, at a workplace,at an agreed
+                  location
+                </span>
+              </li>
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Phone number:
+                </span>
+                <span>+44 330 088 1538 </span>
+              </li>
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Email address:
+                </span>
+                <span>admin@provider5.co.uk</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <hr
+          class="govuk-section-break govuk-section-break--m govuk-section-break--visible"
+        />
+    
+        <p class="govuk-body">
+          <a
+            href="https://www.medigold-health.com"
+            class="govuk-link"
+            rel="noreferrer noopener"
+            target="_blank"
+            >Provider 6 (opens in new tab)</a
+          >
+        </p>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <ul class="govuk-list">
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold">Location:</span>
+                <span>South Street, Bridport, Dorset, DT6 3NY</span>
+              </li>
+    
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Cost after 80% discount:
+                </span>
+                <span> £20 to £80 </span>
+              </li>
+    
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Assessment methods:
+                </span>
+                <span
+                  >Phone, video call, home visit, at a clinic, at a workplace
+                </span>
+              </li>
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Phone number:
+                </span>
+                <span>+44 330 390 3370</span>
+              </li>
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Email address:
+                </span>
+                <span>admin@provider6.co.uk</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <hr
+          class="govuk-section-break govuk-section-break--m govuk-section-break--visible"
+        />
+    
+        <p class="govuk-body">
+          <a
+            href="https://www.psychologyexperts.org/our-services/occupational-psychology/"
+            class="govuk-link"
+            rel="noreferrer noopener"
+            target="_blank"
+            >Provider 7 (opens in new tab)</a
+          >
+        </p>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <ul class="govuk-list">
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold">Location:</span>
+                <span>58 Salisbury Road, Blandford Forum, Dorset, DT11 7LN</span>
+              </li>
+    
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Cost after 80% discount:
+                </span>
+                <span> £40 to £80 </span>
+              </li>
+    
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Assessment methods:
+                </span>
+                <span>Video call, home visit, at a workplace </span>
+              </li>
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Phone number:
+                </span>
+                <span>+44 127 338 1468</span>
+              </li>
+              <li>
+                <span class="govuk-body govuk-!-font-weight-bold"
+                  >Email address:
+                </span>
+                <span>admin@provider7.co.uk</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+
+  <br>
+
+<nav class="govuk-pagination" role="navigation" aria-label="results">
+  <ul class="govuk-pagination__list">
+    <li class="govuk-pagination__item govuk-pagination__item--current">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+        1
+      </a>
+    </li>
+    <li class="govuk-pagination__item">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+        2
+      </a>
+    </li>
+    <li class="govuk-pagination__item">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+        3
+      </a>
+    </li>
+  </ul>
+  <div class="govuk-pagination__next">
+    <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+      <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+    </svg></a>
+  </div>
+</nav>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+<tr class="govuk-table__row">
+  <td class="govuk-table__cell">
+  </td>
+  <td class="govuk-table__cell">
+    <strong class="govuk-tag govuk-tag--purple">
+      Prototype only
+    </strong>
+  </td>
+</tr>
+<br><br>
+<p class="govuk-body">
+  <a href="list-filters" class="govuk-link">Version 1</a><br/>
+  <a href="list" class="govuk-link">Version 2</a><br/>
+  Version 3
+</p>
+
+  </div>
+</div>
+
+{% endblock %}
