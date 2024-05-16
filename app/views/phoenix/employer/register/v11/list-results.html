@@ -6,27 +6,13 @@ provider {% endblock %} {% block header %}
 
 <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 
-<div style="float:right" class="govuk-!-margin-top-2">
-<span class="govuk-body">
-  <strong class="govuk-tag govuk-tag--purple govuk-!-font-size-14">
-    Prototype only
-  </strong>
-  <a href="list-filters-mvp" class="govuk-link govuk-!-font-size-14">Unsorted</a> -
-  <a href="list-filters-mvp-checked" class="govuk-link govuk-!-font-size-14">Cost and Assessment</a> - 
-  <a href="list-filters-mvp-checked-location" class="govuk-link govuk-!-font-size-14">Location</a>
-</span>
-</div>
-
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-width-container">
-  <main class="govuk-main-wrapper">
-
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-4">
-        <h1 class="govuk-heading-l">Find a workplace health provider</h1>
+        <h1 class="govuk-heading-l">Find a workplace health provider (template)</h1>
       </div>
     </div>
 
@@ -64,7 +50,7 @@ provider {% endblock %} {% block header %}
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-!-width-one-half"><a href="#" class="govuk-link">NUFFIELD HEALTH OH SERVICES</a>
                       <br><p class="govuk-body-s govuk-!-padding-top-2">Dorchester, DT1 1XJ<br>0117 207 6190<br>admin@provider.co.uk</p>
-                      <a class="govuk-body-s" href="">View this provider's other clinics</a>
+                      <a class="govuk-body-s" href="provider-clinics">View this provider's other clinics</a>
                     </th>
                     <td class="govuk-table__cell govuk-body-s">Phone<br>Video call</td>
                     <td class="govuk-table__cell">
@@ -109,9 +95,6 @@ provider {% endblock %} {% block header %}
                 </tbody>
               </table>
             </div>
-
-  </main>
-  </div>
 
 {% endblock %}
 
