@@ -106,19 +106,20 @@
 
 {% block bodyEnd %}
   {% block scripts %}
-    {% include "includes/scripts.html" %}
-    {% block pageScripts %}{% endblock %}
-  {% endblock %}
-  <!-- GOV.UK Prototype Kit {{releaseVersion}} -->
-{% endblock %}
 
-{% block scripts %}
   {{ super() }}
   <script>
     var AppFrontend = {};
   </script>
   <script src="/public/javascripts/components/filter-toggle-button.js"></script>
-{% endblock %} 
+
+
+    {% include "includes/scripts.html" %}
+    {% block pageScripts %}{% endblock %}
+  {% endblock %}
+  
+  <!-- GOV.UK Prototype Kit {{releaseVersion}} -->
+{% endblock %}
 
 
 
