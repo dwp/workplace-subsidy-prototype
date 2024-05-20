@@ -15,35 +15,34 @@ Where is your organisation registered?
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-  <form class="form" method="post">
-        <div class="govuk-form-group">
+    <form action="" method="post" novalidate>
 
-          <div class="govuk-width-container">
-            <h1 class="govuk-heading-l">Where is your organisation registered?</h1>
-            {# <p>This is the postcode of your head office.</p> #}
-            <div class="govuk-form-group">
-            <label class="govuk-label" for="postcode">
-              Enter your head office postcode
-            </label>
-            <div id="postcode-hint" class="govuk-hint">
-              For example, AA3 1AB.
-            </div>
-            <input class="govuk-input govuk-input--width-10" id="postcode" name="postcode" type="text" aria-describedby="postcode-hint">
-            </div>
+      <h1 class="govuk-heading-l">Where is your organisation registered?</h1>
 
-        </div>
-      </div>
+      {{ govukInput({
+        id: "postcode",
+        name: "postcode",
+        classes: "govuk-input--width-10",
+        label: {
+          text: "Enter your head office postcode",
+          isPageHeading: true,
+          classes: "govuk-body"
+        },
+        hint: {
+          text: "For example, AA3 1AB."
+        },
+        value: data['postcode']
+      }) }}
 
-{{ govukButton({
-  text: "Continue",
-  href: "business-size"
-}) }}
+    {{ govukButton({
+    text: "Continue"
+    }) }}
 
-</form>
+    </form>
 
     </div>
   </div>
