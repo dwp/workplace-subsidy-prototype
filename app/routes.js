@@ -1558,19 +1558,17 @@ router.post('/phoenix/employer/v21/have-you-registered', function (req, res) {
 
 //Location
 
-router.post('/phoenix/employer/v21/location', function (req, res) {
-        const register = req.session.data['register'];
-        if (register === "England and Wales") {
-                res.redirect('/phoenix/employer/v21/business-size');
-       
-        } else if (register === "Northern Ireland") {
-                        res.redirect('/phoenix/employer/v21/not-eligible-location-ni');
-        } else {
-                res.redirect('/phoenix/employer/v21/not-eligible-location');
-        };
-    })
+router.get('/phoenix/employer/v21/location', function (req, res) {
+        res.render(`/phoenix/employer/v21/location`, {
+        data: req.session.data
+        })
+        })
+        
+        router.post(`/phoenix/employer/v21/location`, function (req, res) {
+        res.redirect(`/phoenix/employer/v21/business-size`)
+        })
 
-    //business-name
+//business-name
 
     router.get(`/phoenix/employer/v21/business-name`, function (req, res) {
         res.render(`/phoenix/employer/v21/business-name`, {
