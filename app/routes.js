@@ -1854,6 +1854,316 @@ router.post('/phoenix/employer/v14/location', function (req, res) {
     
     })
 
+//////////            EMPLOYER VERSION 22 (public beta)
+
+//have you registered before
+
+router.post('/phoenix/employer/v22/have-you-registered', function (req, res) {
+        if (req.session.data['haveRegistered'] === "yes") {
+        res.redirect('/phoenix/employer/v22/email-address-gate-returning')
+        } else {
+        res.redirect('/phoenix/employer/v22/are-you-eligible')
+        }
+    })
+
+//Location
+
+router.get('/phoenix/employer/v22/location', function (req, res) {
+        res.render(`/phoenix/employer/v22/location`, {
+        data: req.session.data
+        })
+        })
+        
+        router.post(`/phoenix/employer/v22/location`, function (req, res) {
+        res.redirect(`/phoenix/employer/v22/business-size`)
+        })
+
+//business-name
+
+    router.get(`/phoenix/employer/v22/business-name`, function (req, res) {
+        res.render(`/phoenix/employer/v22/business-name`, {
+        data: req.session.data
+        })
+        })
+        
+        router.post(`/phoenix/employer/v22/business-name`, function (req, res) {
+        res.redirect(`/phoenix/employer/v22/sector`)
+        })
+
+//email-address-gate
+router.get(`/phoenix/employer/v22/email-address-gate`, function (req, res) {
+        res.render(`/phoenix/employer/v22/email-address-gate`, {
+        data: req.session.data
+        })
+        })
+        
+        router.post(`/phoenix/employer/v22/email-address-gate`, function (req, res) {
+        res.redirect(`/phoenix/employer/v22/email-confirm-code-1`)
+        })
+    
+    //business-size
+    
+    router.post('/phoenix/employer/v22/business-size', function (req, res) {
+        const size = req.session.data['size'];
+         if (size === "small") {
+                res.redirect('/phoenix/employer/v22/turnover');
+        } else if (size === "micro") {
+                res.redirect('/phoenix/employer/v22/turnover');
+        } else  if (size === "medium") {
+                res.redirect('/phoenix/employer/v22/turnover-medium');
+        } else {
+                res.redirect('/phoenix/employer/v22/not-eligible-size');
+        };
+    })
+    
+    
+    //turnover
+    
+    router.post('/phoenix/employer/v22/turnover', function (req, res) {
+
+        // Make a variable and give it the value from 'how-many-balls'
+        var turnover = req.session.data['turnover']
+
+        // Check whether the variable matches a condition
+        if (turnover == "turnover-eligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v22/you-may-be-eligible')
+        }
+        if (turnover == "turnover-ineligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v22/balance-sheet')
+        }
+        // else {
+        // // Send user to ineligible page
+        // res.redirect('basic-employee-contributions')
+        // }
+
+        })
+
+        //turnover-medium
+    
+
+    router.post('/phoenix/employer/v22/turnover-medium', function (req, res) {
+
+        // Make a variable and give it the value from 'how-many-balls'
+        var turnover = req.session.data['turnover']
+
+        // Check whether the variable matches a condition
+        if (turnover == "turnover-eligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v22/you-may-be-eligible')
+        }
+        if (turnover == "turnover-ineligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v22/balance-sheet-medium')
+        }
+        // else {
+        // // Send user to ineligible page
+        // res.redirect('basic-employee-contributions')
+        // }
+
+        })
+    
+    
+    
+    //balance sheet
+    
+
+    router.post('/phoenix/employer/v22/balance-sheet', function (req, res) {
+
+        // Make a variable and give it the value from 'how-many-balls'
+        var balance = req.session.data['balance']
+
+        // Check whether the variable matches a condition
+        if (balance == "balance-eligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v22/you-may-be-eligible')
+        }
+        if (balance == "balance-ineligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v22/not-eligible-balance-sheet')
+        }
+        // else {
+        // // Send user to ineligible page
+        // res.redirect('basic-employee-contributions')
+        // }
+
+        })
+
+        //balance-sheet-medium
+
+        router.post('/phoenix/employer/v22/balance-sheet-medium', function (req, res) {
+
+                // Make a variable and give it the value from 'how-many-balls'
+                var balance = req.session.data['balance']
+
+                // Check whether the variable matches a condition
+                if (balance == "balance-eligible") {
+                // Send user to next page
+                res.redirect('/phoenix/employer/v22/you-may-be-eligible')
+                }
+                if (balance == "balance-ineligible") {
+                // Send user to next page
+                res.redirect('/phoenix/employer/v22/not-eligible-balance-sheet2')
+                }
+                // else {
+                // // Send user to ineligible page
+                // res.redirect('basic-employee-contributions')
+                // }
+
+                })
+    
+    //contact method
+    
+    router.post('/phoenix/employer/v22/contact-method', function (req, res) {
+        var receiveHow = req.session.data['receiveHow']
+        if (receiveHow === "Email") {
+                res.redirect('/phoenix/employer/v22/email-address')
+        }
+        if (receiveHow === "Text message") {
+                res.redirect('/phoenix/employer/v22/phone-number')
+        }
+    
+    })
+
+    //email address
+
+router.post('/phoenix/employer/v22/email-address', function (req, res) {
+        if (req.session.data['rightEmail'] === "Yes") {
+        res.redirect('/phoenix/employer/v22/check-answers-discount')
+        } else {
+        res.redirect('/phoenix/employer/v22/email')
+        }
+    })
+
+    //email recognised
+
+router.post('/phoenix/employer/v22/email-recognised', function (req, res) {
+        if (req.session.data['detailsFound'] === "yes") {
+        res.redirect('/phoenix/employer/v22/check-answers')
+        } else {
+        res.redirect('/phoenix/employer/v22/account-homepage-returning')
+        }
+    })
+
+    //email changed
+
+router.get(`/phoenix/employer/v22/email`, function (req, res) {
+        res.render(`/phoenix/employer/v22/email`, {
+        data: req.session.data
+        })
+        })
+        
+        router.post(`/phoenix/employer/v22/email`, function (req, res) {
+        res.redirect(`/phoenix/employer/v22/check-answers-discount`)
+        })
+
+    //mobile phone number
+
+router.get(`/phoenix/employer/v22/phone-number`, function (req, res) {
+        res.render(`/phoenix/employer/v22/phone-number`, {
+        data: req.session.data
+        })
+        })
+        
+        router.post(`/phoenix/employer/v22/phone-number`, function (req, res) {
+        res.redirect(`/phoenix/employer/v22/check-answers-discount`)
+        })
+
+
+     //main contact
+    
+     router.post('/phoenix/employer/v22/contact', function (req, res) {
+        const mainName = req.session.data['mainName'];
+         if (mainName === "yes") {
+                res.redirect('/phoenix/employer/v22/employer-name');
+        } else {
+                res.redirect('/phoenix/employer/v22/contact-main-details');
+        };
+    
+    })
+
+    //discount
+
+router.post('/phoenix/employer/v22/discount-code', function (req, res) {
+        if (req.session.data['haveRegistered'] === "yes") {
+        res.redirect('/phoenix/employer/v22/account-homepage-returning')
+        } else {
+        res.redirect('/phoenix/employer/v22/account-homepage-returning')
+        }
+    })
+    
+
+    //////////            EMPLOYER    VERSION 14 ( private beta)
+//Location
+
+router.post('/phoenix/employer/v14/location', function (req, res) {
+        const register = req.session.data['register'];
+        if (register === "england") {
+                res.redirect('/phoenix/employer/v14/business-size');
+        } else if (register === "wales") {
+                      res.redirect('/phoenix/employer/v14/business-size');
+        } else if (register === "ireland") {
+                        res.redirect('/phoenix/employer/v14/not-eligible-location-ni');
+        } else {
+                res.redirect('/phoenix/employer/v14/not-eligible-location');
+        };
+    })
+    
+    //business-size
+    
+    router.post('/phoenix/employer/v14/business-size', function (req, res) {
+        const size = req.session.data['size'];
+         if (size === "small") {
+                res.redirect('/phoenix/employer/v14/turnover');
+        } else if (size === "micro") {
+                res.redirect('/phoenix/employer/v14/turnover');
+        } else  if (size === "medium") {
+                res.redirect('/phoenix/employer/v14/turnover');
+        } else {
+                res.redirect('/phoenix/employer/v14/not-eligible-size');
+        };
+    })
+    
+    
+    //turnover
+    
+    router.post('/phoenix/employer/v14/turnover', function (req, res) {
+        const turnover = req.session.data['turnover'];
+         if (turnover === "no") {
+                res.redirect('/phoenix/employer/v14/balance-sheet');
+    
+        } else {
+                res.redirect('/phoenix/employer/v14/you-may-be-eligible');
+        };
+    })
+    
+    
+    
+    //balance sheet
+    
+    router.post('/phoenix/employer/v14/balance-sheet', function (req, res) {
+        const balance = req.session.data['balance'];
+         if (balance === "no") {
+                res.redirect('/phoenix/employer/v14/not-eligible-balance-sheet2');
+        } else {
+                res.redirect('/phoenix/employer/v14/you-may-be-eligible');
+        };
+    
+    })
+    
+    //email address
+    
+    router.post('/phoenix/employer/v14/contact-method', function (req, res) {
+        const email = req.session.data['email'];
+         if (email === "yes") {
+                res.redirect('/phoenix/employer/v14/email');
+        } else {
+                res.redirect('/phoenix/employer/v14/phone-number');
+        };
+    
+    })
+
  //////////            EMPLOYER    VERSION 15 ( private beta)
 //Location
 
