@@ -19,7 +19,8 @@ Which sector does your organisation belong to?
     <div class="govuk-grid-column-two-thirds">
 
 
-
+      <form action="" method="post" novalidate>
+        
         <div class="govuk-form-group">
 
           <fieldset class="govuk-fieldset">
@@ -103,9 +104,9 @@ Which sector does your organisation belong to?
 
 
 
-        <a href="email-address-gate">
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
-      </a>
+        {{ govukButton({
+          text: "Continue"
+        }) }}
 
 </form>
 

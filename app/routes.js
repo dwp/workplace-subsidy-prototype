@@ -1890,6 +1890,29 @@ router.get('/phoenix/employer/v22/location', function (req, res) {
         res.redirect(`/phoenix/employer/v22/sector`)
         })
 
+//sector
+
+router.get(`/phoenix/employer/v22/sector`, function (req, res) {
+        res.render(`/phoenix/employer/v22/sector`, {
+        data: req.session.data
+        })
+        })
+        
+        router.post(`/phoenix/employer/v22/sector`, function (req, res) {
+        res.redirect(`/phoenix/employer/v22/contact-details`)
+        })
+
+//contact-details
+router.get(`/phoenix/employer/v22/contact-details`, function (req, res) {
+        res.render(`/phoenix/employer/v22/contact-details`, {
+        data: req.session.data
+        })
+        })
+        
+        router.post(`/phoenix/employer/v22/contact-details`, function (req, res) {
+        res.redirect(`/phoenix/employer/v22/email-confirm-code-1`)
+        })
+
 //email-address-gate
 router.get(`/phoenix/employer/v22/email-address-gate`, function (req, res) {
         res.render(`/phoenix/employer/v22/email-address-gate`, {
@@ -2021,7 +2044,7 @@ router.get(`/phoenix/employer/v22/email-address-gate`, function (req, res) {
                 res.redirect('/phoenix/employer/v22/email-address')
         }
         if (receiveHow === "Text message") {
-                res.redirect('/phoenix/employer/v22/phone-number')
+                res.redirect('/phoenix/employer/v22/mobile-number')
         }
     
     })
@@ -2057,6 +2080,16 @@ router.get(`/phoenix/employer/v22/email`, function (req, res) {
         router.post(`/phoenix/employer/v22/email`, function (req, res) {
         res.redirect(`/phoenix/employer/v22/check-answers-discount`)
         })
+
+//mobile number
+
+router.post('/phoenix/employer/v22/mobile-number', function (req, res) {
+        if (req.session.data['rightMobileNumber'] === "Yes") {
+        res.redirect('/phoenix/employer/v22/check-answers-discount')
+        } else {
+        res.redirect('/phoenix/employer/v22/phone-number')
+        }
+    })
 
     //mobile phone number
 

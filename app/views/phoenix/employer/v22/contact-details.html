@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Your contact details
+What are your contact details?
 {% endblock %}
 
 {% block header %}
@@ -20,42 +20,64 @@ Your contact details
 
 
       <h1 class="govuk-heading-l">
-        Your contact details
+        What are your contact details?
       </h1>
 
-      <div id="event-name-hint" class="govuk-hint">
-        We may also use these details to contact you about the service.
-      </div>
+      <form action="" method="post" novalidate>
 
-      
       <div class="govuk-form-group">
-        
-      
+
+        <label class="govuk-label" for="firstName">
+          First name
+        </label>
+        <input class="govuk-input" id="firstName" name="firstName" type="text" spellcheck="false" aria-describedby="firstName-hint" autocomplete="given-name">
+        </div>
+          <div class="govuk-form-group">
+              <label class="govuk-label" for="lastName">
+                Last name
+              </label>
+              <input class="govuk-input" id="lastName" name="lastName" type="text" spellcheck="false" aria-describedby="lastName-hint" autocomplete="family-name">
+            </div>
         <div class="govuk-form-group">
-          <label class="govuk-label" for="email">
+          <label class="govuk-label" for="emailAddress">
             Email address
           </label>
           {# <div id="email-hint" class="govuk-hint">
             Hint text
           </div> #}
-          <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+          <input class="govuk-input" id="emailAddress" name="emailAddress" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
         </div>
-</div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="mobileNumber">
+            Mobile number
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="mobileNumber" name="mobileNumber" type="number" inputmode="numeric" autocomplete="tel">
+        </div>
 
-<div class="govuk-form-group">
-  <label class="govuk-label" for="mobileNumber">
-    Mobile number
-  </label>
-  <input class="govuk-input govuk-input--width-20" id="mobileNumber" name="mobileNumber" type="number" inputmode="numeric" autocomplete="postal-code">
-</div>
+{{ govukCheckboxes({
+  name: "",
+  fieldset: {
+    legend: {
+      text: "",
+      isPageHeading: true,
+      classes: ""
+    }
+  },
+  values: data.contactMe,
+  items: [
+    {
+      value: "Tick this box if you're happy to be contacted about the service, for research purposes, or to take part in a survey.",
+      text: "Tick this box if you're happy to be contacted about the service, for research purposes, or to take part in a survey."
+    }
+  ]
+}) }}
 
 
+{{ govukButton({
+  text: "Continue"
+}) }}
 
-
-<a href="sector"
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
-</a>
-
+</form>
 
     </div>
   </div>
