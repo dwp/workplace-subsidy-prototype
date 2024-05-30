@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Sorry, the service is unavailable
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Sorry, the service is unavailable</h1>
+        <p class="govuk-body">Try again later.</p>
+        <p class="govuk-body">Due to a technical problem with the postcode look-up we are unable to find your postcode.  We are working to fix it.</p>
+      </div>
+    </div>
+
+</div>
+{% endblock %}
