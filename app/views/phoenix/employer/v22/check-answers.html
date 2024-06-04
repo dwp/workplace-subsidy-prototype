@@ -122,7 +122,7 @@
                   </dd>
                 </div>
                 
-                <div class="govuk-summary-list__row">
+                {# <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
                   Email address
                   </dt>
@@ -135,9 +135,87 @@
                       Change<span class="govuk-visually-hidden"> email address</span>
                     </a>
                   </dd>
+                </div> #}
+              </dl>
+
+              <h2 class="govuk-heading-m">Contact details</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                  First name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ data['firstName'] or "Joe" }}
+                  </dd>
+                
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="contact-details">
+                      Change<span class="govuk-visually-hidden"> your first name</span>
+                    </a>
+                  </dd>
                 </div>
 
-            </dl>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Last name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ data['lastName'] or "Bloggs" }}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="contact-details">
+                      Change<span class="govuk-visually-hidden"> your last name</span>
+                    </a>
+                  </dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                  Email address
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ data['emailAddress'] or "joebloggs@organisation.com" }}
+                  </dd>
+                
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="contact-details">
+                      Change<span class="govuk-visually-hidden"> your email address</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                  Mobile number
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ data['mobileNumber'] or "07123456789" }}
+                  </dd>
+                
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="contact-details">
+                      Change<span class="govuk-visually-hidden"> your mobile numnber</span>
+                    </a>
+                  </dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                  Agree to be contacted
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ data['contactMe'] or "Yes" }}
+                  </dd>
+                
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="contact-details">
+                      Change<span class="govuk-visually-hidden"> email address</span>
+                    </a>
+                  </dd>
+                </div>
+              </dl>
 
 
       <h2 class="govuk-heading-m">Declaration</h2>
