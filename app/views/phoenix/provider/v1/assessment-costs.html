@@ -1,0 +1,168 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Join the occupational health assessment provider register, so that an employer can use their discount code
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for this page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Section",
+        href: "#"
+      },
+      {
+        text: "Subsection"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">
+  Join the occupational health assessment provider register, so that an employer can use their discount code
+</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <aside class="govuk-prototype-kit-common-templates-mainstream-guide-contents-list" role="complementary">
+        <nav class="govuk-prototype-kit-common-templates-contents-list" aria-label="Pages in this guide" role="navigation">
+          <h2 class="govuk-prototype-kit-common-templates-contents-list__title">
+            Contents
+          </h2>
+          <ol class="govuk-prototype-kit-common-templates-contents-list__list">
+            <li aria-current="true" class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed govuk-prototype-kit-common-templates-contents-list__list-item--active">
+              <a href="how-it-works">
+              How it works
+              </a>
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="eligibility">
+              Eligibility
+            </a>
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="what-health-assessments-mean">
+                What health assessments mean as part of this scheme
+              </a>
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+
+                Assessment costs
+
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="payment-process">
+              Payment process
+              </a>
+            </li>   
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#">
+                Join the provider register
+              </a>
+            </li>                        
+          </ol>
+        </nav>
+      </aside>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-prototype-kit-common-templates-mainstream-guide-body">
+      
+      <h2 class="govuk-heading-l">
+        Assessment costs
+      </h2>
+      
+      <p class="govuk-body">For this scheme, the occupational health assessment should cost no more than £400.</p>
+
+      <p class="govuk-body">If there are travel expenses, they should be included in this cost. DWP will pay 80% of the £400 cost, which will be capped at £320. The employer will pay 20% up to the value of £80.</p>
+
+      <p class="govuk-body">If the costs exceed this amount, for example due to travel cost or if the assessment requires a doctor, you must make sure the employer is aware of this and agrees to pay anything above the £80 in full.</p>
+
+      <div class="govuk-inset-text">
+        VAT is not usually applied to an occupational health assessment if it is carried out by a registered healthcare professional.
+      </div>           
+
+      <p class="govuk-body">You must charge your usual price for assessments. You cannot charge for supplying the quote.</p>    
+      
+      <p class="govuk-body">If you get accepted onto the scheme, you will need to provide the price range of your assessments. The costs may be different depending on the:</p> 
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          complexity of the case
+        </li>
+        <li>
+          type of health care professional that does the assessment
+        </li>
+        <li>
+          assessment method
+        </li>
+      </ul>
+
+
+      <h3 class="govuk-heading-m">
+        Examples of costs
+      </h3>
+
+      <div class="govuk-inset-text">
+        <h4 class="govuk-heading-s">
+          Remote assessment with a nurse
+        </h4>
+        <p class="govuk-body">
+          Sam has a video call assessment with a nurse. It costs £150. You invoice his employer for £30 and DWP for £120.
+        </p>
+        <h4 class="govuk-heading-s">
+          In-person assessment with an occupational therapist
+        </h4>
+        <p class="govuk-body">
+          Kat has an in-person assessment with an occupational therapist. The assessment costs £240. You invoice his employer for £48 and DWP for £192.
+        </p>
+      </div>  
+
+
+
+
+      <nav class="govuk-prototype-kit-common-templates-pagination" role="navigation" aria-label="Pagination">
+
+      {{ govukPagination({
+        previous: {
+          labelText: "What health assessments mean as part of this scheme",
+          href: "what-health-assessments-mean"
+        },
+        next: {
+          labelText: "Payment process",
+          href: "payment-process"
+        }
+      }) }}
+
+
+    </div>
+
+
+  </main>
+</div>
+
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

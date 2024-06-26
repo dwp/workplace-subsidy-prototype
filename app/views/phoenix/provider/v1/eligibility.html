@@ -1,0 +1,192 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Join the occupational health assessment provider register, so that an employer can use their discount code
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for this page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Section",
+        href: "#"
+      },
+      {
+        text: "Subsection"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">
+  Join the occupational health assessment provider register, so that an employer can use their discount code
+</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <aside class="govuk-prototype-kit-common-templates-mainstream-guide-contents-list" role="complementary">
+        <nav class="govuk-prototype-kit-common-templates-contents-list" aria-label="Pages in this guide" role="navigation">
+          <h2 class="govuk-prototype-kit-common-templates-contents-list__title">
+            Contents
+          </h2>
+          <ol class="govuk-prototype-kit-common-templates-contents-list__list">
+            <li aria-current="true" class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed govuk-prototype-kit-common-templates-contents-list__list-item--active">
+              <a href="how-it-works">
+              How it works
+              </a>
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              Eligibility
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="what-health-assessments-mean">
+                What health assessments mean as part of this scheme
+              </a>
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="assessment-costs">
+                Assessment costs
+              </a>
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="payment-process">
+              Payment process
+              </a>
+            </li>   
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="join-the-provider-register">
+                Join the provider register
+              </a>
+            </li>                        
+          </ol>
+        </nav>
+      </aside>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-prototype-kit-common-templates-mainstream-guide-body">
+      
+      <h2 class="govuk-heading-l">
+        Eligibility
+      </h2>
+      
+      <p class="govuk-body">You need to send us your most senior healthcare professional’s registration number and a copy of their qualification.</p>
+
+      <p class="govuk-body">The senior healthcare professional must be a full-time or part-time employee. They cannot be a subcontractor.</p>
+
+      <p class="govuk-body">This information will not be published on the register. It will be used to confirm that your organisation can provide quality assessments.</p>
+
+      <p class="govuk-body">If this person leaves your organisation, you will need to give us the details of their replacement.</p>
+
+      <p class="govuk-body">This service is for providers who can carry out mental and physical health assessments. If you are an occupational health physiotherapist or psychologist, you will be able to apply to the scheme later.</p>
+
+
+      <h3 class="govuk-heading-m">
+        Evidence required
+      </h3>
+
+      <p class="govuk-body">To join the provider register you will need to provide evidence of the qualifications of your occupational health professionals.</p>
+
+      <h4 class="govuk-heading-s">
+        Occupational health physician
+      </h4>     
+
+      <p class="govuk-body">A GMC number and one of the following qualifications:</p>     
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          Diploma in Occupational Medicine (DOccMed) 
+        </li>
+        <li>
+          Associates of the Faculty of Occupational Medicine (AFOM)
+        </li>
+        <li>
+          Members of the Faculty of Occupational Medicine (MFOM)
+        </li>
+        <li>
+          Fellowship of the Faculty of Occupational Medicine (FFOM)
+        </li>
+        <li>
+          any other required qualification that confirms your suitability as an occupational health physician
+        </li>    
+      </ul>
+
+
+
+
+      <h4 class="govuk-heading-s">
+        Occupational health nurse
+      </h4>     
+
+      <p class="govuk-body">A NMC number and one of the following qualifications:</p>     
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          Occupational health certificate, diploma, or degree recorded on Part 3 of the NMC register Specialist Community Public Health Nursing (SCPHN)
+        </li>
+        <li>
+          any other required qualification that confirms your suitability as an occupational health nurse
+        </li>
+        <li>
+          Occupational therapist with experience in workplace settings, vocational rehabilitation, or return to work
+        </li> 
+      </ul>
+
+      <p class="govuk-body">A HCPC number and one of the following qualifications:</p>     
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          Degree (BSc or MSc) in Occupational Therapy
+        </li>
+        <li>
+          any other required qualification that confirms your suitability as an occupational health therapist
+        </li>
+      </ul>
+    
+
+
+      <nav class="govuk-prototype-kit-common-templates-pagination" role="navigation" aria-label="Pagination">
+
+      {{ govukPagination({
+        previous: {
+          labelText: "How it works",
+          href: "how-it-works"
+        },
+        next: {
+          labelText: "What health assessments mean as part of this scheme",
+          href: "what-health-assessments-mean"
+        }
+      }) }}
+
+
+    </div>
+
+
+  </main>
+</div>
+
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

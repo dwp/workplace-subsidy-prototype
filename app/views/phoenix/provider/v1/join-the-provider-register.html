@@ -1,0 +1,179 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Join the occupational health assessment provider register, so that an employer can use their discount code
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for this page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Section",
+        href: "#"
+      },
+      {
+        text: "Subsection"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">
+  Join the occupational health assessment provider register, so that an employer can use their discount code
+</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <aside class="govuk-prototype-kit-common-templates-mainstream-guide-contents-list" role="complementary">
+        <nav class="govuk-prototype-kit-common-templates-contents-list" aria-label="Pages in this guide" role="navigation">
+          <h2 class="govuk-prototype-kit-common-templates-contents-list__title">
+            Contents
+          </h2>
+          <ol class="govuk-prototype-kit-common-templates-contents-list__list">
+            <li aria-current="true" class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed govuk-prototype-kit-common-templates-contents-list__list-item--active">
+              <a href="how-it-works">
+              How it works
+              </a>
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="eligibility">
+              Eligibility
+            </a>
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="what-health-assessments-mean">
+                What health assessments mean as part of this scheme
+              </a>
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="assessment-costs">
+                Assessment costs
+              </a>
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#">
+              Payment process
+              </a>
+            </li>            
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              
+                Join the provider register
+
+            </li>                        
+          </ol>
+        </nav>
+      </aside>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-prototype-kit-common-templates-mainstream-guide-body">
+      
+      <h2 class="govuk-heading-l">
+        Join the provider register
+      </h2>
+      
+      <p class="govuk-body">The register will list providers that have successfully joined the scheme. You can use this service to join the provider register.</p>
+
+      <h3 class="govuk-heading-m">
+        What you will need
+      </h3>
+
+      <p class="govuk-body">To join the register, we will need:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          your full name
+        </li>
+        <li>
+          your job role at the company
+        </li>
+        <li>
+          the company name
+        </li>
+        <li>
+          the full name of your most senior healthcare professional
+        </li>
+        <li>
+          their GMC, HCPC or NMC number
+        </li>
+        <li>
+          a copy of their qualification
+        </li>
+        <li>
+          how you carry out your assessments
+        </li>
+        <li>
+          your bank details to add you to our payment system
+        </li>
+      </ul>
+
+      <h3 class="govuk-heading-m">
+        After you're accepted onto the register
+      </h3>
+
+      <p class="govuk-body">Once your details are published on the provider register, an employer can:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>search the register to find providers</li>
+        <li>contact providers to discuss their employee’s needs</li>
+        <li>arrange an assessment</li>
+      </ul>
+
+      <p class="govuk-body">All their employees can get an assessment. Employees can have more assessments for ongoing or new cases.</p>
+
+      <div class="govuk-inset-text">
+        For every assessment, an employer will need to get a new discount code. 
+      </div>           
+
+      {{ govukButton({
+        text: "I understand - continue",
+        href: "#"
+      }) }}
+
+
+
+
+
+
+
+      <nav class="govuk-prototype-kit-common-templates-pagination" role="navigation" aria-label="Pagination">
+
+      {{ govukPagination({
+        previous: {
+          labelText: "Payment process",
+          href: "payment-process"
+        }
+      }) }}
+
+
+    </div>
+
+
+  </main>
+</div>
+
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}
