@@ -1,0 +1,165 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Join the occupational health assessment provider register, so that an employer can use their discount code
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for this page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Section",
+        href: "#"
+      },
+      {
+        text: "Subsection"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">
+  Join the occupational health assessment provider register, so that an employer can use their discount code
+</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <aside class="govuk-prototype-kit-common-templates-mainstream-guide-contents-list" role="complementary">
+        <nav class="govuk-prototype-kit-common-templates-contents-list" aria-label="Pages in this guide" role="navigation">
+          <h2 class="govuk-prototype-kit-common-templates-contents-list__title">
+            Contents
+          </h2>
+          <ol class="govuk-prototype-kit-common-templates-contents-list__list">
+            <li aria-current="true" class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed govuk-prototype-kit-common-templates-contents-list__list-item--active">
+              How it works
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="eligibility">
+              Eligibility
+            </a>
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="what-health-assessments-mean">
+                What health assessments mean as part of this scheme
+              </a>
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="assessment-costs">
+                Assessment costs
+              </a>
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="payment-process">
+              Payment process
+              </a>
+            </li>   
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="join-the-provider-register">
+                Join the provider register
+              </a>
+            </li>                        
+          </ol>
+        </nav>
+      </aside>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-prototype-kit-common-templates-mainstream-guide-body">
+      
+      <h2 class="govuk-heading-l">
+        How it works
+      </h2>
+      
+      <p class="govuk-body">The Department for Work and Pensions (DWP) and the Department of Health and Social Care (DHSC) are trialling a new workplace health assessment discount scheme.</p>
+
+      <p class="govuk-body">It is called ‘Get a workplace health assessment to support an employee’s health and disability’.</p>
+
+      <p class="govuk-body">The aim is to help small and medium-sized enterprises (SMEs) find workplace health providers to carry out occupational health assessments for their employees.</p>
+
+      <div class="govuk-inset-text">
+        A pilot has already started for this scheme and is expected to run for about 16 weeks.
+      </div>     
+
+      <h3 class="govuk-heading-m">
+        Which employers can use the scheme
+      </h3>
+
+      <p class="govuk-body">The scheme is open to SMEs registered in England or Wales which have 250 employees or less.</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          yearly turnover is £10.2 million or less
+        </li>
+        <li>
+          their yearly balance sheet is £5.1 million or less
+        </li>
+      </ul>
+
+      <p class="govuk-body">Eligible SMEs can use the scheme to:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          get a code for an 80% discount on workplace health assessments for their employees
+        </li>
+        <li>
+          find a private sector workplace health provider to do the assessment
+        </li>
+      </ul>
+
+      <h3 class="govuk-heading-m">
+        Provider register
+      </h3>      
+
+      <p class="govuk-body">If you are an eligible workplace health provider, you can apply to deliver assessments using this scheme.</p>
+
+      <div class="govuk-inset-text">
+        Your details will be added to the public provider register.
+        <br><br>
+        This is an example of what the <a class="govuk-link" href="#">public provider register</a> will look like.
+      </div>  
+
+      <p class="govuk-body">Employers will be able to search and choose a provider to carry out the occupational health assessments using this register.</p>
+
+
+      <nav class="govuk-prototype-kit-common-templates-pagination" role="navigation" aria-label="Pagination">
+
+      {{ govukPagination({
+
+        next: {
+          labelText: "Eligibility",
+          href: "eligibility"
+        }
+      }) }}
+
+
+    </div>
+
+
+  </main>
+</div>
+
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}
