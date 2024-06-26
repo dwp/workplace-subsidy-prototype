@@ -140,16 +140,37 @@ Join the occupational health assessment provider register, so that an employer c
 
       <div class="govuk-inset-text">
         For every assessment, an employer will need to get a new discount code. 
-      </div>           
+      </div>     
+
+      <h3 class="govuk-heading-m">
+        Terms and conditions
+      </h3>
+
+      <p class="govuk-body">The terms and conditions explain more about:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>removal from the register</li>
+        <li>consent and cancellations</li>
+        <li>questions and complaints</li>
+      </ul>
+
+      <p class="govuk-body">Read the full <a href="terms-and-conditions" class="govuk-link" rel="noreferrer noopener" target="_blank">provider terms and conditions (opens in new tab)</a>. Once you have read them you can agree and continue.</p>
+
+      <div class="govuk-form-group">
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="terms" name="terms" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="terms">
+                I have read and agree to the terms and conditions
+              </label>
+            </div>
+          </div>
+      </div>
+
 
       {{ govukButton({
-        text: "I understand - continue",
+        text: "Continue",
         href: "#"
       }) }}
-
-
-
-
 
 
 
