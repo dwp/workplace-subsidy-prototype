@@ -39,15 +39,15 @@ router.post('/phoenix/employer/v1/business-size', function (req, res) {
 //////////           PROVIDER VERSION 1
 //seqosh
 
-router.post('/phoenix/provider/v1/seqohs', function (req, res) {
+router.post('/phoenix/provider/v1_archive/seqohs', function (req, res) {
     const seqohs = req.session.data['seqohs'];
      if (seqohs === "yes") {
-                    res.redirect('/phoenix/provider/v1/seqohs-number');
+                    res.redirect('/phoenix/provider/v1_archive/seqohs-number');
     }if (seqohs === "no") {
-                    res.redirect('/phoenix/provider/v1/no-seqohs-content');
+                    res.redirect('/phoenix/provider/v1_archive/no-seqohs-content');
 
     } else {
-            res.redirect('/phoenix/provider/v1/no-seqohs-content');
+            res.redirect('/phoenix/provider/v1_archive/no-seqohs-content');
     };
 })
 
@@ -55,12 +55,12 @@ router.post('/phoenix/provider/v1/seqohs', function (req, res) {
 
 //GDPR
 
-router.post('/phoenix/provider/v1/gdpr', function (req, res) {
+router.post('/phoenix/provider/v1_archive/gdpr', function (req, res) {
     const gdpr = req.session.data['gdpr'];
      if (gdpr === "yes") {
-                    res.redirect('/phoenix/provider/v1/gdpr-upload');
+                    res.redirect('/phoenix/provider/v1_archive/gdpr-upload');
     }if (gdpr === "no") {
-                    res.redirect('/phoenix/provider/v1/not-eligible');
+                    res.redirect('/phoenix/provider/v1_archive/not-eligible');
 
 
     };
@@ -68,12 +68,12 @@ router.post('/phoenix/provider/v1/gdpr', function (req, res) {
 
 //CLINICAL
 
-router.post('/phoenix/provider/v1/clinical-gov', function (req, res) {
+router.post('/phoenix/provider/v1_archive/clinical-gov', function (req, res) {
     const clinical = req.session.data['clinical'];
      if (clinical === "yes") {
-                    res.redirect('/phoenix/provider/v1/clinical-upload');
+                    res.redirect('/phoenix/provider/v1_archive/clinical-upload');
     }if (clinical === "no") {
-                    res.redirect('/phoenix/provider/v1/not-eligible');
+                    res.redirect('/phoenix/provider/v1_archive/not-eligible');
 
 
     };
@@ -82,12 +82,12 @@ router.post('/phoenix/provider/v1/clinical-gov', function (req, res) {
 
 //FEEDBACK
 
-router.post('/phoenix/provider/v1/feedback', function (req, res) {
+router.post('/phoenix/provider/v1_archive/feedback', function (req, res) {
     const feedback = req.session.data['feedback'];
      if (feedback === "yes") {
-                    res.redirect('/phoenix/provider/v1/feedback-upload');
+                    res.redirect('/phoenix/provider/v1_archive/feedback-upload');
     }if (feedback === "no") {
-                    res.redirect('/phoenix/provider/v1/not-eligible');
+                    res.redirect('/phoenix/provider/v1_archive/not-eligible');
 
 
     };
@@ -96,12 +96,12 @@ router.post('/phoenix/provider/v1/feedback', function (req, res) {
 
 //REFERRAL
 
-router.post('/phoenix/provider/v1/referral', function (req, res) {
+router.post('/phoenix/provider/v1_archive/referral', function (req, res) {
     const referral = req.session.data['referral'];
      if (referral === "yes") {
-                    res.redirect('/phoenix/provider/v1/referral-upload');
+                    res.redirect('/phoenix/provider/v1_archive/referral-upload');
     }if (referral === "no") {
-                    res.redirect('/phoenix/provider/v1/not-eligible');
+                    res.redirect('/phoenix/provider/v1_archive/not-eligible');
 
 
     };
@@ -110,12 +110,12 @@ router.post('/phoenix/provider/v1/referral', function (req, res) {
 
 //ASSESSMENT
 
-router.post('/phoenix/provider/v1/assessment', function (req, res) {
+router.post('/phoenix/provider/v1_archive/assessment', function (req, res) {
     const assessment = req.session.data['assessment'];
      if (assessment === "yes") {
-                    res.redirect('/phoenix/provider/v1/assessment-upload');
+                    res.redirect('/phoenix/provider/v1_archive/assessment-upload');
     }if (assessment === "no") {
-                    res.redirect('/phoenix/provider/v1/not-eligible');
+                    res.redirect('/phoenix/provider/v1_archive/not-eligible');
 
 
     };
@@ -124,12 +124,12 @@ router.post('/phoenix/provider/v1/assessment', function (req, res) {
 
 //OH REPORT
 
-router.post('/phoenix/provider/v1/oh-report', function (req, res) {
+router.post('/phoenix/provider/v1_archive/oh-report', function (req, res) {
     const ohreport = req.session.data['oh-report'];
      if (ohreport === "yes") {
-                    res.redirect('/phoenix/provider/v1/oh-report-upload');
+                    res.redirect('/phoenix/provider/v1_archive/oh-report-upload');
     }if (ohreport === "no") {
-                    res.redirect('/phoenix/provider/v1/not-eligible');
+                    res.redirect('/phoenix/provider/v1_archive/not-eligible');
 
 
     };
@@ -138,12 +138,12 @@ router.post('/phoenix/provider/v1/oh-report', function (req, res) {
 
 //INPUT
 
-router.post('/phoenix/provider/v1/input', function (req, res) {
+router.post('/phoenix/provider/v1_archive/input', function (req, res) {
     const input = req.session.data['input'];
      if (input === "yes") {
-                    res.redirect('/phoenix/provider/v1/name');
+                    res.redirect('/phoenix/provider/v1_archive/name');
     }if (input === "no") {
-                    res.redirect('/phoenix/provider/v1/not-eligible');
+                    res.redirect('/phoenix/provider/v1_archive/not-eligible');
 
 
     };
@@ -3505,5 +3505,22 @@ router.post('/phoenix/agent/v12/manage-whitelist-remove', function (req, res) {
                 res.redirect('/phoenix/agent/v12/manage-whitelist-email-removed');
         } else {
                 res.redirect('/phoenix/agent/v12/manage-whitelist');
+        };
+    })
+
+
+
+
+
+
+
+// Provider UI
+
+router.post('/phoenix/provider/v1/eoi/eoi-cya', function (req, res) {
+        var providerCompanyLocation = req.session.data['companyLocation'];
+        if (providerCompanyLocation === "yes") {
+                res.redirect('/phoenix/provider/v1/eoi/submitted-location-yes');
+        } else {
+                res.redirect('/phoenix/provider/v1/eoi/submitted-location-no');
         };
     })
