@@ -1,0 +1,41 @@
+{% set serviceName %}
+Join the occupational health assessment provider register, so that an employer can use their discount code
+{% endset%}
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Join the occupational health assessment provider register, so that an employer can use their discount code
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">
+          Expression of interest submitted
+        </h1>
+      </div> -->
+
+      <h1 class="govuk-heading-l">Expression of interest submitted</h1>
+
+      <p class="govuk-body"><strong>For the pilot we are only accepting providers who are based in Cumbria, Lancashire and Barrow-in-Furness.</strong></p>
+
+      <p class="govuk-body">We hope to open up to other places in the UK in the next phase.</p>
+        
+      <p class="govuk-body">If you would like to to be notified when the pilot extends email _________@EMail.com </p>
+
+
+    </div>
+  </div>
+
+{% endblock %}
