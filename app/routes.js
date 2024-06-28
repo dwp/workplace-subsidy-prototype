@@ -3516,7 +3516,7 @@ router.post('/phoenix/agent/v12/manage-whitelist-remove', function (req, res) {
 
 // Provider UI
 
-router.post('/phoenix/provider/v1/eoi/eoi-cya', function (req, res) {
+router.post('/provider-eligibility-decision', function (req, res) {
         var providerCompanyLocation = req.session.data['companyLocation'];
         if (providerCompanyLocation === "yes") {
                 res.redirect('/phoenix/provider/v1/eoi/submitted-location-yes');
