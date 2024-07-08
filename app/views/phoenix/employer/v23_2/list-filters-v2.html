@@ -1,0 +1,617 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %} {% block pageTitle %} Find a workplace health
+provider {% endblock %} {% block header %}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader() }} {% endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-4">
+        <p class="govuk-body">
+          <a href="/phoenix/employer/v17/start-page" class="govuk-link"
+            >Go back to the start page</a
+          >
+        </p>
+        <h1 class="govuk-heading-l">Find a workplace health provider</h1>
+        <h2 class="govuk-heading-m">How to book an assessment</h2>
+        <ol class="govuk-list govuk-list--number">
+          <li>Search the list of providers.</li>
+          <li>Contact a provider to book an assessment.</li>
+          <li>Give the provider your discount code.</li>
+        </ol>
+        <p>
+          When choosing a provider it is important you check their services will
+          meet your needs. Read about
+          <a href="evaluation">how providers have been evaluated</a>.
+        </p>
+      </div>
+    </div>
+    
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <div class="moj-filter">
+          <div class="moj-filter__header">
+            <div class="moj-filter__header-title">
+              <h2 class="govuk-heading-m">Filter</h2>
+            </div>
+
+            <div class="moj-filter__header-action"></div>
+          </div>
+
+          <div class="moj-filter__content">
+
+            <div class="moj-filter__options">
+              <button
+                type="submit"
+                class="govuk-button"
+                data-module="govuk-button"
+                data-test-id="submit-button"
+              >
+                Apply filters
+              </button>
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend
+                    class="govuk-fieldset__legend govuk-fieldset__legend--m"
+                  >
+                    Assessment methods
+                  </legend>
+
+                  <div
+                    class="govuk-checkboxes govuk-checkboxes--small"
+                    data-module="govuk-checkboxes"
+                  >
+                    <div class="govuk-checkboxes__item">
+                      <input
+                        class="govuk-checkboxes__input"
+                        id="status"
+                        name="status"
+                        type="checkbox"
+                        value="complete"
+                      />
+                      <label
+                        class="govuk-label govuk-checkboxes__label"
+                        for="status"
+                      >
+                        Phone (80)
+                      </label>
+                    </div>
+
+                    <div class="govuk-checkboxes__item">
+                      <input
+                        class="govuk-checkboxes__input"
+                        id="status-2"
+                        name="status"
+                        type="checkbox"
+                        value="incomplete"
+                      />
+                      <label
+                        class="govuk-label govuk-checkboxes__label"
+                        for="status-2"
+                      >
+                        Video call (25)
+                      </label>
+                    </div>
+
+                    <div class="govuk-checkboxes__item">
+                      <input
+                        class="govuk-checkboxes__input"
+                        id="status-3"
+                        name="status"
+                        type="checkbox"
+                        value="inprogress"
+                      />
+                      <label
+                        class="govuk-label govuk-checkboxes__label"
+                        for="status-3"
+                      >
+                        Home visit (12)
+                      </label>
+                    </div>
+
+                    <div class="govuk-checkboxes__item">
+                      <input
+                        class="govuk-checkboxes__input"
+                        id="status-4"
+                        name="status"
+                        type="checkbox"
+                        value="inprogress"
+                      />
+                      <label
+                        class="govuk-label govuk-checkboxes__label"
+                        for="status-4"
+                      >
+                        At a clinic (5)
+                      </label>
+                    </div>
+
+                    <div class="govuk-checkboxes__item">
+                      <input
+                        class="govuk-checkboxes__input"
+                        id="status-5"
+                        name="status"
+                        type="checkbox"
+                        value="inprogress"
+                      />
+                      <label
+                        class="govuk-label govuk-checkboxes__label"
+                        for="status-5"
+                      >
+                        At a workplace (12)
+                      </label>
+                    </div>
+
+                    <div class="govuk-checkboxes__item">
+                      <input
+                        class="govuk-checkboxes__input"
+                        id="status-6"
+                        name="status"
+                        type="checkbox"
+                        value="inprogress"
+                      />
+                      <label
+                        class="govuk-label govuk-checkboxes__label"
+                        for="status-6"
+                      >
+                        At an agreed location (10)
+                      </label>
+                    </div>
+
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="govuk-grid-column-two-thirds">
+
+        <!-- The component to be hidden -->
+
+        <div class="moj-banner" id="visibleComponent" style="display: block;" role="region" aria-label="information">
+
+          {# <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+            <path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
+          C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S19.1,0.5,12.5,0.5z" />
+          </svg> #}
+
+        <!-- Your component content goes here -->
+
+          <div class="moj-banner__message">
+            <h2 class="govuk-heading-s">This providers list is unsorted.</h2>
+          </div>
+        
+        </div>
+
+        <p class="govuk-body-l govuk-!-font-weight-bold govuk-!-margin-top-0">
+          30 results
+        </p>
+
+        <p class="govuk-body">
+          <strong>Sort by:</strong> 
+          &nbsp;
+           {# Unsorted &nbsp;|
+          &nbsp; #}
+          <a href="#unsorted" class="govuk-link" id="unsortedLink">Unsorted</a>  &nbsp;|&nbsp;
+          <a href="#cost" class="govuk-link" id="costLink">Cost</a>  &nbsp;|&nbsp;
+          <a href="#distance" class="govuk-link" id="distanceLink">Distance</a> &nbsp;|&nbsp;
+          <a href="#name" class="govuk-link" id="nameLink">Name</a>
+        </p>
+
+        <div id="unsorted" class="table-section" style="display: block;">
+          <!-- Initially visible -->
+          <!-- Your "Unsorted" table content goes here -->
+          <table class="govuk-table govuk-table--small-text-until-tablet">
+            <caption class="govuk-table__caption govuk-table__caption--m">Providers - Unsorted</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Contact details</th>
+                <th scope="col" class="govuk-table__header">Assessment methods</th>
+                <th scope="col" class="govuk-table__header">Cost after discount</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-width-one-half"><a href="#" class="govuk-link">Nuffield Health OH Services</a>
+                  <br><p class="govuk-body-s govuk-!-padding-top-2">Dorchester, DT1 1XJ<br>0117 207 6190<br>admin@provider.co.uk</p>
+                  <a class="govuk-body-s" href="provider-clinics">View this provider's other clinics</a>
+                </th>
+                <td class="govuk-table__cell govuk-body-s">Phone<br>Video call<br>Home visit</td>
+                <td class="govuk-table__cell">
+                    <p class="govuk-body-s">
+                      £20 to £80
+                    </p>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-width-one-half"><a href="#" class="govuk-link">Nuffield Health OH Services</a>
+                  <br><p class="govuk-body-s govuk-!-padding-top-2">Dorchester, DT1 1XJ<br>0117 207 6190<br>admin@provider.co.uk</p>
+                </th>
+                <td class="govuk-table__cell govuk-body-s">Phone<br>Video call<br>Home visit</td>
+                <td class="govuk-table__cell">
+                    <p class="govuk-body-s">
+                      £20 to £80
+                    </p>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-width-one-half"><a href="#" class="govuk-link">Nuffield Health OH Services</a>
+                  <br><p class="govuk-body-s govuk-!-padding-top-2">Dorchester, DT1 1XJ<br>0117 207 6190<br>admin@provider.co.uk</p>
+                </th>
+                <td class="govuk-table__cell govuk-body-s">Phone<br>Video call<br>Home visit</td>
+                <td class="govuk-table__cell">
+                    <p class="govuk-body-s">
+                      £20 to £80
+                    </p>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-width-one-half"><a href="#" class="govuk-link">Nuffield Health OH Services</a>
+                  <br><p class="govuk-body-s govuk-!-padding-top-2">Dorchester, DT1 1XJ<br>0117 207 6190<br>admin@provider.co.uk</p>
+                </th>
+                <td class="govuk-table__cell govuk-body-s">Phone<br>Video call<br>Home visit</td>
+                <td class="govuk-table__cell">
+                    <p class="govuk-body-s">
+                      £20 to £80
+                    </p>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-width-one-half"><a href="#" class="govuk-link">Nuffield Health OH Services</a>
+                  <br><p class="govuk-body-s govuk-!-padding-top-2">Dorchester, DT1 1XJ<br>0117 207 6190<br>admin@provider.co.uk</p>
+                </th>
+                <td class="govuk-table__cell govuk-body-s">Phone<br>Video call<br>Home visit</td>
+                <td class="govuk-table__cell">
+                    <p class="govuk-body-s">
+                      £20 to £80
+                    </p>
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div id="cost" class="table-section" style="display: none;">
+          <!-- Your "Cost" table content goes here -->
+          <table class="govuk-table govuk-table--small-text-until-tablet">
+            <caption class="govuk-table__caption govuk-table__caption--m">Providers - Cost</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Contact details</th>
+                <th scope="col" class="govuk-table__header">Assessment methods</th>
+                <th scope="col" class="govuk-table__header">Cost after discount</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-width-one-half"><a href="#" class="govuk-link">Nuffield Health OH Services</a>
+                  <br><p class="govuk-body-s govuk-!-padding-top-2">Dorchester, DT1 1XJ<br>0117 207 6190<br>admin@provider.co.uk</p>
+                </th>
+                <td class="govuk-table__cell govuk-body-s">Phone<br>Video call<br>Home visit</td>
+                <td class="govuk-table__cell">
+                    <p class="govuk-body-s">
+                      £20 to £80
+                    </p>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-width-one-half"><a href="#" class="govuk-link">Nuffield Health OH Services</a>
+                  <br><p class="govuk-body-s govuk-!-padding-top-2">Dorchester, DT1 1XJ<br>0117 207 6190<br>admin@provider.co.uk</p>
+                </th>
+                <td class="govuk-table__cell govuk-body-s">Phone<br>Video call<br>Home visit</td>
+                <td class="govuk-table__cell">
+                    <p class="govuk-body-s">
+                      £20 to £80
+                    </p>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-width-one-half"><a href="#" class="govuk-link">Nuffield Health OH Services</a>
+                  <br><p class="govuk-body-s govuk-!-padding-top-2">Dorchester, DT1 1XJ<br>0117 207 6190<br>admin@provider.co.uk</p>
+                </th>
+                <td class="govuk-table__cell govuk-body-s">Phone<br>Video call<br>Home visit</td>
+                <td class="govuk-table__cell">
+                    <p class="govuk-body-s">
+                      £20 to £80
+                    </p>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-width-one-half"><a href="#" class="govuk-link">Nuffield Health OH Services</a>
+                  <br><p class="govuk-body-s govuk-!-padding-top-2">Dorchester, DT1 1XJ<br>0117 207 6190<br>admin@provider.co.uk</p>
+                </th>
+                <td class="govuk-table__cell govuk-body-s">Phone<br>Video call<br>Home visit</td>
+                <td class="govuk-table__cell">
+                    <p class="govuk-body-s">
+                      £20 to £80
+                    </p>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-width-one-half"><a href="#" class="govuk-link">Nuffield Health OH Services</a>
+                  <br><p class="govuk-body-s govuk-!-padding-top-2">Dorchester, DT1 1XJ<br>0117 207 6190<br>admin@provider.co.uk</p>
+                </th>
+                <td class="govuk-table__cell govuk-body-s">Phone<br>Video call<br>Home visit</td>
+                <td class="govuk-table__cell">
+                    <p class="govuk-body-s">
+                      £20 to £80
+                    </p>
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div id="distance" class="table-section" style="display: none;">
+          <!-- Your "Distance" table content goes here -->
+          <table class="govuk-table govuk-table--small-text-until-tablet">
+            <caption class="govuk-table__caption govuk-table__caption--m">Providers - Distance</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Contact details</th>
+                <th scope="col" class="govuk-table__header">Assessment methods</th>
+                <th scope="col" class="govuk-table__header">Cost after discount</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-width-one-half"><a href="#" class="govuk-link">Nuffield Health OH Services</a>
+                  <br><p class="govuk-body-s govuk-!-padding-top-2">Dorchester, DT1 1XJ<br>0117 207 6190<br>admin@provider.co.uk</p>
+                </th>
+                <td class="govuk-table__cell govuk-body-s">Phone<br>Video call<br>Home visit</td>
+                <td class="govuk-table__cell">
+                    <p class="govuk-body-s">
+                      £20 to £80
+                    </p>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-width-one-half"><a href="#" class="govuk-link">Nuffield Health OH Services</a>
+                  <br><p class="govuk-body-s govuk-!-padding-top-2">Dorchester, DT1 1XJ<br>0117 207 6190<br>admin@provider.co.uk</p>
+                </th>
+                <td class="govuk-table__cell govuk-body-s">Phone<br>Video call<br>Home visit</td>
+                <td class="govuk-table__cell">
+                    <p class="govuk-body-s">
+                      £20 to £80
+                    </p>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-width-one-half"><a href="#" class="govuk-link">Nuffield Health OH Services</a>
+                  <br><p class="govuk-body-s govuk-!-padding-top-2">Dorchester, DT1 1XJ<br>0117 207 6190<br>admin@provider.co.uk</p>
+                </th>
+                <td class="govuk-table__cell govuk-body-s">Phone<br>Video call<br>Home visit</td>
+                <td class="govuk-table__cell">
+                    <p class="govuk-body-s">
+                      £20 to £80
+                    </p>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-width-one-half"><a href="#" class="govuk-link">Nuffield Health OH Services</a>
+                  <br><p class="govuk-body-s govuk-!-padding-top-2">Dorchester, DT1 1XJ<br>0117 207 6190<br>admin@provider.co.uk</p>
+                </th>
+                <td class="govuk-table__cell govuk-body-s">Phone<br>Video call<br>Home visit</td>
+                <td class="govuk-table__cell">
+                    <p class="govuk-body-s">
+                      £20 to £80
+                    </p>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-width-one-half"><a href="#" class="govuk-link">Nuffield Health OH Services</a>
+                  <br><p class="govuk-body-s govuk-!-padding-top-2">Dorchester, DT1 1XJ<br>0117 207 6190<br>admin@provider.co.uk</p>
+                </th>
+                <td class="govuk-table__cell govuk-body-s">Phone<br>Video call<br>Home visit</td>
+                <td class="govuk-table__cell">
+                    <p class="govuk-body-s">
+                      £20 to £80
+                    </p>
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div id="name" class="table-section" style="display: none;">
+          <!-- Your "Name" table content goes here -->
+          <table class="govuk-table govuk-table--small-text-until-tablet">
+            <caption class="govuk-table__caption govuk-table__caption--m">Providers - Name</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Contact details</th>
+                <th scope="col" class="govuk-table__header">Assessment methods</th>
+                <th scope="col" class="govuk-table__header">Cost after discount</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-width-one-half"><a href="#" class="govuk-link">Nuffield Health OH Services</a>
+                  <br><p class="govuk-body-s govuk-!-padding-top-2">Dorchester, DT1 1XJ<br>0117 207 6190<br>admin@provider.co.uk</p>
+                </th>
+                <td class="govuk-table__cell govuk-body-s">Phone<br>Video call<br>Home visit</td>
+                <td class="govuk-table__cell">
+                    <p class="govuk-body-s">
+                      £20 to £80
+                    </p>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-width-one-half"><a href="#" class="govuk-link">Nuffield Health OH Services</a>
+                  <br><p class="govuk-body-s govuk-!-padding-top-2">Dorchester, DT1 1XJ<br>0117 207 6190<br>admin@provider.co.uk</p>
+                </th>
+                <td class="govuk-table__cell govuk-body-s">Phone<br>Video call<br>Home visit</td>
+                <td class="govuk-table__cell">
+                    <p class="govuk-body-s">
+                      £20 to £80
+                    </p>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-width-one-half"><a href="#" class="govuk-link">Nuffield Health OH Services</a>
+                  <br><p class="govuk-body-s govuk-!-padding-top-2">Dorchester, DT1 1XJ<br>0117 207 6190<br>admin@provider.co.uk</p>
+                </th>
+                <td class="govuk-table__cell govuk-body-s">Phone<br>Video call<br>Home visit</td>
+                <td class="govuk-table__cell">
+                    <p class="govuk-body-s">
+                      £20 to £80
+                    </p>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-width-one-half"><a href="#" class="govuk-link">Nuffield Health OH Services</a>
+                  <br><p class="govuk-body-s govuk-!-padding-top-2">Dorchester, DT1 1XJ<br>0117 207 6190<br>admin@provider.co.uk</p>
+                </th>
+                <td class="govuk-table__cell govuk-body-s">Phone<br>Video call<br>Home visit</td>
+                <td class="govuk-table__cell">
+                    <p class="govuk-body-s">
+                      £20 to £80
+                    </p>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-width-one-half"><a href="#" class="govuk-link">Nuffield Health OH Services</a>
+                  <br><p class="govuk-body-s govuk-!-padding-top-2">Dorchester, DT1 1XJ<br>0117 207 6190<br>admin@provider.co.uk</p>
+                </th>
+                <td class="govuk-table__cell govuk-body-s">Phone<br>Video call<br>Home visit</td>
+                <td class="govuk-table__cell">
+                    <p class="govuk-body-s">
+                      £20 to £80
+                    </p>
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <script>
+          document.getElementById('nameLink').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default jump behavior
+            
+            var tableSections = document.querySelectorAll('.table-section'); // Select all table sections
+            
+            // Hide all table sections except for the "Name" section
+            tableSections.forEach(function(section) {
+              if (section.id === 'name') {
+                section.style.display = 'block';
+              } else {
+                section.style.display = 'none';
+              }
+            });
+          });
+          
+          // Add similar event listeners for other links if needed
+
+          document.getElementById('unsortedLink').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default jump behavior
+            
+            var tableSections = document.querySelectorAll('.table-section'); // Select all table sections
+            
+            // Hide all table sections except for the "Name" section
+            tableSections.forEach(function(section) {
+              if (section.id === 'unsorted') {
+                section.style.display = 'block';
+              } else {
+                section.style.display = 'none';
+              }
+            });
+          });
+
+          document.getElementById('distanceLink').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default jump behavior
+            
+            var tableSections = document.querySelectorAll('.table-section'); // Select all table sections
+            
+            // Hide all table sections except for the "Name" section
+            tableSections.forEach(function(section) {
+              if (section.id === 'distance') {
+                section.style.display = 'block';
+              } else {
+                section.style.display = 'none';
+              }
+            });
+          });
+
+          document.getElementById('costLink').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default jump behavior
+            
+            var tableSections = document.querySelectorAll('.table-section'); // Select all table sections
+            
+            // Hide all table sections except for the "Name" section
+            tableSections.forEach(function(section) {
+              if (section.id === 'cost') {
+                section.style.display = 'block';
+              } else {
+                section.style.display = 'none';
+              }
+            });
+          });
+        </script>
+
+        <script>
+          // Function to handle click event for table section links
+          function handleLinkClick(linkId) {
+            var visibleComponent = document.getElementById('visibleComponent');
+            
+            // Check which link is clicked and hide or show the component accordingly
+            if (linkId === 'unsortedLink') {
+              visibleComponent.style.display = 'block'; // Show the component for unsortedLink
+            } else {
+              visibleComponent.style.display = 'none'; // Hide the component for other links
+            }
+          }
+          
+          // Add click event listeners for table section links
+          document.getElementById('unsortedLink').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default jump behavior
+            handleLinkClick('unsortedLink');
+          });
+          
+          document.getElementById('costLink').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default jump behavior
+            handleLinkClick('costLink');
+          });
+          
+          document.getElementById('distanceLink').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default jump behavior
+            handleLinkClick('distanceLink');
+          });
+          
+          document.getElementById('nameLink').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default jump behavior
+            handleLinkClick('nameLink');
+          });
+        </script>
+    
+
+      </div>
+    </div>
+  </main>
+  </div>
+
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+<tr class="govuk-table__row">
+  <td class="govuk-table__cell">
+  </td>
+  <td class="govuk-table__cell">
+    <strong class="govuk-tag govuk-tag--purple">
+      Prototype only
+    </strong>
+  </td>
+</tr>
+<br><br>
+<p class="govuk-body">
+  Version 1<br/>
+  <a href="list" class="govuk-link">Version 2</a><br/>
+  <a href="list-filters-2" class="govuk-link">Version 3</a>
+</p>
+
+  </div>
+</div>
+
+{% endblock %}
