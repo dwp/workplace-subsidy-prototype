@@ -3514,6 +3514,297 @@ router.post('/phoenix/agent/v12/manage-whitelist-remove', function (req, res) {
 
 
 
+
+
+
+//////////            EMPLOYER VERSION 23.1 (public beta)
+
+//have you registered before
+
+router.post('/phoenix/employer/v23_1/have-you-registered', function (req, res) {
+        if (req.session.data['haveRegistered'] === "yes") {
+        res.redirect('/phoenix/employer/v23_1/email-address-gate-returning')
+        } else {
+        res.redirect('/phoenix/employer/v23_1/are-you-eligible')
+        }
+    })
+
+//Location
+
+// router.get('/phoenix/employer/v23_1/location', function (req, res) {
+//         res.render(`/phoenix/employer/v23_1/location`, {
+//         data: req.session.data
+//         })
+//         })
+        
+        router.post(`/phoenix/employer/v23_1/location`, function (req, res) {
+        res.redirect(`/phoenix/employer/v23_1/business-size`)
+        })
+
+//business-name
+
+    router.get(`/phoenix/employer/v23_1/business-name`, function (req, res) {
+        res.render(`/phoenix/employer/v23_1/business-name`, {
+        data: req.session.data
+        })
+        })
+        
+        router.post(`/phoenix/employer/v23_1/business-name`, function (req, res) {
+        res.redirect(`/phoenix/employer/v23_1/contact-method`)
+        })
+
+//sector
+
+router.get(`/phoenix/employer/v23_1/sector`, function (req, res) {
+        res.render(`/phoenix/employer/v23_1/sector`, {
+        data: req.session.data
+        })
+        })
+        
+        router.post(`/phoenix/employer/v23_1/sector`, function (req, res) {
+        res.redirect(`/phoenix/employer/v23_1/contact-details`)
+        })
+
+//contact-details
+router.get(`/phoenix/employer/v23_1/contact-details`, function (req, res) {
+        res.render(`/phoenix/employer/v23_1/contact-details`, {
+        data: req.session.data
+        })
+        })
+        
+        router.post(`/phoenix/employer/v23_1/contact-details`, function (req, res) {
+        res.redirect(`/phoenix/employer/v23_1/email-confirm-code-1`)
+        })
+
+//email-address-gate
+router.get(`/phoenix/employer/v23_1/email-address-gate`, function (req, res) {
+        res.render(`/phoenix/employer/v23_1/email-address-gate`, {
+        data: req.session.data
+        })
+        })
+        
+        router.post(`/phoenix/employer/v23_1/email-address-gate`, function (req, res) {
+        res.redirect(`/phoenix/employer/v23_1/email-confirm-code-1`)
+        })
+    
+    //business-size
+    
+    router.post('/phoenix/employer/v23_1/business-size', function (req, res) {
+        const size = req.session.data['size'];
+         if (size === "small") {
+                res.redirect('/phoenix/employer/v23_1/turnover');
+        } else if (size === "micro") {
+                res.redirect('/phoenix/employer/v23_1/turnover');
+        } else  if (size === "medium") {
+                res.redirect('/phoenix/employer/v23_1/turnover-medium');
+        } else {
+                res.redirect('/phoenix/employer/v23_1/not-eligible-size');
+        };
+    })
+    
+    
+    //turnover
+    
+    router.post('/phoenix/employer/v23_1/turnover', function (req, res) {
+
+        // Make a variable and give it the value from 'how-many-balls'
+        var turnover = req.session.data['turnover']
+
+        // Check whether the variable matches a condition
+        if (turnover == "turnover-eligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v23_1/you-may-be-eligible')
+        }
+        if (turnover == "turnover-ineligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v23_1/balance-sheet')
+        }
+        // else {
+        // // Send user to ineligible page
+        // res.redirect('basic-employee-contributions')
+        // }
+
+        })
+
+        //turnover-medium
+    
+
+    router.post('/phoenix/employer/v23_1/turnover-medium', function (req, res) {
+
+        // Make a variable and give it the value from 'how-many-balls'
+        var turnover = req.session.data['turnover']
+
+        // Check whether the variable matches a condition
+        if (turnover == "turnover-eligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v23_1/you-may-be-eligible')
+        }
+        if (turnover == "turnover-ineligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v23_1/balance-sheet-medium')
+        }
+        // else {
+        // // Send user to ineligible page
+        // res.redirect('basic-employee-contributions')
+        // }
+
+        })
+    
+    
+    
+    //balance sheet
+    
+
+    router.post('/phoenix/employer/v23_1/balance-sheet', function (req, res) {
+
+        // Make a variable and give it the value from 'how-many-balls'
+        var balance = req.session.data['balance']
+
+        // Check whether the variable matches a condition
+        if (balance == "balance-eligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v23_1/you-may-be-eligible')
+        }
+        if (balance == "balance-ineligible") {
+        // Send user to next page
+        res.redirect('/phoenix/employer/v23_1/not-eligible-balance-sheet')
+        }
+        // else {
+        // // Send user to ineligible page
+        // res.redirect('basic-employee-contributions')
+        // }
+
+        })
+
+        //balance-sheet-medium
+
+        router.post('/phoenix/employer/v23_1/balance-sheet-medium', function (req, res) {
+
+                // Make a variable and give it the value from 'how-many-balls'
+                var balance = req.session.data['balance']
+
+                // Check whether the variable matches a condition
+                if (balance == "balance-eligible") {
+                // Send user to next page
+                res.redirect('/phoenix/employer/v23_1/you-may-be-eligible')
+                }
+                if (balance == "balance-ineligible") {
+                // Send user to next page
+                res.redirect('/phoenix/employer/v23_1/not-eligible-balance-sheet2')
+                }
+                // else {
+                // // Send user to ineligible page
+                // res.redirect('basic-employee-contributions')
+                // }
+
+                })
+    
+    //contact method
+    
+    router.post('/phoenix/employer/v23_1/contact-method', function (req, res) {
+        var receiveHow = req.session.data['receiveHow']
+        if (receiveHow === "Email") {
+                res.redirect('/phoenix/employer/v23_1/email-address')
+        }
+        if (receiveHow === "Text message") {
+                res.redirect('/phoenix/employer/v23_1/mobile-number')
+        }
+    
+    })
+
+    //email address
+
+router.post('/phoenix/employer/v23_1/email-address', function (req, res) {
+        if (req.session.data['rightEmail'] === "Yes") {
+        res.redirect('/phoenix/employer/v23_1/check-answers-discount')
+        } else {
+        res.redirect('/phoenix/employer/v23_1/email')
+        }
+    })
+
+    //email recognised
+
+router.post('/phoenix/employer/v23_1/email-recognised', function (req, res) {
+        if (req.session.data['detailsFound'] === "yes") {
+        res.redirect('/phoenix/employer/v23_1/check-answers')
+        } else {
+        res.redirect('/phoenix/employer/v23_1/account-homepage-returning')
+        }
+    })
+
+    //email changed
+
+router.get(`/phoenix/employer/v23_1/email`, function (req, res) {
+        res.render(`/phoenix/employer/v23_1/email`, {
+        data: req.session.data
+        })
+        })
+        
+        router.post(`/phoenix/employer/v23_1/email`, function (req, res) {
+        res.redirect(`/phoenix/employer/v23_1/check-answers-discount`)
+        })
+
+//mobile number
+
+router.post('/phoenix/employer/v23_1/mobile-number', function (req, res) {
+        if (req.session.data['rightMobileNumber'] === "Yes") {
+        res.redirect('/phoenix/employer/v23_1/check-answers-discount')
+        } else {
+        res.redirect('/phoenix/employer/v23_1/phone-number')
+        }
+    })
+
+    //mobile phone number
+
+router.get(`/phoenix/employer/v23_1/phone-number`, function (req, res) {
+        res.render(`/phoenix/employer/v23_1/phone-number`, {
+        data: req.session.data
+        })
+        })
+        
+        router.post(`/phoenix/employer/v23_1/phone-number`, function (req, res) {
+        res.redirect(`/phoenix/employer/v23_1/check-answers-discount`)
+        })
+
+
+     //main contact
+    
+     router.post('/phoenix/employer/v23_1/contact', function (req, res) {
+        const mainName = req.session.data['mainName'];
+         if (mainName === "yes") {
+                res.redirect('/phoenix/employer/v23_1/employer-name');
+        } else {
+                res.redirect('/phoenix/employer/v23_1/contact-main-details');
+        };
+    
+    })
+
+    //discount
+
+router.post('/phoenix/employer/v23_1/discount-code', function (req, res) {
+        if (req.session.data['haveRegistered'] === "yes") {
+        res.redirect('/phoenix/employer/v23_1/account-homepage-returning')
+        } else {
+        res.redirect('/phoenix/employer/v23_1/account-homepage-returning')
+        }
+    })
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Provider UI
 
 router.post('/provider-eligibility-decision', function (req, res) {

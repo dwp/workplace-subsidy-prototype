@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Your discount code
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">
+        Your discount code
+        </h1>
+        <div class="govuk-panel__body">
+          <strong>ABC 234</strong>
+        </div>
+      </div>
+
+
+
+<p>We have sent you a confirmation email with your discount code.</p>
+
+<p>It does not have an expiry date.</p>
+
+<form action="?" method="post" novalidate>
+
+{{ govukButton({
+  text: "Go to homepage"
+}) }}
+
+</form>
+
+<p><a href="">Print this page</a></p>
+
+    </div>
+  </div>
+  </main>
+  </div>
+{% endblock %}
