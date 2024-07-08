@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Using workplace health to help an employee 
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">
+Guidance <h1>
+
+  <h2 class="govuk-heading-m">How to use the discount code</h2>
+
+
+<ol class="govuk-list govuk-list--number">
+  <li><a href="are-you-eligible">Check if your business is eligible </a>and get a discount code.</li>
+  <div class="govuk-!-padding-bottom-2"></div>
+  <li>Search the list of providers.</li>
+  <div class="govuk-!-padding-bottom-2"></div>
+  <li>Contact a provider to book an assessment. </li>
+  <div class="govuk-!-padding-bottom-2"></div>
+  <li>Give the provider your discount code.</li>
+  <div class="govuk-!-padding-bottom-2"></div>
+  <li>After the assessment, you will get advice about free or funded onward support for your employee.</li>
+  <div class="govuk-!-padding-bottom-2"></div>
+  <li>Pay the provider when they invoice you. </li>
+  <div class="govuk-!-padding-bottom-2"></div>
+
+</ol>
+
+<h2 class="govuk-heading-m">If you need another discount code</h2>
+<p>You can use this scheme for all employees, including yourself.</p>
+
+<p>Employees can have more assessments for ongoing or new cases. </p>
+<p>For every assessment, you will need to get a new discount code by answering the eligibility questions again. </p>
+
+
+<p>Discount codes do not expire.</p>
+
+<h2 class="govuk-heading-m"> What an assessment will cost </h2>
+
+<p>An assessment will cost between £1 and £80 after the 80% discount.</p>
+
+
+<h2 class="govuk-heading-m"> Why the cost of assessments differ </h2>
+<p>The price can be different depending on:</p>
+<ul class="govuk-list govuk-list--bullet">
+
+<li>the complexity of the case</li>
+<li>the type of health care professional that does the assessment</li>
+</ul>
+
+<div class="govuk-inset-text">
+<p class="govuk-body govuk-!-font-weight-bold">  Examples</p>
+
+<p>Sam has a video call assessment with a nurse. It costs £150, so his employer pays £30.
+</p>
+<p>Emma has an video call with an occupational therapist. It costs £250, so her employer pays £50.
+</p>
+</div>
+
+
+
+
+</div>
+
+<h2 class="govuk-heading-m">If an employee needs to cancel or reschedule an assessment</h2>
+<p>Cancellation or rescheduling of an assessment might result in a fee.</p>
+<p>You need to check with the workplace health provider what their cancellation policy is.</p>
+
+<h2 class="govuk-heading-m">If an employee does not attend an assessment</h2>
+<p>You will have to pay for the full cost of an assessment if your employee does not attend.</p>
+<p>Reassuring and reminding your employee about the assessment process means they are more likely to attend.</p>
+
+
+
+
+
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}
