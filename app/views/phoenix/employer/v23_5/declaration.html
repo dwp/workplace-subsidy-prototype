@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Declaration
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">
+Declaration </h1>
+
+<p>
+By filling in the application you agree that the information you have given is correct. </p>
+<div class="govuk-inset-text">
+  DWP may undertake checks on the eligibility of your organisation for the 80% discount.
+</div>
+<p>
+If you deliberately give the wrong information, or you do not report any changes, you may:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li>  be prosecuted</li>
+<li>  have to pay a penalty</li>
+<li>  have to pay for the services you've used if you're asked to</li>
+</ul>
+
+
+
+
+
+
+<a href="voucher"
+      <button class="govuk-button" data-module="govuk-button">
+    I agree - continue
+  </button></a>
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}
