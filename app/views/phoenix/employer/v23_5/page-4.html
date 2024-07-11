@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<h1 class="govuk-heading-l"> List of providers</h1>
+
+      <p>Refined list fo providers after filtering </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>probably sortable table with checkboxes to select</li>
+        <li>placeholder</li>
+        <li>placeholder</li>
+      </ul>
+
+<a href="page-5"
+      <button class="govuk-button" data-module="govuk-button">
+    Check the provider details
+  </button></a>
+
+
+
+
+    </div>
+  </div>
+  </main>
+  </div>
+{% endblock %}
