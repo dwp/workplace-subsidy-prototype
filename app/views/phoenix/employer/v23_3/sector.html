@@ -5,113 +5,104 @@ Which sector does your organisation belong to?
 {% endblock %}
 
 {% block header %}
-  <!-- Blank header with no service name for the start page -->
-  {{ govukHeader() }}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader() }}
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
 
-      <form action="" method="post" novalidate>
-        
-        <div class="govuk-form-group">
+    <form action="" method="post" novalidate>
 
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-<!--<span class="govuk-caption-l">Find out if you're eligible</span>-->
-              <h1 class="govuk-fieldset__heading">
-                Which sector does your organisation belong to?
-              </h1>
-            </legend>
-            <div class="govuk-radios" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="register" name="register" type="radio" value="Agriculture, forestry, fishing or mining">
-                <label class="govuk-label govuk-radios__label" for="register">
-                  Agriculture, forestry, fishing or mining
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="register-2" name="register" type="radio" value="Manufacturing, construction or transport">
-                <label class="govuk-label govuk-radios__label" for="register-2">
-                  Manufacturing, construction or transport
-                </label>
-              </div>
+      <div class="govuk-form-group">
 
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="register-3" name="register" type="radio" value="Utilities provision (electricity, gas, water, waste disposal etc.)">
-                <label class="govuk-label govuk-radios__label" for="register-3">
-                  Utilities provision (electricity, gas, water, waste disposal etc.)
-                </label>
-              </div>
-
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="register-4" name="register" type="radio" value="Wholesale or retail">
-                <label class="govuk-label govuk-radios__label" for="register-4">
-                  Wholesale or retail
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="register-4" name="register" type="radio" value="Hospitality, food service, arts, entertainment or recreation">
-                <label class="govuk-label govuk-radios__label" for="register-4">
-                  Hospitality, food service, arts, entertainment or recreation
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="register-4" name="register" type="radio" value="Finance or business services">
-                <label class="govuk-label govuk-radios__label" for="register-4">
-                  Finance or business services
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="register-4" name="register" type="radio" value="Education, health or government">
-                <label class="govuk-label govuk-radios__label" for="register-4">
-                  Education, health or government
-                </label>
-              </div>
-              <!--  <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="register-4" name="register" type="radio" value="#">
-                <label class="govuk-label govuk-radios__label" for="register-4">
-                  Other
-                </label>
-              </div>-->
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <!--<span class="govuk-caption-l">Find out if you're eligible</span>-->
+            <h1 class="govuk-fieldset__heading">
+              Which sector does your organisation belong to?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="Other" data-aria-controls="conditional-contact-3">
-                <label class="govuk-label govuk-radios__label" for="contact-3">
-                  Other
-                </label>
-              </div> 
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="register-4">
-                    Sector
-                  </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
-                </div>
-              
-
-
+              <input class="govuk-radios__input" id="register" name="sector" type="radio"
+                value="Agriculture, forestry, fishing or mining">
+              <label class="govuk-label govuk-radios__label" for="sector">
+                Agriculture, forestry, fishing or mining
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sector-2" name="sector" type="radio"
+                value="Manufacturing, construction or transport">
+              <label class="govuk-label govuk-radios__label" for="sector-2">
+                Manufacturing, construction or transport
+              </label>
             </div>
 
-          </fieldset>
-        </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sector-3" name="sector" type="radio"
+                value="Utilities provision (electricity, gas, water, waste disposal etc.)">
+              <label class="govuk-label govuk-radios__label" for="sector-3">
+                Utilities provision (electricity, gas, water, waste disposal etc.)
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sector-4" name="sector" type="radio" value="Wholesale or retail">
+              <label class="govuk-label govuk-radios__label" for="sector-4">
+                Wholesale or retail
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sector-5" name="sector" type="radio"
+                value="Hospitality, food service, arts, entertainment or recreation">
+              <label class="govuk-label govuk-radios__label" for="sector-5">
+                Hospitality, food service, arts, entertainment or recreation
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sector-6" name="sector" type="radio"
+                value="Finance or business services">
+              <label class="govuk-label govuk-radios__label" for="sector-6">
+                Finance or business services
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sector-7" name="sector" type="radio"
+                value="Education, health or government">
+              <label class="govuk-label govuk-radios__label" for="sector-7">
+                Education, health or government
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sector-8" name="sector" type="radio" value="Other"
+                data-aria-controls="conditional-contact-3">
+              <label class="govuk-label govuk-radios__label" for="sector-8">
+                Other
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
 
 
 
-        {{ govukButton({
-          text: "Continue"
-        }) }}
+      {{ govukButton({
+      text: "Continue"
+      }) }}
 
-</form>
+    </form>
 
 
-    </div>
   </div>
+</div>
 
 {% endblock %}
