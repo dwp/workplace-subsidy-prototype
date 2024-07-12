@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Get an 80% discount on expert workplace health advice and recommendations for an employee
+{% endblock %}
+
+{% block header %}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader() }}
+{% endblock %}
+
+
+
+
+{% block content %}
+<div class="govuk-grid-row">
+
+
+
+
+
+
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Get a workplace health assessment to support an employee's health and disability
+    </h1>
+
+    <p>Use this service to:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>do something</li>
+      <li>update your name, address or other details</li>
+      <li>do something else</li>
+    </ul>
+
+    <p>Registering takes around 5 minutes.</p>
+
+
+
+    <a href="start-page" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+      Start now
+      <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19"
+        viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+      </svg>
+    </a>
+
+
+    <h3 class="govuk-heading-m">If you have generated a discount code before</h3>
+    <p>If you are returning to get another discount code you will need a new <a href="email-address-gate-returning?returningUser=yes">one-time passcode</a> to access your details.</p>
+    <p>Once you have the one-time passcode you will be able to:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>find a provider</li>
+      <li>generate another discount code</li>
+      <li>see existing codes you've generated</li>
+    </ul>
+
+  </div>
+
+
+
+
+</div>
+
+
+
+{% endblock %}
