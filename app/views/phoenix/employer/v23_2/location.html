@@ -5,12 +5,12 @@ Where is your organisation registered?
 {% endblock %}
 
 {% block header %}
-  <!-- Blank header with no service name for the start page -->
-  {{ govukHeader() }}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader() }}
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -19,54 +19,75 @@ Where is your organisation registered?
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form action="" method="post" novalidate>
-
+    <form class="form" method="post">
       <div class="govuk-form-group">
+
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <!--<span class="govuk-caption-l">Find out if you're eligible</span>-->
             <h1 class="govuk-fieldset__heading">
-              Is the company based in Cumbria, Lancashire or Barrow-in-Furness?
+              Where is your company registered?
             </h1>
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="companyLocation" name="companyLocation" type="radio" value="yes">
-              <label class="govuk-label govuk-radios__label" for="companyLocation">
-                Yes
+              <input class="govuk-radios__input" id="register" name="register" type="radio" value="England and Wales">
+              <label class="govuk-label govuk-radios__label" for="register">
+                England and Wales
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="companyLocation-2" name="companyLocation" type="radio" value="no">
-              <label class="govuk-label govuk-radios__label" for="companyLocation-2">
-                No
+              <input class="govuk-radios__input" id="register-2" name="register" type="radio" value="Wales">
+              <label class="govuk-label govuk-radios__label" for="register-2">
+                Wales
               </label>
             </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="register-3" name="register" type="radio" value="Scotland">
+              <label class="govuk-label govuk-radios__label" for="register-3">
+                Scotland
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="register-4" name="register" type="radio" value="Ireland">
+              <label class="govuk-label govuk-radios__label" for="register-4">
+                Northern Ireland
+              </label>
+            </div>
+
+
           </div>
+
         </fieldset>
       </div>
 
-      {{ govukButton({
-        text: "Continue"
-      }) }}
+
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
 
     </form>
 
+
+
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
     <tr class="govuk-table__row">
-    <td class="govuk-table__cell">
-    </td>
-    <td class="govuk-table__cell">
-      <strong class="govuk-tag govuk-tag--purple">
-        Prototype only
-      </strong>
-    </td>
+      <td class="govuk-table__cell">
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--purple">
+          Prototype only
+        </strong>
+      </td>
     </tr>
     <br><br>
     <p class="govuk-body">
-    <a href="not-eligible-location" class="govuk-link">Scenario: Ineligible - not in eligible area</a><br>
+      <a href="not-eligible-location" class="govuk-link">Scenario: Ineligible - not in eligible area</a><br>
     </p>
 
-    </div>
   </div>
+</div>
 
 {% endblock %}
