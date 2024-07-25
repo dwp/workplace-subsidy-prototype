@@ -23,36 +23,31 @@
 
 
 
+
+
+
+
+
     <h2 class="govuk-heading-m">
-      July 2024 - baselining for delivery purposes
+      Version 24
       </h2>
       
-      <p>A series of reference points to support development of the SME journey between early July and late August '24. <a href="https://dwpdigital.atlassian.net/browse/PHN-1968">Jira ticket (PHN-1968) and sub-tasks can be viewed here</a></p>
+      <h3 class="govuk-heading-s">Changes</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>.</li>
+        <li>.</li>
+        <li>.</li>
 
-      <h3 class="govuk-heading-s">Versions</h3>
-      <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-        <li><a href="/phoenix/employer/v23_1/start-page">baselined to build version 1.9.0</a> - update SME guidance navigation</li>
-        <li><a href="/phoenix/employer/v23_2/start-page">baselined to build version 1.10.0</a> - add industry (sector) questions</li>
-        <li><a href="/phoenix/employer/v23_3/start-page">baselined to build version 1.11.0</a> - add OTP login</li>
-        <li><a href="/phoenix/employer/v23_4/start-page">baselined to build version 1.12.0</a> - add postcode lookup for region</li>
-        <li>Baseline version 1.13.0 - directing new vs returning users, including home page concept, as per <a href="https://dwpdigital.atlassian.net/browse/PHN-1988">Jira ticket PHN-1988</a>. Also includes iteration of Confirmation pages, for completing application and generating discount code, as per <a href="https://dwpdigital.atlassian.net/browse/PHN-1859">Jira ticket PHN-1859</a>
-          <br>
-          -- <a href="/phoenix/employer/v23_5/start-page?returningUser=no">New user journey</a>
-          <br>
-          -- Returning user journey in progress
-            <!-- -- <a href="/phoenix/employer/v23_5/start-page?returningUser=yes">Returning user journey</a> -->
-        </li>
       </ul>
     
-
       <!-- <h3 class="govuk-heading-s">Notes</h3>
       <p>Design:</p>
       <ul class="govuk-list govuk-list--bullet">
         <li><a href="https://app.mural.co/t/dwpdigital7412/m/dwpdigital7412/1714483188847/a3d2d73f64d3e0449f27033c57104ec26e4464fe?sender=u57f46f1ebfd00e6e8d919712" class="govuk-link" rel="noreferrer noopener" target="_blank">Design board</a></li>
         <li><a href="https://app.mural.co/t/dwpdigital7412/m/dwpdigital7412/1714573532842/9b35fb8f61581f1beaff6a9ba73d1f74b79096b9?sender=u57f46f1ebfd00e6e8d919712" class="govuk-link" rel="noreferrer noopener" target="_blank">Content board</a></li>
-      </ul> -->
+      </ul>
     
-      <!-- <p>Research:</p>
+      <p>Research:</p>
       <ul class="govuk-list govuk-list--bullet">
         <li><a href="https://app.mural.co/t/dwpdigital7412/m/dwpdigital7412/1700490962555/7898de0a85b263318fd56c18b855e27cf1307ffe?sender=u57f46f1ebfd00e6e8d919712" class="govuk-link" rel="noreferrer noopener" target="_blank">UR on provider register and filters</a></li>
       </ul> -->
@@ -61,15 +56,54 @@
       
       <!-- {{ govukButton({
       text: 'View prototype',
-      href: '/phoenix/employer/v23_1/start-page'
+      href: '/phoenix/employer/v24/start-page'
       }) }} -->
 
+      <p>
+        <a href="/phoenix/employer/v24/start-page?returningUser=no">New user</a>
+      <br>
+      <a href="/phoenix/employer/v24/start-page?returningUser=yes">Returning user</a>
+      </p>
 
 
 
 
 
-  <br><br>
+
+
+
+
+
+
+
+
+
+
+
+      {% set v23 %}
+
+    <!-- <h2 class="govuk-heading-m">
+      July 2024 - baselining for delivery purposes
+      </h2> -->
+      
+      <p>A series of reference points to support development of the SME journey between early July and late August '24. <a href="https://dwpdigital.atlassian.net/browse/PHN-1968">Jira ticket (PHN-1968) and sub-tasks can be viewed here</a></p>
+
+      <h3 class="govuk-heading-s">Versions</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="/phoenix/employer/v23_1/start-page">baselined to build version 1.9.0</a> - update SME guidance navigation</li>
+        <li><a href="/phoenix/employer/v23_2/start-page">baselined to build version 1.10.0</a> - add industry (sector) questions</li>
+        <li><a href="/phoenix/employer/v23_3/start-page">baselined to build version 1.11.0</a> - add OTP login</li>
+        <li><a href="/phoenix/employer/v23_4/start-page">baselined to build version 1.12.0</a> - add postcode lookup for region</li>
+        <li><a href="/phoenix/employer/v23_5/start-page">version 1.13.0, includes design work for new/returning users</a></li>
+
+      </ul>
+      
+
+
+      <br>
+
+
+      {% endset %}
 
   {# {% set vX %}
 
@@ -277,6 +311,10 @@
   
   {{ govukAccordion({
   items: [
+  {
+    heading: { text: 'July 2024 - baselining for delivery purposes' },
+    content: { html: v23 }
+  },  
   {
     heading: { text: 'Version 22' },
     content: { html: v22 }
