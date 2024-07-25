@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+What is your full name?
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="" method="post" novalidate>
+
+      {{ govukInput({
+        id: "fullName",
+        name: "fullName",
+        label: {
+          text: "What is your full name?",
+          isPageHeading: true,
+          classes: "govuk-label--l"
+        },
+        value: data['fullName']
+      }) }}
+     
+
+{# <a href="sector"
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+</a> #}
+
+{{ govukButton({
+  text: "Continue",
+  href: "business-name"
+}) }}
+
+</form>
+
+    </div>
+  </div>
+
+{% endblock %}
