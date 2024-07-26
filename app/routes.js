@@ -4907,3 +4907,17 @@ router.post('/provider-eligibility-decision', function (req, res) {
                 res.redirect('/phoenix/provider/v1/eoi/submitted-location-no');
         };
 })
+
+router.post('/providerTermsRP', function (req, res) {
+        // Make a variable from session data
+        let providerTerms = req.session.data['provider-terms']
+        let providertermserror = 0
+      
+        if (!providerTerms) {
+          res.redirect('/phoenix/provider/v1/mainstream/join-the-provider-register?providertermserror=1')
+        }
+        else {
+          res.redirect('/phoenix/provider/v1/eoi/full-name')
+        }
+      
+      })
