@@ -171,30 +171,30 @@ Join the occupational health assessment provider register, so that an employer c
 
 
 
-
-
-
-      <div class="govuk-form-group">
-        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="provider-terms" name="provider-terms" type="checkbox"
-              value="carcasses">
-            <label class="govuk-label govuk-checkboxes__label" for="provider-terms">
-              I have read and agree to the terms and conditions
-            </label>
+      {% if data['providertermserror'] == 1 %}
+      <div class="govuk-form-group govuk-form-group--error">
+        <span class="govuk-error-message" id="question">
+          <span class="govuk-visually-hidden">Error:</span> You must agree to the terms and conditions to continue
+        </span>
+        {% else %}
+        <div class="govuk-form-group">
+          {% endif %}
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="provider-terms" name="provider-terms" type="checkbox"
+                value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="provider-terms">
+                I have read and agree to the terms and conditions
+              </label>
+            </div>
           </div>
         </div>
-      </div>
 
 
 
-
-
-      
-
-      <button type="submit" class="govuk-button govuk-!-margin-bottom-1">
-        Continue
-      </button>
+        <button type="submit" class="govuk-button govuk-!-margin-bottom-1">
+          Continue
+        </button>
 
     </form>
     <br>
