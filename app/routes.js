@@ -4340,7 +4340,11 @@ router.post('/phoenix/employer/v23_4/have-you-registered', function (req, res) {
 //         })
 
 router.post(`/phoenix/employer/v23_4/location`, function (req, res) {
-        res.redirect(`/phoenix/employer/v23_4/business-size`)
+        if (req.session.data['postcode']) {
+                res.redirect('/phoenix/employer/v23_4/business-size')
+        } else {
+                res.redirect('/phoenix/employer/v23_4/location?postcodeerror=1')
+        }
 })
 
 //business-name
@@ -4608,7 +4612,7 @@ router.post('/phoenix/employer/v23_4/discount-code', function (req, res) {
 
 
 
-//////////            EMPLOYER VERSION 24 (public beta)
+//////////            EMPLOYER VERSION 25 (public beta)
 
 //have you registered before
 
