@@ -20,17 +20,51 @@ Join the occupational health assessment provider register, so that an employer c
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
+      {% if data['providerfullnameerror'] == 1 %}
 
-      <form class="form" action="email-address" method="post">
+      <!-- error summary -->
+      {{ govukErrorSummary({
+      titleText: "There is a problem",
+      errorList: [
+      {
+      text: "Enter your full name",
+      href: "#full-name"
+      }
+      ]
+      }) }}
+  
+      {% endif %}    
 
-        <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper">
+      <form class="form" action="/provider-full-name" method="post">
+
+
+        {% if data['providerfullnameerror'] == 1 %}
+        <div class="govuk-form-group govuk-form-group--error">
+          
+  
+          <div class="govuk-form-group">
             <label class="govuk-label govuk-label--l" for="full-name">
               What is your full name?
             </label>
-          </h1>
+            <span class="govuk-error-message" id="question">
+              <span class="govuk-visually-hidden">Error:</span> Enter your full name
+            </span>
+            <input class="govuk-input govuk-input--width-40 govuk-input--error" id="full-name" name="providerFullName" type="text" spellcheck="false" autocomplete="name">
+          </div>
+  
+        </div>
+  
+        {% else %}
+
+        <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--l" for="full-name">
+              What is your full name?
+            </label>
           <input class="govuk-input govuk-input--width-40" id="full-name" name="providerFullName" type="text" spellcheck="false" autocomplete="name">
         </div>
+
+        {% endif %}
+
 
         {{ govukButton({
           text: "Continue"

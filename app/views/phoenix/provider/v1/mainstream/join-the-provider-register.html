@@ -12,30 +12,30 @@ Join the occupational health assessment provider register, so that an employer c
 
 {% block content %}
 
+
+{% if data['providertermserror'] == 1 %}
+
+<!-- error summary -->
+{{ govukErrorSummary({
+titleText: "There is a problem",
+errorList: [
+{
+text: "You have not agreed to the terms and conditions",
+href: "#provider-terms"
+}
+]
+}) }}
+
+{% endif %}
+
+
+
 <h1 class="govuk-heading-xl">
   Join the occupational health assessment provider register, so that an employer can use their discount code
 </h1>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
-
-
-    {% if data['providertermserror'] == 1 %}
-
-    <!-- error summary -->
-    {{ govukErrorSummary({
-    titleText: "There is a problem",
-    errorList: [
-    {
-    text: "You have not agreed to the terms and conditions",
-    href: "#provider-terms"
-    }
-    ]
-    }) }}
-
-    {% endif %}
-
 
     <aside class="govuk-prototype-kit-common-templates-mainstream-guide-contents-list" role="complementary">
       <nav class="govuk-prototype-kit-common-templates-contents-list" aria-label="Pages in this guide"

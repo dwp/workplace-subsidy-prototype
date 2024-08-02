@@ -4916,12 +4916,22 @@ router.post('/providerTermsRP', function (req, res) {
         // Make a variable from session data
         let providerTerms = req.session.data['provider-terms']
         let providertermserror = 0
-      
+
         if (!providerTerms) {
-          res.redirect('/phoenix/provider/v1/mainstream/join-the-provider-register?providertermserror=1')
+                res.redirect('/phoenix/provider/v1/mainstream/join-the-provider-register?providertermserror=1')
         }
         else {
-          res.redirect('/phoenix/provider/v1/eoi/full-name')
+                res.redirect('/phoenix/provider/v1/eoi/full-name')
         }
-      
-      })
+
+})
+
+
+router.post('/provider-full-name', function (req, res) {
+        var provFullName = req.session.data['providerFullName'];
+        if (provFullName) {
+                res.redirect('/phoenix/provider/v1/eoi/email-address');
+        } else {
+                res.redirect('/phoenix/provider/v1/eoi/full-name?providerfullnameerror=1');
+        };
+})
