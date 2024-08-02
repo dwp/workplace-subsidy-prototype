@@ -19,26 +19,24 @@ Where is your organisation registered?
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
+    {% if data['postcodeerror'] == 1 %}
+
+    <!-- error summary -->
+    {{ govukErrorSummary({
+    titleText: "There is a problem",
+    errorList: [
+    {
+    text: "Enter a valid postcode",
+    href: "#postcode"
+    }
+    ]
+    }) }}
+
+    {% endif %}    
+
     <form action="" method="post" novalidate>
 
       <h1 class="govuk-heading-l">Where is your organisation registered?</h1>
-
-
-
-      {% if data['postcodeerror'] == 1 %}
-
-      <!-- error summary -->
-      {{ govukErrorSummary({
-      titleText: "There is a problem",
-      errorList: [
-      {
-      text: "Enter a valid postcode",
-      href: "#postcode"
-      }
-      ]
-      }) }}
-
-      {% endif %}
 
 
 
