@@ -4906,7 +4906,7 @@ router.post('/phoenix/employer/v23_5/email-confirm-code-routing', function (req,
 router.post('/provider-eligibility-decision', function (req, res) {
         var providerCompanyLocation = req.session.data['companyLocation'];
         if (providerCompanyLocation === "yes") {
-                res.redirect('/phoenix/provider/v1/eoi/submitted-location-yes');
+                res.redirect('/phoenix/provider/v1/eoi/full-name');
         } else {
                 res.redirect('/phoenix/provider/v1/eoi/submitted-location-no');
         };
@@ -4921,7 +4921,7 @@ router.post('/providerTermsRP', function (req, res) {
                 res.redirect('/phoenix/provider/v1/mainstream/join-the-provider-register?providertermserror=1')
         }
         else {
-                res.redirect('/phoenix/provider/v1/eoi/full-name')
+                res.redirect('/phoenix/provider/v1/eoi/company-location')
         }
 
 })
