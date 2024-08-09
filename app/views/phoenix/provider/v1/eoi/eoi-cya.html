@@ -26,6 +26,17 @@ Join the occupational health assessment provider register, so that an employer c
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
+            Do you carry out assessments for employers who are based in Cumbria, Lancashire or Barrow-in-Furness?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['companyLocation'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="company-location">Change<span class="govuk-visually-hidden"> contact details</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
             Full name
           </dt>
           <dd class="govuk-summary-list__value">
@@ -66,17 +77,6 @@ Join the occupational health assessment provider register, so that an employer c
           </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="company-role">Change<span class="govuk-visually-hidden"> organisation role</span></a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Do you carry out assessments for employers who are based in Cumbria, Lancashire or Barrow-in-Furness?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['companyLocation'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="company-location">Change<span class="govuk-visually-hidden"> contact details</span></a>
           </dd>
         </div>
       </dl>
