@@ -1,0 +1,68 @@
+{% extends "layout2.html" %}
+
+{% block pageTitle %}
+  Manage email whitelist
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="manage-whitelist-email-added" method="post">
+
+      <h1 class="govuk-heading-l">
+        Manage email whitelist
+      </h1>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="email-whitelist">
+          Enter an email address
+        </label>
+        {# <div id="email-hint" class="govuk-hint">
+          We’ll only use this to send you a receipt
+        </div> #}
+        <input class="govuk-input" id="email-whitelist" name="email-whitelist" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Add email to whitelist
+      </button>
+
+      </form>
+
+      <br><br>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Whitelisted emails</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Emails</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-!-width-one-quarter">Action</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-body govuk-!-font-weight-regular">joe.bloggs@employer.com</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="manage-whitelist-remove" class="govuk-link">Remove</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-body govuk-!-font-weight-regular">joe.bloggs@employer.com</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="manage-whitelist-remove" class="govuk-link">Remove</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      
+
+    </div>
+  </div>
+
+{% endblock %}
