@@ -1,0 +1,67 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %} {% block pageTitle %} Find a workplace health
+provider {% endblock %} {% block header %}
+<!-- Blank header with no service name for the start page -->
+<link rel="stylesheet" href="/public/css/accessible-autocomplete.min.css" />
+{{ govukHeader() }} {% endblock %} {% block beforeContent %}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-4">
+
+    <form action="invoice-entry" method="post">
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label for="my-autocomplete" class="govuk-label govuk-label--l">Select a provider</label>
+
+        </h1>
+        <div id="my-autocomplete-container"></div>
+        <br><br>
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="/public/javascripts/accessible-autocomplete.min.js"></script>
+
+<script>
+  const providers = [
+    'Abbott Healthcare Connections',
+    'Acorn Occupational Health Ltd',
+    'Ad Hoc Occupational Health Limited',
+    'Bespoke Wellbeing',
+    'Best Practice Occupational Health',
+    'BHSF Occupational Health Limited',
+    'Caer Health Services Ltd',
+    'Cordell Health Ltd',
+    'Crossland Occupational Health Ltd',
+    'Dr. Arshad Health Associates',
+    'Elite Executives Limited',
+    'Enable Works Ltd',
+    'Ensure Health',
+    'Everwell Occupational Health',
+    'Express Medicals Ltd',
+    'Fembim Occupational Health Ltd',
+    'Flex Occupational Health Limited',
+    'FOHCUS Occupational Health Ltd',
+    'Gipping Occupational Health Ltd'
+  ]
+
+  accessibleAutocomplete({
+    element: document.querySelector('#my-autocomplete-container'),
+    id: 'my-autocomplete', // To match it to the existing <label>.
+    source: providers
+  })
+
+</script>
+
+{% endblock %}
