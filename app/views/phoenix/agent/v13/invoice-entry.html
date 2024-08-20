@@ -193,6 +193,39 @@ provider {% endblock %} {% block header %}
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Invoice received date</span></a>
             </dd>
+          </div>          
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Assessment date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              11 August 2024
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Assessment date</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Cost of assesssment
+            </dt>
+            <dd class="govuk-summary-list__value">
+              £333
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> cost of assessment</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Travel costs
+            </dt>
+            <dd class="govuk-summary-list__value">
+              £100
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Travel costs</span></a>
+            </dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -229,7 +262,7 @@ provider {% endblock %} {% block header %}
 
 
 
-
+    <form action="invoice-submitted" method="post">
 
     <!-- logic needed here to enable button if all details are filled in -->
     <button type="submit" aria-disabled="true" class="govuk-button" data-module="govuk-button">
@@ -240,6 +273,7 @@ provider {% endblock %} {% block header %}
       Submit
     </button> -->
 
+    </form>
 
 
   </div>
