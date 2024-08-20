@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+You are not eligible to use this service 
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">You are not eligible to use this service </h1>
+
+  <p class="govuk-body"><strong>You can only use this service if your company is registered in England or Wales.</strong></p>
+
+  <p class="govuk-body">We hope to open up to other places in the UK in the next phase.</p>
+    
+  <p class="govuk-body">If you would like to to be notified when the pilot extends email workplacehealth.employer@dwp.gov.uk</p>
+
+
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}
