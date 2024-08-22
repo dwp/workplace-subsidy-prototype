@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+What are your contact details?
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-l">
+        What are your contact details?
+      </h1>
+
+      <form action="" method="post" novalidate>
+
+      <div class="govuk-form-group">
+
+        <label class="govuk-label" for="firstName">
+          First name
+        </label>
+        <input class="govuk-input" id="firstName" name="firstName" type="text" spellcheck="false" aria-describedby="firstName-hint" autocomplete="given-name">
+        </div>
+          <div class="govuk-form-group">
+              <label class="govuk-label" for="lastName">
+                Last name
+              </label>
+              <input class="govuk-input" id="lastName" name="lastName" type="text" spellcheck="false" aria-describedby="lastName-hint" autocomplete="family-name">
+            </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="emailAddress">
+            Email address
+          </label>
+          {# <div id="email-hint" class="govuk-hint">
+            Hint text
+          </div> #}
+          <input class="govuk-input" id="emailAddress" name="emailAddress" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="mobileNumber">
+            Mobile number
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="mobileNumber" name="mobileNumber" type="number" inputmode="numeric" autocomplete="tel">
+        </div>
+
+{{ govukCheckboxes({
+  name: "",
+  fieldset: {
+    legend: {
+      text: "",
+      isPageHeading: true,
+      classes: ""
+    }
+  },
+  values: data.contactMe,
+  items: [
+    {
+      value: "Yes",
+      text: "Tick this box if you agree to be contacted about the service for research purposes or to take part in a survey."
+    }
+  ]
+}) }}
+
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+</form>
+
+    </div>
+  </div>
+
+{% endblock %}

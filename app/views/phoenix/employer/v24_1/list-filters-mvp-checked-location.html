@@ -1,0 +1,412 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %} {% block pageTitle %} Find a workplace health
+provider {% endblock %} {% block header %}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader() }} {% endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+<div style="float:right" class="govuk-!-margin-top-2">
+  <span class="govuk-body">
+    <strong class="govuk-tag govuk-tag--purple govuk-!-font-size-14">
+      Prototype only
+    </strong>
+    <a href="list-filters-mvp" class="govuk-link govuk-!-font-size-14">Unsorted</a> -
+    <a href="list-filters-mvp-checked" class="govuk-link govuk-!-font-size-14">Cost and Assessment</a> - 
+    <a href="list-filters-mvp-checked-location" class="govuk-link govuk-!-font-size-14">Location</a>
+  </span>
+  </div>
+  
+{% endblock %} {% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-4">
+        <h1 class="govuk-heading-l">Find a workplace health provider</h1>
+        <h2 class="govuk-heading-m">How to book an assessment</h2>
+        <ol class="govuk-list govuk-list--number">
+          <li>Search the list of providers.</li>
+          <li>Contact a provider to book an assessment.</li>
+          <li>Give the provider your discount code.</li>
+        </ol>
+        <p>
+          When choosing a provider it is important you check their services will
+          meet your needs. Read about
+          <a href="evaluation">how providers have been evaluated</a>.
+        </p>
+      </div>
+    </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <div class="moj-filter">
+            <div class="moj-filter__header">
+              <div class="moj-filter__header-title">
+                <h2 class="govuk-heading-m">Filter</h2>
+              </div>
+  
+              <div class="moj-filter__header-action"></div>
+            </div>
+  
+            <div class="moj-filter__content">
+
+              <div class="moj-filter__selected">
+
+                <div class="moj-filter__selected-heading">
+          
+                  <div class="moj-filter__heading-title">
+                    <h2 class="govuk-heading-m">Selected filters</h2>
+                  </div>
+          
+                  <div class="moj-filter__heading-action">
+                    <p><a class="govuk-link govuk-link--no-visited-state" href="list-filters-mvp">Clear</a></p>
+                  </div>
+          
+                </div>
+
+                <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Employee location</h3>
+          
+                <ul class="moj-filter-tags">
+          
+                  <li><a class="moj-filter__tag" href="/path/to/remove/this"><span class="govuk-visually-hidden">Remove this filter</span> L12 3AB</a></li>
+        
+          
+                </ul>
+          
+                <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Cost</h3>
+          
+                <ul class="moj-filter-tags">
+          
+                  <li><a class="moj-filter__tag" href="/path/to/remove/this"><span class="govuk-visually-hidden">Remove this filter</span> £20 to £40</a></li>
+          
+                  <li><a class="moj-filter__tag" href="/path/to/remove/this"><span class="govuk-visually-hidden">Remove this filter</span> £40 to £60</a></li>
+          
+                </ul>
+          
+                <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Assessment methods</h3>
+          
+                <ul class="moj-filter-tags">
+          
+                  <li><a class="moj-filter__tag" href="/path/to/remove/this"><span class="govuk-visually-hidden">Remove this filter</span> At a clinic</a></li>
+                  <li><a class="moj-filter__tag" href="/path/to/remove/this"><span class="govuk-visually-hidden">Remove this filter</span> At a workplace</a></li>
+                  <li><a class="moj-filter__tag" href="/path/to/remove/this"><span class="govuk-visually-hidden">Remove this filter</span> At an agreed location</a></li>
+          
+                </ul>
+          
+              </div>
+              
+              <form action="?" method="post" novalidate>
+              <div class="moj-filter__options">
+                <button
+                  type="submit"
+                  class="govuk-button"
+                  data-module="govuk-button"
+                  data-test-id="submit-button"
+                >
+                  Apply filters
+                </button>
+              </form>
+  
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-label--m" for="keywords">
+                    Employee location
+                  </label>
+                  <div id="location-hint" class="govuk-hint">
+                    Enter postcode
+                  </div>
+  
+                  <input
+                    class="govuk-input"
+                    id="locationPostcode"
+                    name="locationPostcode"
+                    type="text"
+                    value="L12 3AB"
+                  />
+                </div>
+  
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend
+                      class="govuk-fieldset__legend govuk-fieldset__legend--m"
+                    >
+                      Cost after discount
+                    </legend>
+  
+                    <div
+                      class="govuk-checkboxes govuk-checkboxes--small"
+                      data-module="govuk-checkboxes"
+                    >
+
+                    <div class="govuk-checkboxes__item">
+                      <input
+                        class="govuk-checkboxes__input"
+                        id="type-0"
+                        name="type"
+                        type="checkbox"
+                        value="0"
+                      />
+                      <label
+                        class="govuk-label govuk-checkboxes__label"
+                        for="type"
+                      >
+                        Less than £20
+                      </label>
+                    </div>
+                    
+                      <div class="govuk-checkboxes__item">
+                        <input
+                          class="govuk-checkboxes__input"
+                          id="cost"
+                          name="cost"
+                          type="checkbox"
+                          value="1"
+                          checked
+                        />
+                        <label
+                          class="govuk-label govuk-checkboxes__label"
+                          for="cost"
+                        >
+                          £20 to £40
+                        </label>
+                      </div>
+  
+                      <div class="govuk-checkboxes__item">
+                        <input
+                          class="govuk-checkboxes__input"
+                          id="cost-2"
+                          name="cost"
+                          type="checkbox"
+                          value="2"
+                          checked
+                        />
+                        <label
+                          class="govuk-label govuk-checkboxes__label"
+                          for="cost-2"
+                        >
+                        £40 to £60
+                        </label>
+                      </div>
+  
+                      <div class="govuk-checkboxes__item">
+                        <input
+                          class="govuk-checkboxes__input"
+                          id="cost-3"
+                          name="cost"
+                          type="checkbox"
+                          value="3"
+                        />
+                        <label
+                          class="govuk-label govuk-checkboxes__label"
+                          for="cost-3"
+                        >
+                        £60 to £80
+                        </label>
+                      </div>
+  
+                    </div>
+                  </fieldset>
+                </div>
+  
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend
+                      class="govuk-fieldset__legend govuk-fieldset__legend--m"
+                    >
+                      Assessment methods
+                    </legend>
+  
+                    <div
+                      class="govuk-checkboxes govuk-checkboxes--small"
+                      data-module="govuk-checkboxes"
+                    >
+                      <div class="govuk-checkboxes__item">
+                        <input
+                          class="govuk-checkboxes__input"
+                          id="assessmentPhone"
+                          name="assessmentMethod"
+                          type="checkbox"
+                          value="remote"
+                        />
+                        <label
+                          class="govuk-label govuk-checkboxes__label"
+                          for="assessmentPhone"
+                        >
+                          Phone
+                        </label>
+                      </div>
+  
+                      <div class="govuk-checkboxes__item">
+                        <input
+                          class="govuk-checkboxes__input"
+                          id="assessmentVideo"
+                          name="assessmentMethod"
+                          type="checkbox"
+                          value="remote"
+                        />
+                        <label
+                          class="govuk-label govuk-checkboxes__label"
+                          for="assessmentVideo"
+                        >
+                          Video call
+                        </label>
+                      </div>
+  
+                      <div class="govuk-checkboxes__item">
+                        <input
+                          class="govuk-checkboxes__input"
+                          id="assessmentHome"
+                          name="assessmentMethod"
+                          type="checkbox"
+                          value="in person"
+                        />
+                        <label
+                          class="govuk-label govuk-checkboxes__label"
+                          for="assessmentHome"
+                        >
+                          Home visit
+                        </label>
+                      </div>
+  
+                      <div class="govuk-checkboxes__item">
+                        <input
+                          class="govuk-checkboxes__input"
+                          id="assessmentClinic"
+                          name="assessmentMethod"
+                          type="checkbox"
+                          value="in person"
+                          checked
+                        />
+                        <label
+                          class="govuk-label govuk-checkboxes__label"
+                          for="assessmentClinic"
+                        >
+                          At a clinic
+                        </label>
+                      </div>
+  
+                      <div class="govuk-checkboxes__item">
+                        <input
+                          class="govuk-checkboxes__input"
+                          id="assessmentWorkplace"
+                          name="assessmentMethod"
+                          type="checkbox"
+                          value="in person"
+                          checked
+                        />
+                        <label
+                          class="govuk-label govuk-checkboxes__label"
+                          for="assessmentWorkplace"
+                        >
+                          At a workplace
+                        </label>
+                      </div>
+  
+                      <div class="govuk-checkboxes__item">
+                        <input
+                          class="govuk-checkboxes__input"
+                          id="assessmentAgreedLocation"
+                          name="assessmentMethod"
+                          type="checkbox"
+                          value="in person"
+                          checked
+                        />
+                        <label
+                          class="govuk-label govuk-checkboxes__label"
+                          for="assessmentAgreedLocation"
+                        >
+                          At an agreed location
+                        </label>
+                      </div>
+  
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="govuk-grid-column-two-thirds">
+  
+          <p class="govuk-body-l govuk-!-font-weight-bold govuk-!-margin-top-0">
+            4 results
+          </p>
+
+      <div id="unsorted" class="table-section" style="display: block;">
+        <!-- Initially visible -->
+        <!-- Your "Unsorted" table content goes here -->
+        <table class="govuk-table govuk-table--small-text-until-tablet">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Contact details</th>
+              <th scope="col" class="govuk-table__header">Assessment</th>
+              <th scope="col" class="govuk-table__header">Cost</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">
+                <a href="#" class="govuk-link">MERSEY HEALTH SERVICES</a>
+                <br>
+                <p class="govuk-body-s govuk-!-padding-top-2">
+                  Liverpool, L1 1AA<br>0151 123 4567<br>admin@merseyhealth.co.uk
+                </p>
+                <p class="govuk-body govuk-hint govuk-body-s govuk-body govuk-!-font-size-14">0.4 miles away</p>
+                <a class="govuk-body-s" href="provider-clinics">View this provider's other clinics</a>
+              </th>
+              <td class="govuk-table__cell govuk-body-s">At a clinic<br>At a workplace<br>At an agreed location</td>
+              <td class="govuk-table__cell">
+                <p class="govuk-body-s">£20 to £40</p>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">
+                <a href="#" class="govuk-link">LIVERBIRD WELLNESS CLINIC</a>
+                <br>
+                <p class="govuk-body-s govuk-!-padding-top-2">
+                  Liverpool, L24 2BB<br>0151 234 5678<br>info@liverpoolwellness.co.uk
+                </p>
+                <p class="govuk-body govuk-hint govuk-body-s govuk-body govuk-!-font-size-14">8.1 miles away</p>
+                <a class="govuk-body-s" href="provider-clinics">View this provider's other clinics</a>
+              </th>
+              <td class="govuk-table__cell govuk-body-s">At a clinic<br>At a workplace<br>At an agreed location</td>
+              <td class="govuk-table__cell">
+                <p class="govuk-body-s">£20 to £40</p>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">
+                <a href="#" class="govuk-link">ACTIVECARE ASSESSMENTS</a>
+                <br>
+                <p class="govuk-body-s govuk-!-padding-top-2">
+                  Warrington, WA1 3TA<br>01925 987 654<br>info@activecare.co.uk
+                </p>
+              </th>
+              <td class="govuk-table__cell govuk-body-s">At a clinic<br>At a workplace<br>At an agreed location</td>
+              <td class="govuk-table__cell">
+                <p class="govuk-body-s">£40 to £60</p>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">
+                <a href="#" class="govuk-link">CHESTER HEALTH CHECKS</a>
+                <br>
+                <p class="govuk-body-s govuk-!-padding-top-2">
+                  Chester, CH1 4DD<br>01244 456 789<br>support@merseysidehealth.co.uk
+                </p>
+                <p class="govuk-body govuk-hint govuk-body-s govuk-body govuk-!-font-size-14">23.4 miles away</p>
+              </th>
+              <td class="govuk-table__cell govuk-body-s">At a clinic<br>At a workplace<br>At an agreed location</td>
+              <td class="govuk-table__cell">
+                <p class="govuk-body-s">£40 to £60</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+{% endblock %}

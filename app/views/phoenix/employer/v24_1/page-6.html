@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+
+{% block content %}
+<div class="govuk-width-container">
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <p>OH providers you can access</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>placeholder</li>
+        <li>placeholder</li>
+        <li>placeholder</li>
+      </ul>
+
+<a href="page-7"
+      <button class="govuk-button" data-module="govuk-button">
+    Search
+  </button></a>
+
+  <p>Or helpline for advice</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>placeholder</li>
+    <li>placeholder</li>
+    <li>placeholder</li>
+  </ul>
+
+
+    </div>
+  </div>
+  </main>
+  </div>
+{% endblock %}
