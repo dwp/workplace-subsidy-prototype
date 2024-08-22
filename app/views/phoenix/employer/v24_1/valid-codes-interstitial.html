@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Find a provider to carry out your OH assessment
+{% endblock %}
+
+{% block header %}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader() }}
+{% endblock %}
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Find a provider to carry out your OH assessment</h1>
+
+    <p>If you have a discount code which you haven't used, you will have until noon on the <strong>5th September</strong> to use it. After this date any unused codes will be invalid.</p>
+
+    <p>You can use this service to <a href="list-filters-mvp.html">find a provider</a> to carry out the OH assessment.</p>
+
+    <a href="list-filters-mvp" class="govuk-button">
+      Find a provider
+    </a>
+
+
+  </div>
+</div>
+</main>
+</div>
+
+{% endblock %}
